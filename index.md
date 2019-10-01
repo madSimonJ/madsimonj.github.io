@@ -30,7 +30,7 @@ var fun = function lang(l) {
 }
 ```
 
-```js
+```csharp
 // C# code with syntax highlighting.
         public static IEnumerable<T> Adjust<T>(this IEnumerable<T> @this, Func<T, int, bool> shouldReplace, T replacement) =>
             @this.Select((obj, pos) =>
