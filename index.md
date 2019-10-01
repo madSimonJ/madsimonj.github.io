@@ -30,6 +30,18 @@ var fun = function lang(l) {
 }
 ```
 
+```js
+// C# code with syntax highlighting.
+        public static IEnumerable<T> Adjust<T>(this IEnumerable<T> @this, Func<T, int, bool> shouldReplace, T replacement) =>
+            @this.Select((obj, pos) =>
+                shouldReplace(obj, pos)
+                   ? replacement
+                   : obj);
+
+        public static IEnumerable<T> Adjust<T>(this IEnumerable<T> @this, Func<AdjustSelector<T>, Func<T, int, bool>> selector, T replacement) =>
+            @this.Adjust(selector(new AdjustSelector<T>()), replacement);
+```
+
 ```ruby
 # Ruby code with syntax highlighting
 GitHubPages::Dependencies.gems.each do |gem, version|
