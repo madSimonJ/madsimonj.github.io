@@ -1,9 +1,7 @@
-#header_wrap {
-  width: 100%;
-  background-image: url(https://madsimonj.github.io/Content/img/IMG_4858.JPG);
-  background-position: center;
-}
-
-#navigation,.navbar .navbar-default{
-  background-image: url(https://madsimonj.github.io/Content/img/IMG_4858.JPG);
+.navbar-inner{
+ background-image: url(https://madsimonj.github.io/Content/img/IMG_4858.JPG);
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
 }
