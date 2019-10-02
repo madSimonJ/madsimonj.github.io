@@ -431,7 +431,7 @@ header .top-bar.expanded .title-area {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/rugged_bg.png) repeat;
+  background: url(/Content/img/rugged_bg.png) repeat;
   top: 0px;
   left: 0px;
   z-index: 1;
