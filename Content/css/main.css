@@ -2527,4 +2527,6 @@ a .icon-flip-vertical:before {
 
 .top-bar, .top-bar ul {
     background-color: white;
+	list-style: none;
 }
+
