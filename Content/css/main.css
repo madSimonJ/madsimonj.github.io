@@ -2562,3 +2562,6 @@ a .icon-flip-vertical:before {
   background: url('https://s3.amazonaws.com/onepagelove/one-page-love-award.png') no-repeat;
 }
 
+.top-bar, .top-bar ul {
+    background-color: white;
+}
