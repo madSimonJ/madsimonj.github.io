@@ -397,21 +397,21 @@ header .top-bar.expanded .title-area {
   top: 20%;
   left: 7%;
   text-align: center;
-  color: #fff;
+  color: yellow;
   font-family: 'Julius Sans One', sans-serif;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 #hero_cont .hero_txt h2 {
   font-weight: normal;
   font-family: 'Julius Sans One', sans-serif;
-  color: #fff;
+  color: yellow;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 #hero_cont .hero_txt h2 small {
-  color: #76926f;
+  color: yellow;
 }
 #hero_cont .hero_txt hr {
   margin-bottom: 30px;
