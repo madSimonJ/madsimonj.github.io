@@ -521,7 +521,7 @@ hr:after {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/rugged_bg.png) repeat;
+  background: url(/Content/img/rugged_bg.png) repeat;
   top: 0px;
   left: 0px;
   z-index: 1;
@@ -690,10 +690,6 @@ hr:after {
   z-index: 3;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
-.pagepanel.black {
-  background: #000000 url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/black_img.jpg) no-repeat right top;
-  color: #5b5b5b;
-}
 .pagepanel.black h2 {
   color: #fff;
 }
@@ -758,39 +754,6 @@ hr:after {
 }
 .pagepanel.work h5 span {
   display: none;
-}
-.pagepanel.work .ushahidi {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_ushahidi.png);
-}
-.pagepanel.work .ihub {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_ihub.png);
-}
-.pagepanel.work .brck {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_brck.png);
-}
-.pagepanel.work .bankinter {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_bankinter.png);
-}
-.pagepanel.work .mit {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_mit.png);
-}
-.pagepanel.work .ted {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_ted.png);
-}
-.pagepanel.work .desmond {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_tutu.png);
-}
-.pagepanel.work .microsoft {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_microsoft.png);
-}
-.pagepanel.work .waabeh {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_waabeh.png);
-}
-.pagepanel.work .dld {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_dld.png);
-}
-.pagepanel.work .socialent {
-  background-image: url(http://julia.na/wp-content/themes/juliana/assets/css/../img/content/logo_socialent.png);
 }
 .pagepanel.work h5:hover {
   -webkit-transition: all 0.5s ease;
