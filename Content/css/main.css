@@ -2530,3 +2530,8 @@ a .icon-flip-vertical:before {
 	list-style: none;
 }
 
+.top-bar .name h1 {
+    line-height: 45px;
+    font-size: 1.0625em;
+    margin: 0;
+}
