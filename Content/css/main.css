@@ -2549,3 +2549,15 @@ header .top-bar .title-area h1 a {
     margin: 0;
     font-size: 16px;
 }
+
+.top-bar {
+	padding: 0em;
+}
+
+.title-area {
+	margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+}
