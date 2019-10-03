@@ -11,7 +11,6 @@ layout: default
     <hr/>
     <p>{{site.description}}</p>
   </div>
-<p><a href="#about" class="scroll"><i class="icon-angle-down"></i></a></p>
   <div class="hero_img">
     <img src="/Content/img/IMG_4858.JPG">
   </div>  
