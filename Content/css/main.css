@@ -2565,3 +2565,8 @@ header .top-bar .title-area h1 a {
     margin-inline-end: 0px;
     padding-inline-start: 0;
 }
+
+.top-bar-section {
+	margin:0;
+	height:100%;
+}
