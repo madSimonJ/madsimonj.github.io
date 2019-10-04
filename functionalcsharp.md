@@ -6,6 +6,7 @@ layout: default
   <div class="center">
     <h2>FUNCTIONAL PROGRAMMING IN C#</h2>
     <hr>
+		<img src="/Content/img/functional-csharp-large.png">
     <p>Functional Programming is becoming increasingly popular and relevant with each year that goes by. With so much discussion around languages such as F#, Haskell and Erlang, it can seem as though getting started with Functional programming would mean first learning a whole new syntax...but what if it didn't?</P>
 
 <p>Most .NET developers are familiar with the use of Linq, and basic constructs such as IEnumerable, Func delegates, arrow functions and ternary expressions, but did you know that you can use all of this to implement some of the most powerful patterns and techniques from the world of functional programming?</P>
@@ -13,11 +14,11 @@ layout: default
 <p>This talk will demonstrate how, using only familiar features available in out-of-the-box C#, to write Functional code that is:</p>
 
 <br/>
-<ul>
-<li>More robust</li>
-<li>Easier to read</li>
-<li>Easier to maintain</li>
-</ul>
+
+<p>More robust</p>
+<p>Easier to read</p>
+<p>Easier to maintain</p>
+
 <br/>
 
 <p>As well as these benefits, Functional code is a great enabler for the use of concurrency with Async functions and Serverless applications with technologies such as Azure Functions.</p>
