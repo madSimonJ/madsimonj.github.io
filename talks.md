@@ -11,7 +11,7 @@ layout: default
 	</p>
 	
 	<img src="/Content/img/functional-csharp.png">
-	<h3><a href="/functionalcsharp">Functional Programming in C#</A></h3>
+	<h3><a href="/talk/functionalcsharp">Functional Programming in C#</A></h3>
 	<p>
 	A look at how we might implement the functional programming paradigm using C# language features that date back as far as C# 4.  
 	</p>
