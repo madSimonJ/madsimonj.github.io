@@ -12,9 +12,13 @@ layout: default
 
 <p>This talk will demonstrate how, using only familiar features available in out-of-the-box C#, to write Functional code that is:</p>
 
-* More robust
-* Easier to read
-* Easier to maintain
+<br/>
+<ul>
+<li>More robust</li>
+<li>Easier to read</li>
+<li>Easier to maintain</li>
+</ul>
+<br/>
 
 <p>As well as these benefits, Functional code is a great enabler for the use of concurrency with Async functions and Serverless applications with technologies such as Azure Functions.</p>
 
