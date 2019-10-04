@@ -11,11 +11,11 @@ layout: default
 	</p>
 	
 	<img src="/Content/img/functional-csharp.png">
-	<h3>Functional Programming in C#</h3>
+	<h3><a href="/functionalcsharp">Functional Programming in C#</A></h3>
 	<p>
 	A look at how we might implement the functional programming paradigm using C# language features that date back as far as C# 4.  
 	</p>
-	
+	<hr>
 	<img src="/Content/img/hacking-csharp.png">
 	<h3>Hacking C#: Development for the Truly Lazy</h3>
 	<p>
