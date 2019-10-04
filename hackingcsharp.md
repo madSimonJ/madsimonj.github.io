@@ -15,9 +15,9 @@ layout: default
 <p>What's the alternative? In this talk, I'll demonstrate a way of working that avoids all this unneccesary work, and gives you more time to do something more productive.</p>
 
 <p>We'll look at:</p>
-<p>Functional Programming - what benefits does this increasingly popular paradigm bring us to cut down coding effort</p>
-<p>Linq & Generics - These have been a part of C# for a long time now, and are some of the most powerful features available in the language, but hardly anyone seems to be using them effectively</p>
-<p>MetaProgramming - break open C# and take it to the next level with code that describes how to generate code</p>
+<p><strong>Functional Programming</strong> - what benefits does this increasingly popular paradigm bring us to cut down coding effort</p>
+<p><strong>Linq & Generics</strong> - These have been a part of C# for a long time now, and are some of the most powerful features available in the language, but hardly anyone seems to be using them effectively</p>
+<p><strong>MetaProgramming</strong> - break open C# and take it to the next level with code that describes how to generate code</p>
 
 <p>Our goal is to write code in as few lines as possible that provides the greatest amount of impact. We also want code that's readable, and easily maintainable. We want to think smart, and think...Lazy.</p>
 		
