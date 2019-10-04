@@ -26,5 +26,22 @@ layout: default
 <p>This talk might be of interest to anyone looking into moving to a new platform, or in improving the scalability of an existing application, or even just interested in seeing what Functional Programming is all about, but all within the comfort of a familiar language.</p>
 
 <p>We might even attempt the impossible, and explain what a Monad is!</p>
+
+<p>
+	<strong>Presented at:</strong>
+</p>
+
+
+<p><strong>GTS-X</strong> - Minneapolis, Minnesota, USA - <small>July, 2018</small></p>
+<p><strong><a href="https://www.dddeastanglia.com/">DDD East Anglia</a></strong> - Cambridge, UK<small>October, 2018</small></p>
+<p><strong><a href="https://shropshiredevs.co.uk/">Shropshire Devs</a></strong> - Telford, Shropshire, UK<small>October, 2018</small></p>
+<p><strong><a href="https://www.meetup.com/Smart-Devs-User-Group/events/255292560/">Smart Devs</a></strong> - Hereford, UK<small>December, 2018</small></p>
+<p><strong><a href="https://www.meetup.com/dotnetnotts/events/255664276/">DotNetNotts</a></strong> - Nottingham, UK<small>December, 2018</small></p>
+<p><strong><a href="https://www.meetup.com/Crafty-Coders/events/256566772/">Crafty Coders</a></strong> - Coventry, UK<small>February, 2019</small></p>
+<p><strong><a href="https://www.dotnetoxford.com/posts/2019-03-functional-programming-in-csharp">DotNet Oxford</a></strong> - Oxford, UK<small>March, 2019</small></p>
+<p><strong><a href="https://www.dddnorth.co.uk/Home">DDD North</a></strong> - Hull, UK<small>March, 2019</small></p>
+<p><strong><a href="https://www.meetup.com/Stoke-On-Tech/events/264395386/">Stoke-on-Tech</a></strong> - Stoke-on-Trent, Staffordshire, UK<small>September, 2019</small></p>
+<p><strong><a href="https://www.developerdeveloperdeveloper.com/">DDD</a></strong> - Microsoft Campus, Reading, UK<small>October, 2019</small></p>
+
   </div>
 </div>

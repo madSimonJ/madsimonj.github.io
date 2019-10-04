@@ -21,5 +21,12 @@ layout: default
 
 <p>Our goal is to write code in as few lines as possible that provides the greatest amount of impact. We also want code that's readable, and easily maintainable. We want to think smart, and think...Lazy.</p>
 		
+		<p>
+	<strong>Presented at:</strong>
+</p>
+
+<p><strong><a href="https://www.dddeastanglia.com/">DDD East Anglia</a></strong> - Cambridge, UK<small>September, 2019</small></p>
+
+		
   </div>
 </div>
