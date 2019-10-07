@@ -2570,3 +2570,7 @@ header .top-bar .title-area h1 a {
 	margin:0;
 	height:100%;
 }
+
+.top-bar-section .right {
+	width: max-content;
+}
