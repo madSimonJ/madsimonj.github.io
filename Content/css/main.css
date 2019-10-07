@@ -2573,4 +2573,5 @@ header .top-bar .title-area h1 a {
 
 .top-bar-section .right {
 	width: max-content;
+	padding-right: 5%;
 }
