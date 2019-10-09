@@ -4,7 +4,8 @@ layout: default
 
 <div class="pagepanel down_arrow white">
   <div class="center">
-
+    <h2>GALLERY</h2>
+    <hr/>
 	<img src="/Content/img/gallery/Simon_C.JPG" alt="A Picture of Me" />
 	<br/>
 	<img src="/Content/img/gallery/IMG_4849.JPG" alt="A Picture of Me" />
