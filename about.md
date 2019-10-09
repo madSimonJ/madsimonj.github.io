@@ -14,7 +14,7 @@ layout: default
 	<p>I work predominently in C# and ASP.NET, but I've also worked a lot with NodeJS, JavaScript (ES5 and ES6+), VB6, VB.NET, ASP Classic and a host of other technologies.  In all honesty I'm happy working with anything, so long as there's plenty of work to do.</p>
 	<p>I'm at my happiest with a mug of coffee, a pair of headphones playing some sort of strange music that only I seem to like, and a realy tough code problem to ponder.  Possibly with a few sheets of blank paper to make notes on</p>
 	<p>I've worked previously for Cap Gemini, The Works, ProtoLabs and EuroFins Scientific, but these days I'm a self-employed contractor.  I'd like to imagine myself as a gun for hire, drifting into town, cleaning up all the problems, then riding off into the sunset</p>
-	<p>Aside from coding, I'm a fairly keen amateur musician (my enthusiasm prpbably far outstretches my ability, however) and can often be heard torturing my wife and kids with the aid of a guitar, flute, or some other instrument.  </p>
+	<p>Aside from coding, I'm a fairly keen amateur musician (my enthusiasm probably far outstretches my ability, however) and can often be heard torturing my wife and kids with the aid of a guitar, flute, or some other instrument.  </p>
 	<p>My other interests include Doctor Who, Fighting Fantasy Gamebooks and drinking rather more cofee than is probably healthy for me!</p>
 	<p>If you're interested in offering me a contract, or you have a question following one of my talks, or you just want to chat, check out my <a href="/contactme">Contact Me</a> page.
   </div>
