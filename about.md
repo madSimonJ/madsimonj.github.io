@@ -17,6 +17,6 @@ layout: default
 	<p>I've worked previously for Cap Gemini, The Works, ProtoLabs and EuroFins Scientific, but these days I'm a self-employed contractor.  I'd like to imagine myself as a gun for hire, drifting into town, cleaning up all the problems, then riding off into the sunset</p>
 	<p>Aside from coding, I'm a fairly keen amateur musician (my enthusiasm probably far outstretches my ability, however) and can often be heard torturing my wife and kids with the aid of a guitar, flute, or some other instrument.  </p>
 	<p>My other interests include Doctor Who, Fighting Fantasy Gamebooks and drinking rather more cofee than is probably healthy for me!</p>
-	<p>If you're interested in offering me a contract, or you have a question following one of my talks, or you just want to chat, check out my <a href="/contactme">Contact Me</a> page.</p>
+	<p>If you're interested in offering me a contract, or you have a question following one of my talks, or you just want to chat, check out my <a href="/contact">Contact Me</a> page.</p>
   </div>
 </div>
