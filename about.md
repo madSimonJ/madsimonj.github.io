@@ -6,7 +6,7 @@ layout: default
   <div class="center">
     <h2>ABOUT</h2>
     <hr/>
-	<img src="/Content/img/sp-500.jpg">
+	<img src="/Content/img/sp-500.jpg" alt="A Picture of Me">
 	<hr/>
     <p>Hi!  My name is Simon Painter and I code both professionally and - since it's also my hobby - for fun as well.  I live in a small town in the West Midlands, not far from the Welsh Border, along with my lovely wife and two small children.</p>
 	<p>I've been coding professionally since I graduated from university in 2005, and for a hobbby since I was old enough to read my Dad's ZX Spectrum BASIC manual.  I used to love those Usbourne books which were full of source code, accompanied by flashy 80s-tastic oil paintings of spaceships and monsters, as well as the accompanying source code for a game that, once entered into the machine, was somewhat less visually impressive.</p>
