@@ -4,6 +4,12 @@ layout: default
 
 <div class="pagepanel down_arrow white">
   <div class="center">
+		<h2>CONTACT ME</h2>
+		<hr/>
+  
+		I'm fairly active on social media, and can be reached by any of these means:
+  
+		<br />
 		<nav class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a contact-types">
         <a href="mailto:info@thecodepainter.co.uk" target="_blank">
           <div class="hi-icon fa fa-envelope" aria-hidden="true"></div>
