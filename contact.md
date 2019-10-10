@@ -4,7 +4,7 @@ layout: default
 
 <div class="pagepanel down_arrow white">
   <div class="center">
-		<nav class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+		<nav class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a contact-types">
         <a href="mailto:info@thecodepainter.co.uk" target="_blank">
           <div class="hi-icon fa fa-envelope" aria-hidden="true"></div>
         </a>
