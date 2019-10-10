@@ -2573,5 +2573,9 @@ header .top-bar .title-area h1 a {
 
 .top-bar-section .right {
 	width: max-content;
-	padding-right: 5%;
+	padding-right: 10%;
+}
+
+.contact-types {
+	font-size: xx-large;
 }
