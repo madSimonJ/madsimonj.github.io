@@ -11,16 +11,16 @@ layout: default
   
 		<br />
 		<nav class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a contact-types">
-        <a href="mailto:info@thecodepainter.co.uk" target="_blank">
+        <a href="mailto:info@thecodepainter.co.uk" target="_blank" title="email">
           <div class="hi-icon fa fa-envelope" aria-hidden="true"></div>
         </a>
-        <a href="https://github.com/madSimonJ" target="_blank">
+        <a href="https://github.com/madSimonJ" target="_blank" title="github">
           <div class="hi-icon fa fa-github" aria-hidden="true"></div>
         </a>
-        <a href="https://www.linkedin.com/in/simon-painter-45a05217/" target="_blank">
+        <a href="https://www.linkedin.com/in/simon-painter-45a05217/" target="_blank" title="linkedin">
           <div class="hi-icon fa fa-linkedin" aria-hidden="true"></div>
         </a>
-        <a href="https://twitter.com/madSimonJ" target="_blank">
+        <a href="https://twitter.com/madSimonJ" target="_blank" title="twitter">
           <div class="hi-icon fa fa-twitter" aria-hidden="true"></div>
         </a>
       </nav>
