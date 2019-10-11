@@ -7,7 +7,7 @@ layout: default
     <h2>TALKS</h2>
     <hr>
     <p>
-	I love talking tech, travelling, meeting new people and making a bit of a fool of myself in public.  Speakinng at conferences and user groups gives me the perfect opportunity to endulge all of those interests.  I come up with new talks all the time, and at any given moment there are usually at least two or three new ones in development, but these are the ones I've finished and have been known to subject members of the public to:
+	I love talking tech, travelling, meeting new people and making a bit of a fool of myself in public.  Speaking at conferences and user groups gives me the perfect opportunity to endulge all of those interests.  I come up with new talks all the time, and at any given moment there are usually at least two or three new ones in development, but these are the ones I've finished and have been known to subject members of the public to:
 	</p>
 	
 	<a href="/functionalcsharp"><img src="/Content/img/functional-csharp.png">
