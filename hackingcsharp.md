@@ -25,7 +25,7 @@ layout: default
 	<strong>Presented at:</strong>
 </p>
 
-<p><strong><a href="https://www.dddeastanglia.com/">DDD East Anglia</a></strong> - Cambridge, UK<small>September, 2019</small></p>
+<p><strong><a href="https://www.dddeastanglia.com/">DDD East Anglia</a></strong> - Cambridge, UK - <small>September, 2019</small></p>
 
 		
   </div>

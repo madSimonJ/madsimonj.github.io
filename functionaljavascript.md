@@ -31,6 +31,6 @@ layout: default
 	<strong>Presented at:</strong>
 </p>
 <p><strong>GTS-X</strong> - Minneapolis, Minnesota, USA - <small>July, 2015</small></p>
-<p><strong><a href="https://www.meetup.com/meetup-group-MzfqIqCy/events/xzxnwqyzhbcc/">BrumJS</a></strong> - Birmingham, West Midlands, UK<small>May, 2019</small></p>
+<p><strong><a href="https://www.meetup.com/meetup-group-MzfqIqCy/events/xzxnwqyzhbcc/">BrumJS</a></strong> - Birmingham, West Midlands, UK - <small>May, 2019</small></p>
   </div>
 </div>
