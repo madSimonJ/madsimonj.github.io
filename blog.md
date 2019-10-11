@@ -6,7 +6,7 @@ layout: default
   <div class="center">
 		<h2>THE CODE PAINTER BLOG</h2>
 		<hr/>
-		placeholder
+		Coming soon...
 		
 	</div>
 </div>
