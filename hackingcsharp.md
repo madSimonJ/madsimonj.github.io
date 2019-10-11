@@ -12,7 +12,7 @@ layout: default
 
 <p>One of my pet hates is writing enhancements that involve copying and pasting blocks of code, changing a variable name, then leaving everything else the same. I hate having to consider each and every possible null reference exception, and adding in a whole ton of boilerplate to handle it. I hate having to spent ages jumping back and forth in a legacy codebase, trying to understand what it actually does!</p>
 
-<p>What's the alternative? In this talk, I'll demonstrate a way of working that avoids all this unneccesary work, and gives you more time to do something more productive.</p>
+<p>What's the alternative? In this talk, I'll demonstrate a way of working that avoids all this unnecessary work, and gives you more time to do something more productive.</p>
 
 <p>We'll look at:</p>
 <p><strong>Functional Programming</strong> - what benefits does this increasingly popular paradigm bring us to cut down coding effort</p>
