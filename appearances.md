@@ -10,6 +10,7 @@ layout: default
 		<p>Hacking C#: Development for the Truly Lazy: <strong><a href="https://www.dddeastmidlands.com/">DDD East Midlands</a></strong> - Nottingham, UK - <small>26th October 2019</small></p>
 		<p>Functional Programming in C# - <strong><a href="https://www.meetup.com/dotnetsheff/events/259322674/">DotNet Sheffield</a></strong> - Sheffield, UK - <small>5th November 2019</small></p>
 		<p>Hacking C#: Development for the Truly Lazy: <strong><a href="https://www.meetup.com/The-IT-Crewe/">The IT Crewe</a></strong> - Crewe, UK - <small>19th November 2019</small></p>
+		<p>Hacking C#: Development for the Truly Lazy: <strong><a href="https://shropshiredevs.co.uk/">Shropshire Devs</a></strong> - Telford, UK - <small>16 January 2020</small></p>
 		<p>Hacking C#: Development for the Truly Lazy: <strong><a href="https://www.meetup.com/Birmingham-DotNet-And-Xamarin-User-Group/events/265178106/">Birmingham .NET and Xamarin User Group</a></strong> - Birmingham, UK - <small>28 January 2020</small></p>
 		<p>Hacking C#: Development for the Truly Lazy: <strong><a href="https://dotnetnotts.co/">DotNetNotts</a></strong> - Nottingham, UK - <small>March 2020</small></p>
 		<p>Hacking C#: Development for the Truly Lazy: <strong><a href="https://www.meetup.com/Smart-Devs-User-Group/events/265371131/">SmartDevs</a></strong> - Ludlow, Shropshire, UK - <small>11th May 2020</small></p>
