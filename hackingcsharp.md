@@ -26,6 +26,7 @@ layout: default
 </p>
 
 <p><strong><a href="https://www.dddeastanglia.com/">DDD East Anglia</a></strong> - Cambridge, UK - <small>September, 2019</small></p>
+<p><strong><a href="https://www.dddeastmidlands.com/">DDD East Midlands</a></strong> - Nottingham, UK - <small>26th October 2019</small></p>
 
 		
   </div>
