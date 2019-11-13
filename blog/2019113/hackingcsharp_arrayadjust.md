@@ -6,7 +6,8 @@ layout: default
   <div class="center">
     <h2>HACKING C#: PROGRAMMING FOR THE TRULY LAZY</h2>
 	<h3>Parte the Firste: Adjustable Arrays</h3>
-		
+	<hr/>
+	
 		Welcome to my very first blog entry.  Do please wipe your feet on the way in and try not to leave any mess.  Beers are in the fridge, help yourselves!
 		
 		This is the first in a series of articles I'm planning to write on ways to help you with some of the techniques I've used over the years to accomplish a whole load more in C# with as little effort as I can get away with.  I'm very much of the opinion that life is too short to spend writing the same old boilerplate code, and that every problem only ever needs to be solved once.  Hopefully this article series will open your eyes a little to what can be done with a bit of imagination.
@@ -79,7 +80,3 @@ layout: default
 		
 		It's done using an overloaded version of the Linq Select operator - one which takes an arrow function with two parameters: the current item in the array (of type T, which I've referenced as 'x') and the current index value within the list (an integer, which I've referenced as 'i').  In my function, I've created an arrow function that returns true if the current index location is 2, in which case the Adjust function will replace whatever that item would have been with a "z".
 		
-		
-		
-  </div>
-</div>
