@@ -1,6 +1,13 @@
 title: Simon Painter
 description: Because good code is art.
 show_downloads: true
-google_analytics:
 markdown: kramdown
+lsi: false
+safe: true
+incremental: false
 highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
