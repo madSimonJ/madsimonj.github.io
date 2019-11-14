@@ -16,20 +16,14 @@ layout: default
 		
 		<p>If you've got an array of items referenced as such, then it's trivial to update a specific item, you'd just do it like this:</p>
 		
-		```
-		function test() {
-		  console.log("notice the blank line before this function?");
-		}
-		```
-		
-		```csharp
-		
-			var arrayOfStuff = new[] { "a", "b", "c", "d" };
-			arrayOfStuff[2] = "z";
+		<pre>
+			<code class="csharp">
+				var arrayOfStuff = new[] { "a", "b", "c", "d" };
+				arrayOfStuff[2] = "z";
 
-			// arrayOfStuff = { "a", "b", "z", "d" }
-		
-		```
+				// arrayOfStuff = { "a", "b", "z", "d" }			
+			</code>
+		</pre>		
 
 		<p>Easy, right?  Here's the thing though - an IEnumerable isn't an array, nor is it even data - it's a collection of function calls that tell you how to get data.  A subject for another day is methods you can use to crack open an IEnumerable and create your own custom behaviour.  The problem we face if we want to amend the item at index 2, like we did above, is that the IEnumerable doesn't necessarily know where the item as index position 2 <strong>is</strong> or even if there <strong>is</strong> an item 2, until it starts making function calls to iterate through the Enumerable.  How then do we amend our value?</p>
 		
