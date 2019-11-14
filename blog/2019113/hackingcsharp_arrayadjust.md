@@ -33,7 +33,7 @@ layout: default
 			<pre>
 				<code class="cs hljs">
 			
-				public static IEnumerable<string> Adjust(IEnumerable<string> oldArray, int indexPos, string replacement)
+				public static IEnumerable&lt;string&gt; Adjust(IEnumerable&lt;string&gt; oldArray, int indexPos, string replacement)
 				{
 
 					var oldArrayAsArray = oldArray.ToArray();
