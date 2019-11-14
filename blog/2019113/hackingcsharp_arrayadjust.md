@@ -62,9 +62,9 @@ layout: default
 			<pre>
 				<code class="cs hljs">
 			
-				public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func<AdjustSelector&lt;T&gt;, Func&lt;T, int, bool&gt;&gt; selector, T replacement) =>
-					@this.Adjust(selector(new AdjustSelector&lt;T&gt;()), replacement);
-				
+	public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func<AdjustSelector&lt;T&gt;, Func&lt;T, int, bool&gt;&gt; selector, T replacement) =>
+		@this.Adjust(selector(new AdjustSelector&lt;T&gt;()), replacement);
+	
 				</code>
 			</pre>	
 			
@@ -73,11 +73,11 @@ layout: default
 			<pre>
 				<code class="cs hljs">
 			
-				var arrayOfStuff = new[] { "a", "b", "c", "d" };
-				var array2 = stringArray.Adjust((x, i) => i == 2, "z");
+	var arrayOfStuff = new[] { "a", "b", "c", "d" };
+	var array2 = stringArray.Adjust((x, i) => i == 2, "z");
 
-				// arrayOfStuff = { "a", "b", "z", "d" }
-			}
+	// arrayOfStuff = { "a", "b", "z", "d" }
+
 				
 				</code>
 			</pre>	
@@ -86,4 +86,3 @@ layout: default
 			<p>So what have we done here?  We've created a new IEnumerable in the Adjust extension method, one which holds the original Enumerable as a local variable - referenced as @this.  Because we're trading an Enumerable for an Enumerable, nothing is actually evaluated properly until we enumerate through the values - or call ToArray/ToList - later in the code.  We've put a filter layer over the top of the original layer, which will mostly just pass through the original value for each item we enumerate through - unless certain criteria are true, in which case the replacement value is returned instead of what we'd otherwise have returned.</p>
 			
 			<p>It's done using an overloaded version of the Linq Select operator - one which takes an arrow function with two parameters: the current item in the array (of type T, which I've referenced as 'x') and the current index value within the list (an integer, which I've referenced as 'i').  In my function, I've created an arrow function that returns true if the current index location is 2, in which case the Adjust function will replace whatever that item would have been with a "z".</p>
-	</div>
