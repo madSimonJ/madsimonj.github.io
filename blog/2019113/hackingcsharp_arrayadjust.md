@@ -16,6 +16,12 @@ layout: default
 		
 		<p>If you've got an array of items referenced as such, then it's trivial to update a specific item, you'd just do it like this:</p>
 		
+		```
+		function test() {
+		  console.log("notice the blank line before this function?");
+		}
+		```
+		
 		```csharp
 		
 			var arrayOfStuff = new[] { "a", "b", "c", "d" };
