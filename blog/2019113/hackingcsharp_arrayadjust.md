@@ -33,14 +33,14 @@ layout: default
 			<pre>
 				<code class="cs hljs">
 			
-				public static IEnumerable&lt;string&gt; Adjust(IEnumerable&lt;string&gt; oldArray, int indexPos, string replacement)
-				{
+	public static IEnumerable&lt;string&gt; Adjust(IEnumerable&lt;string&gt; oldArray, int indexPos, string replacement)
+	{
 
-					var oldArrayAsArray = oldArray.ToArray();
-					oldArrayAsArray[indexPos] = replacement;
-					return oldArrayAsArray;
+		var oldArrayAsArray = oldArray.ToArray();
+		oldArrayAsArray[indexPos] = replacement;
+		return oldArrayAsArray;
 
-				}
+	}
 			
 				</code>
 			</pre>	
@@ -62,8 +62,8 @@ layout: default
 			<pre>
 				<code class="cs hljs">
 			
-				public static IEnumerable<T> Adjust<T>(this IEnumerable<T> @this, Func<AdjustSelector<T>, Func<T, int, bool>> selector, T replacement) =>
-					@this.Adjust(selector(new AdjustSelector<T>()), replacement);
+				public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func<AdjustSelector&lt;T&gt;, Func&lt;T, int, bool&gt;&gt; selector, T replacement) =>
+					@this.Adjust(selector(new AdjustSelector&lt;T&gt;()), replacement);
 				
 				</code>
 			</pre>	
