@@ -30,7 +30,8 @@ layout: default
 			
 			<p>The sort've method I usually see that people deploy in production is something like this:</P>
 			
-			```csharp
+			<pre>
+				<code class="csharp">
 			
 				public static IEnumerable<string> Adjust(IEnumerable<string> oldArray, int indexPos, string replacement)
 				{
@@ -41,7 +42,8 @@ layout: default
 
 				}
 			
-			```
+				</code>
+			</pre>	
 		
 			<p>I don't like this approach for several reasons.  </p>
 			
@@ -57,16 +59,19 @@ layout: default
 			
 			<p>Step 1 - a new extension method to write and stick in an innocuous class somewhere at the back of your codebase:</p>
 			
-			```csharp
+			<pre>
+				<code class="csharp">
 			
 				public static IEnumerable<T> Adjust<T>(this IEnumerable<T> @this, Func<AdjustSelector<T>, Func<T, int, bool>> selector, T replacement) =>
 					@this.Adjust(selector(new AdjustSelector<T>()), replacement);
 				
-			```
+				</code>
+			</pre>	
 			
 			<p>Step 2 - Call it instead of writing a new function to update your array:</p>
 			
-			```csharp
+			<pre>
+				<code class="csharp">
 			
 				var arrayOfStuff = new[] { "a", "b", "c", "d" };
 				var array2 = stringArray.Adjust((x, i) => i == 2, "z");
@@ -74,7 +79,8 @@ layout: default
 				// arrayOfStuff = { "a", "b", "z", "d" }
 			}
 				
-			```
+				</code>
+			</pre>	
 			
 			
 			<p>So what have we done here?  We've created a new IEnumerable in the Adjust extension method, one which holds the original Enumerable as a local variable - referenced as @this.  Because we're trading an Enumerable for an Enumerable, nothing is actually evaluated properly until we enumerate through the values - or call ToArray/ToList - later in the code.  We've put a filter layer over the top of the original layer, which will mostly just pass through the original value for each item we enumerate through - unless certain criteria are true, in which case the replacement value is returned instead of what we'd otherwise have returned.</p>
