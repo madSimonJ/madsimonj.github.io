@@ -18,7 +18,7 @@ layout: default
 			<p>If you've got an array of items referenced as such, then it's trivial to update a specific item, you'd just do it like this:</p>
 			
 			<pre>
-				<code class="csharp">
+				<code class="cs hljs">
 	var arrayOfStuff = new[] { "a", "b", "c", "d" };
 	arrayOfStuff[2] = "z";
 
@@ -31,7 +31,7 @@ layout: default
 			<p>The sort've method I usually see that people deploy in production is something like this:</P>
 			
 			<pre>
-				<code class="csharp">
+				<code class="cs hljs">
 			
 				public static IEnumerable<string> Adjust(IEnumerable<string> oldArray, int indexPos, string replacement)
 				{
@@ -60,7 +60,7 @@ layout: default
 			<p>Step 1 - a new extension method to write and stick in an innocuous class somewhere at the back of your codebase:</p>
 			
 			<pre>
-				<code class="csharp">
+				<code class="cs hljs">
 			
 				public static IEnumerable<T> Adjust<T>(this IEnumerable<T> @this, Func<AdjustSelector<T>, Func<T, int, bool>> selector, T replacement) =>
 					@this.Adjust(selector(new AdjustSelector<T>()), replacement);
@@ -71,7 +71,7 @@ layout: default
 			<p>Step 2 - Call it instead of writing a new function to update your array:</p>
 			
 			<pre>
-				<code class="csharp">
+				<code class="cs hljs">
 			
 				var arrayOfStuff = new[] { "a", "b", "c", "d" };
 				var array2 = stringArray.Adjust((x, i) => i == 2, "z");
