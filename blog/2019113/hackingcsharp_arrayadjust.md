@@ -28,8 +28,7 @@ layout: default
 
 			<p>Easy, right?  Here's the thing though - an IEnumerable isn't an array, nor is it even data - it's a collection of function calls that tell you how to get data.  Let me show you what I mean:</p>
 			
-			<object data="array-a.svg" type="image/svg+xml" viewBox="0 0 100 100">
-			</object>
+			<img src="array-a.svg" width="50%" height="50%">
 			
 			<p>An ordinary array looks like the picture above, a simple collection of data.  And if we wanted to replace the item at Index=2 with "z", we'd just assign that value in directly to array[2].
 			
