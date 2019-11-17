@@ -26,7 +26,14 @@ layout: default
 				</code>
 			</pre>		
 
-			<p>Easy, right?  Here's the thing though - an IEnumerable isn't an array, nor is it even data - it's a collection of function calls that tell you how to get data.  A subject for another day is methods you can use to crack open an IEnumerable and create your own custom behaviour.  The problem we face if we want to amend the item at index 2, like we did above, is that the IEnumerable doesn't necessarily know where the item as index position 2 <strong>is</strong> or even if there <strong>is</strong> an item 2, until it starts making function calls to iterate through the Enumerable.  How then do we amend our value?</p>
+			<p>Easy, right?  Here's the thing though - an IEnumerable isn't an array, nor is it even data - it's a collection of function calls that tell you how to get data.  Let me show you what I mean:</p>
+			
+			<object data="arra-a.svg" type="image/svg+xml">
+			</object>
+			
+			<p>An ordinary array looks like the picture above, a simple collection of data.  And if we wanted to replace the item at Index=2 with "z", we'd just assign that value in directly to array[2].
+			
+			<p>A subject for another day is methods you can use to crack open an IEnumerable and create your own custom behaviour.  The problem we face if we want to amend the item at index 2, like we did above, is that the IEnumerable doesn't necessarily know where the item as index position 2 <strong>is</strong> or even if there <strong>is</strong> an item 2, until it starts making function calls to iterate through the Enumerable.  How then do we amend our value?</p>
 			
 			<p>The sort've method I usually see that people deploy in production is something like this:</P>
 			
