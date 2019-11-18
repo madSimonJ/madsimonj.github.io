@@ -2579,3 +2579,7 @@ header .top-bar .title-area h1 a {
 .contact-types {
 	font-size: xx-large;
 }
+
+.svg-container {
+	text-align: center
+}
