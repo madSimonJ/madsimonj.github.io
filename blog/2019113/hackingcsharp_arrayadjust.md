@@ -34,6 +34,18 @@ layout: default
 			
 			<p>An ordinary array looks like the picture above, a simple collection of data.  And if we wanted to replace the item at Index=2 with "z", we'd just assign that value in directly to array[2].
 			
+			<p>An Enumerable on the otherhand looks more like this:</p>
+			
+			<div class="svg-container">
+				<img src="array-b.svg" width="50%" height="50%" style="text-align: center">
+			</div>
+
+			<p>It's more like a box with two buttons - get the current item, and move to the next.  It doesn't necessarily know how many items there are, where they are, or anything else about them until it has iterated over to look.  In our simple example, above, there's just an array at the back of it, which isn't much different in principle to the original array diagram.  But an Enumerable doesn't necessarily just point to a simple data structure.  It could contain functions:</p>
+
+			<div class="svg-container">
+				<img src="array-c.svg" width="50%" height="50%" style="text-align: center">
+			</div>
+
 			<p>A subject for another day is methods you can use to crack open an IEnumerable and create your own custom behaviour.  The problem we face if we want to amend the item at index 2, like we did above, is that the IEnumerable doesn't necessarily know where the item as index position 2 <strong>is</strong> or even if there <strong>is</strong> an item 2, until it starts making function calls to iterate through the Enumerable.  How then do we amend our value?</p>
 			
 			<p>The sort've method I usually see that people deploy in production is something like this:</P>
