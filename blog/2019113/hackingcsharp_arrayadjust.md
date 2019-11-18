@@ -72,6 +72,14 @@ layout: default
 			
 			<p>Finally, the code just doesn't look very elegant. </p>
 			
+			<p>What you're effectively doing is this:</p>
+			
+			<div class="svg-container">
+				<img src="array-d.svg" width="50%" height="50%" style="text-align: center">
+			</div>
+			
+			<p>You're starting with one Enumerable, reading through it so that you have a solid set of values.  Creating a new array based on it, then returning that with a new enumerable attached.  That's almost twice the amount of work being done in order to amend a single value from the whole array.  That's trivial with the little array I have created here, but what if there were thousands of values in it?</p>
+			
 			<p>C# is an amazing language. I've been working with it since not long after it was created, and I'm a big fan.  It has its limitations though, and I don't think we should feel the need to write boilerplate code like this to work around those limitations.  There is, after all, always a better way.</p>
 			
 			<p>This is what I'd consider doing instead:</p>
@@ -102,6 +110,12 @@ layout: default
 			</pre>	
 			
 			
-			<p>So what have we done here?  We've created a new IEnumerable in the Adjust extension method, one which holds the original Enumerable as a local variable - referenced as @this.  Because we're trading an Enumerable for an Enumerable, nothing is actually evaluated properly until we enumerate through the values - or call ToArray/ToList - later in the code.  We've put a filter layer over the top of the original layer, which will mostly just pass through the original value for each item we enumerate through - unless certain criteria are true, in which case the replacement value is returned instead of what we'd otherwise have returned.</p>
+			<p>So what have we done here?  We've created a new IEnumerable in the Adjust extension method, one which refernces the original Enumerable as if it were a local variable - named here as @this.  Because we're trading an Enumerable for an Enumerable, nothing is actually evaluated properly until we enumerate through the values - or call ToArray/ToList - later in the code.  We've put a filter layer over the top of the original layer, which will mostly just pass through the original value for each item we enumerate through - unless certain criteria are true, in which case the replacement value is returned instead of what we'd otherwise have returned.</p>
+			
+			<p>The diagram looks a bit like this:</p>
+			
+			<div class="svg-container">
+				<img src="array-e.svg" width="50%" height="50%" style="text-align: center">
+			</div>
 			
 			<p>It's done using an overloaded version of the Linq Select operator - one which takes an arrow function with two parameters: the current item in the array (of type T, which I've referenced as 'x') and the current index value within the list (an integer, which I've referenced as 'i').  In my function, I've created an arrow function that returns true if the current index location is 2, in which case the Adjust function will replace whatever that item would have been with a "z".</p>
