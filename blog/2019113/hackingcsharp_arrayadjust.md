@@ -4,11 +4,10 @@ layout: default
 
 <div class="pagepanel down_arrow white">
   <div class="center">
-	<div style="text-align: left">
 		<h2>HACKING C#: PROGRAMMING FOR THE TRULY LAZY</h2>
 		<h3>Parte the Firste: Adjustable Arrays</h3>
 		<hr/>
-		
+		<div style="text-align: left">		
 			<p>Welcome to my very first blog entry.  Do please wipe your feet on the way in and try not to leave any mess.  Beers are in the fridge, help yourselves!</p>
 			
 			<p>This is the first in a series of articles I'm planning to write on ways to help you with some of the techniques I've used over the years to accomplish a whole load more in C# with as little effort as I can get away with.  I'm very much of the opinion that life is too short to spend writing the same old boilerplate code, and that every problem only ever needs to be solved once.  Hopefully this article series will open your eyes a little to what can be done with a bit of imagination.</p>
@@ -37,13 +36,13 @@ layout: default
 			<p>An Enumerable on the otherhand looks more like this:</p>
 			
 			<div class="svg-container">
-				<img src="array-b.svg" width="50%" height="50%" style="text-align: center">
+				<img src="array-c.svg" width="50%" height="50%" style="text-align: center">
 			</div>
 
 			<p>It's more like a box with two buttons - get the current item, and move to the next.  It doesn't necessarily know how many items there are, where they are, or anything else about them until it has iterated over to look.  In our simple example, above, there's just an array at the back of it, which isn't much different in principle to the original array diagram.  But an Enumerable doesn't necessarily just point to a simple data structure.  It could contain functions:</p>
 
 			<div class="svg-container">
-				<img src="array-c.svg" width="50%" height="50%" style="text-align: center">
+				<img src="array-b.svg" width="50%" height="50%" style="text-align: center">
 			</div>
 
 			<p>A subject for another day is methods you can use to crack open an IEnumerable and create your own custom behaviour.  The problem we face if we want to amend the item at index 2, like we did above, is that the IEnumerable doesn't necessarily know where the item as index position 2 <strong>is</strong> or even if there <strong>is</strong> an item 2, until it starts making function calls to iterate through the Enumerable.  How then do we amend our value?</p>
