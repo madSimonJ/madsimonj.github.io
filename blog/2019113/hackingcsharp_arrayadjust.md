@@ -112,7 +112,7 @@ layout: default
 			</pre>	
 			
 			
-			<p>So what have we done here?  We've created a new IEnumerable in the Adjust extension method, one which refernces the original Enumerable as if it were a local variable - named here as @this.  Because we're trading an Enumerable for an Enumerable, nothing is actually evaluated properly until we enumerate through the values - or call ToArray/ToList - later in the code.  We've put a filter layer over the top of the original layer, which will mostly just pass through the original value for each item we enumerate through - unless certain criteria are true, in which case the replacement value is returned instead of what we'd otherwise have returned.</p>
+			<p>So what have we done here?  We've created a new IEnumerable in the Adjust extension method, one which references the original Enumerable as if it were a local variable - named here as @this.  Because we're trading an Enumerable for an Enumerable, nothing is actually evaluated properly until we enumerate through the values - or call ToArray/ToList - later in the code.  We've put a filter layer over the top of the original layer, which will mostly just pass through the original value for each item we enumerate through - unless certain criteria are true, in which case the replacement value is returned instead of what we'd otherwise have returned.</p>
 			
 			<p>The diagram looks a bit like this:</p>
 			
