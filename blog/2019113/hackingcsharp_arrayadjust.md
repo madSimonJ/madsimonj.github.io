@@ -149,7 +149,16 @@ layout: default
 			</code>			
 		</pre>
 			
-			<p>I hope you'll agree that my method is significantly easier to read, and entirely dynamic!</p>
+			<p>I hope you'll agree that my method is significantly easier to read:</p>
 			
-			<p>Watch this space for more articles in this series in which I'll be demonstrating other novel ways to malform C# to accomplish what you want in an easier (i.e. lazier) way.</p>
+			<pre>
+				<code class="cs hljs">
+	public IEnumerable&lt;T&gt; AdjustArray(IEnumerable&lt;T&gt; input) =>
+		input.Adjust((x, i) => i == 1, "x")
+			 .Adjust((x, i) => i == 2, "y")
+			 .Adjust((x, i) => i == 3, "z")
+			</code>			
+		</pre>
+			
+			<p>Watch this space for more articles in this series in which I'll be demonstrating other novel ways to malform C# to accomplish what you want in an easier (i.e. lazier) way.  Part two will look at a method to make functions like the Adjust even more compact.</p>
 			
