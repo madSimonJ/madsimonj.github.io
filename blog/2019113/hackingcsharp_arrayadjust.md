@@ -112,7 +112,15 @@ layout: default
 			
 			<p>So what have we done here?  We've created a new IEnumerable in the Adjust extension method, one which refernces the original Enumerable as if it were a local variable - named here as @this.  Because we're trading an Enumerable for an Enumerable, nothing is actually evaluated properly until we enumerate through the values - or call ToArray/ToList - later in the code.  We've put a filter layer over the top of the original layer, which will mostly just pass through the original value for each item we enumerate through - unless certain criteria are true, in which case the replacement value is returned instead of what we'd otherwise have returned.</p>
 			
-			<p>The diagram looks a bit like this:</p>
+			<p>The function at a symbolic level looks like this:</p>
+			
+			<div class="svg-container">
+				<img src="array-f.svg" width="50%" height="50%" style="text-align: center">
+			</div>
+			
+			<p>We've taken two things as inputs - a replacement string (i.e. a "z" string) and a predicate (fancy term for a function that will tell you whether a condition has been met - in our case "i ==2" - i.e. we're on the third element (index=2) of the array), and they we merge them together into a new function that runs the predicate, and either returns the replacement string ("z") if it's true, or the unchanged original input if false.
+			
+			<p>The whole process of running a replacement looks like this:</p>
 			
 			<div class="svg-container">
 				<img src="array-e.svg" width="50%" height="50%" style="text-align: center">
