@@ -77,7 +77,7 @@ layout: default
 			<p>What you're effectively doing is this:</p>
 			
 			<div class="svg-container">
-				<img src="array-d.svg" width="50%" height="50%" style="text-align: center">
+				<img src="array-d.svg" width="80%" style="text-align: center">
 			</div>
 			
 			<p>You're starting with one Enumerable, reading through it so that you have a solid set of values.  Creating a new array based on it, then returning that with a new enumerable attached.  That's almost twice the amount of work being done in order to amend a single value from the whole array.  That's trivial with the little array I have created here, but what if there were thousands of values in it?</p>
@@ -117,7 +117,7 @@ layout: default
 			<p>The function at a symbolic level looks like this:</p>
 			
 			<div class="svg-container">
-				<img src="array-f.svg" width="50%" height="50%" style="text-align: center">
+				<img src="array-f.svg" width="80%" style="text-align: center">
 			</div>
 			
 			<p>We've taken two things as inputs - a replacement string (i.e. a "z" string) and a predicate (fancy term for a function that will tell you whether a condition has been met - in our case "i ==2" - i.e. we're on the third element (index=2) of the array), and they we merge them together into a new function that runs the predicate, and either returns the replacement string ("z") if it's true, or the unchanged original input if false.
@@ -128,7 +128,7 @@ layout: default
 			<p>Using this method, you can now string as many alternations to the original array (or whatever other data source it might be) onto the original Enumerable without every having to waste processor time enumerating it more than once.  This way we're not only saving computer time, but also writing code that's more consise, easier to read and easier to maintain.  If you were to run "Adjust" - say - three times, instead of creating multiple arrays with slightly different values, you'd actually end up with something like this:</p>
 			
 			<div class="svg-container">
-				<img src="array-g.svg" width="50%" height="50%" style="text-align: center">
+				<img src="array-g.svg" width="80%" style="text-align: center">
 			</div>
 			
 			<p>Each call to the Adjust function effectively creates another filter layer between the Enumerator and the actual array.  When the "current" value is requested by the enumerator, then a value will be requested from the array, and passed through each Adjust function in turn - to see whether it should be returned as-is, or replaced with something else.  </p>
