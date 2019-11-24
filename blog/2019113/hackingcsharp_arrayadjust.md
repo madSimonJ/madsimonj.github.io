@@ -136,9 +136,9 @@ layout: default
 		{
 			if(i == 1)
 				outputArray[i] = "x";
-			ElseIf(i == 2)
+			else if(i == 2)
 				outputArray[i] = "y";
-			ElseIf(i == 3)
+			else if(i == 3)
 				outputArray[i] = "z";
 			else
 				outputArray[i] = inputArray[i];
