@@ -18,12 +18,10 @@ layout: default
 			
 			<pre>
 				<code class="cs hljs">
-	
 	var arrayOfStuff = new[] { "a", "b", "c", "d" };
 	arrayOfStuff[2] = "z";
 
 	// arrayOfStuff = { "a", "b", "z", "d" }			
-	
 				</code>
 			</pre>		
 
@@ -55,7 +53,6 @@ layout: default
 			
 			<pre>
 				<code class="cs hljs">
-			
 	public static IEnumerable&lt;string&gt; Adjust(IEnumerable&lt;string&gt; oldArray, int indexPos, string replacement)
 	{
 
@@ -64,7 +61,6 @@ layout: default
 		return oldArrayAsArray;
 
 	}
-			
 				</code>
 			</pre>	
 		
@@ -92,23 +88,19 @@ layout: default
 			
 			<pre>
 				<code class="cs hljs">
-			
 	public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func<AdjustSelector&lt;T&gt;, Func&lt;T, int, bool&gt;&gt; selector, T replacement) =>
 		@this.Adjust(selector(new AdjustSelector&lt;T&gt;()), replacement);
-	
 				</code>
 			</pre>	
-			
+		
 			<p>Step 2 - Call it instead of writing a new function to update your array:</p>
 			
 			<pre>
 				<code class="cs hljs">
-			
 	var arrayOfStuff = new[] { "a", "b", "c", "d" };
 	var array2 = stringArray.Adjust((x, i) => i == 2, "z");
 
 	// arrayOfStuff = { "a", "b", "z", "d" }
-
 				</code>
 			</pre>	
 			
@@ -136,7 +128,6 @@ layout: default
 			
 			<pre>
 				<code class="cs hljs">
-			
 	public IEnumerable&lt;T&gt; AdjustArray(IEnumerable&lt;T&gt; input)
 	{
 		var inputArray = input.ToArray();
@@ -155,7 +146,6 @@ layout: default
 		
 		return outputArray;
 	}
-	
 			</code>			
 		</pre>
 			
