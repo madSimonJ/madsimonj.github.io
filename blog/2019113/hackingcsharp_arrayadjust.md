@@ -122,15 +122,16 @@ layout: default
 			
 			<p>We've taken two things as inputs - a replacement string (i.e. a "z" string) and a predicate (fancy term for a function that will tell you whether a condition has been met - in our case "i ==2" - i.e. we're on the third element (index=2) of the array), and they we merge them together into a new function that runs the predicate, and either returns the replacement string ("z") if it's true, or the unchanged original input if false.
 			
-			<p>The whole process of running a replacement looks like this:</p>
+			<p>:</p>
+			
+			
+			<p>Using this method, you can now string as many alternations to the original array (or whatever other data source it might be) onto the original Enumerable without every having to waste processor time enumerating it more than once.  This way we're not only saving computer time, but also writing code that's more consise, easier to read and easier to maintain.  If you were to run "Adjust" - say - three times, instead of creating multiple arrays with slightly different values, you'd actually end up with something like this:</p>
 			
 			<div class="svg-container">
-				<img src="array-e.svg" width="50%" height="50%" style="text-align: center">
+				<img src="array-g.svg" width="50%" height="50%" style="text-align: center">
 			</div>
 			
-			<p>It's done using an overloaded version of the Linq Select operator - one which takes an arrow function with two parameters: the current item in the array (of type T, which I've referenced as 'x') and the current index value within the list (an integer, which I've referenced as 'i').  In my function, I've created an arrow function that returns true if the current index location is 2, in which case the Adjust function will replace whatever that item would have been with a "z".</p>
-			
-			<p>Using this method, you can now string as many alternations to the original array (or whatever other data source it might be) onto the original Enumerable without every having to waste processor time enumerating it more than once.  This way we're not only saving computer time, but also writing code that's more consise, easier to read and easier to maintain.</p>
+			<p>Each call to the Adjust function effectively creates another filter layer between the Enumerator and the actual array.  When the "current" value is requested by the enumerator, then a value will be requested from the array, and passed through each Adjust function in turn - to see whether it should be returned as-is, or replaced with something else.  </p>
 			
 			<p>Watch this space for more articles in this series in which I'll be demonstrating other novel ways to malform C# to accomplish what you want in an easier (i.e. lazier) way.</p>
 			
