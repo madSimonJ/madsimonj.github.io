@@ -33,7 +33,7 @@ layout: default
 			
 			<p>An ordinary array looks like the picture above, a simple collection of data.  And if we wanted to replace the item at Index=2 with "z", we'd just assign that value in directly to array[2].
 			
-			<p>An Enumerable on the otherhand looks more like this:</p>
+			<p>An Enumerable on the other hand looks more like this:</p>
 			
 			<div class="svg-container">
 				<img src="array-c.svg" width="50%" height="50%" style="text-align: center">
@@ -45,7 +45,9 @@ layout: default
 				<img src="array-b.svg" width="50%" height="50%" style="text-align: center">
 			</div>
 
-			<p>A subject for another day is methods you can use to crack open an IEnumerable and create your own custom behaviour.  The problem we face if we want to amend the item at index 2, like we did above, is that the IEnumerable doesn't necessarily know where the item as index position 2 <strong>is</strong> or even if there <strong>is</strong> an item 2, until it starts making function calls to iterate through the Enumerable.  How then do we amend our value?</p>
+			<p>These might be simple data converting functions, or they could be expensive database or I/O operations that will each take time to execute.  The beauty of an Enumerable is that you can define it at the beginning of a function, but until an item from an Enumerable is requested for the first time to use in something else, those functions won't be executed at all.  Also, if logic later on would prevent the use of the data in the Enumerable, then it will actually <strong>never</strong> execute those functions, saving us time and resources we simply don't need to use up.  In an ideal world, we'll leave data defined behind an Enumerable for as long as possible, so that we only access it as and when it's needed and not before.  A subject for another day is methods you can use to crack open an IEnumerable and create your own custom behaviour.  </p>
+
+			<p>The problem we face if we want to amend the item at index 2, like we did at the start of this article, is that the Enumerable doesn't necessarily know where the item as index position 2 <strong>is</strong> or even if there <strong>is</strong> an item 2, until it starts making function calls to iterate through the data.  How then do we amend our value without losing all the benefits of the Lazy Evaluation that an Enumerable gives us?</p>
 			
 			<p>The sort've method I usually see that people deploy in production is something like this:</P>
 			
@@ -110,7 +112,7 @@ layout: default
 			</pre>	
 			
 			
-			<p>So what have we done here?  We've created a new IEnumerable in the Adjust extension method, one which refernces the original Enumerable as if it were a local variable - named here as @this.  Because we're trading an Enumerable for an Enumerable, nothing is actually evaluated properly until we enumerate through the values - or call ToArray/ToList - later in the code.  We've put a filter layer over the top of the original layer, which will mostly just pass through the original value for each item we enumerate through - unless certain criteria are true, in which case the replacement value is returned instead of what we'd otherwise have returned.</p>
+			<p>So what have we done here?  We've created a new IEnumerable in the Adjust extension method, one which references the original Enumerable as if it were a local variable - named here as @this.  Because we're trading an Enumerable for an Enumerable, nothing is actually evaluated properly until we enumerate through the values - or call ToArray/ToList - later in the code.  We've put a filter layer over the top of the original layer, which will mostly just pass through the original value for each item we enumerate through - unless certain criteria are true, in which case the replacement value is returned instead of what we'd otherwise have returned.</p>
 			
 			<p>The function at a symbolic level looks like this:</p>
 			
@@ -127,3 +129,8 @@ layout: default
 			</div>
 			
 			<p>It's done using an overloaded version of the Linq Select operator - one which takes an arrow function with two parameters: the current item in the array (of type T, which I've referenced as 'x') and the current index value within the list (an integer, which I've referenced as 'i').  In my function, I've created an arrow function that returns true if the current index location is 2, in which case the Adjust function will replace whatever that item would have been with a "z".</p>
+			
+			<p>Using this method, you can now string as many alternations to the original array (or whatever other data source it might be) onto the original Enumerable without every having to waste processor time enumerating it more than once.  This way we're not only saving computer time, but also writing code that's more consise, easier to read and easier to maintain.</p>
+			
+			<p>Watch this space for more articles in this series in which I'll be demonstrating other novel ways to malform C# to accomplish what you want in an easier (i.e. lazier) way.</p>
+			
