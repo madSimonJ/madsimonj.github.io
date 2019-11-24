@@ -10,7 +10,7 @@ layout: default
 		<div style="text-align: left">		
 			<p>Welcome to my very first blog entry.  Do please wipe your feet on the way in and try not to leave any mess.  Beers are in the fridge, help yourselves!</p>
 			
-			<p>This is the first in a series of articles I'm planning to write on ways to help you with some of the techniques I've used over the years to accomplish a whole load more in C# with as little effort as I can get away with.  I'm very much of the opinion that life is too short to spend writing the same old boilerplate code, and that every problem only ever needs to be solved once.  Hopefully this article series will open your eyes a little to what can be done with a bit of imagination.</p>
+			<p>This is the first in a series of articles I'm planning to write on some of the techniques I've used over the years to accomplish a whole load more in C# with as little effort as I can get away with.  I'm very much of the opinion that life is too short to spend writing the same old boilerplate code, and that every problem only ever needs to be solved once.  Hopefully this article series will open your eyes a little to what can be done with a bit of imagination.</p>
 			
 			<p>A common enough scenario you might encounter is that - given an array - you need to adjust one of its records.  If you're following best practice, then you'll be referencing arrays between functions in their most abstract form - the IEnumerable&lt;T&gt; - and if not, why not? </p>
 			
@@ -39,15 +39,15 @@ layout: default
 				<img src="array-c.svg" width="50%" height="50%" style="text-align: center">
 			</div>
 
-			<p>It's more like a box with two buttons - get the current item, and move to the next.  It doesn't necessarily know how many items there are, where they are, or anything else about them until it has iterated over to look.  In our simple example, above, there's just an array at the back of it, which isn't much different in principle to the original array diagram.  But an Enumerable doesn't necessarily just point to a simple data structure.  It could contain functions:</p>
+			<p>It's more like a box with two buttons - "get the current item", and "move to the next item".  It doesn't necessarily know how many items there are, where they are, or anything else about them until it has iterated over to look.  In our simple example, above, there's just an array at the back of it, which isn't much different in principle to the original array diagram.  But an Enumerable doesn't necessarily just point to a simple data structure.  It could contain functions:</p>
 
 			<div class="svg-container">
 				<img src="array-b.svg" width="50%" height="50%" style="text-align: center">
 			</div>
 
-			<p>These might be simple data converting functions, or they could be expensive database or I/O operations that will each take time to execute.  The beauty of an Enumerable is that you can define it at the beginning of a function, but until an item from an Enumerable is requested for the first time to use in something else, those functions won't be executed at all.  Also, if logic later on would prevent the use of the data in the Enumerable, then it will actually <strong>never</strong> execute those functions, saving us time and resources we simply don't need to use up.  In an ideal world, we'll leave data defined behind an Enumerable for as long as possible, so that we only access it as and when it's needed and not before.  A subject for another day is methods you can use to crack open an IEnumerable and create your own custom behaviour.  </p>
+			<p>These might be simple data converting functions, or they could be expensive database or I/O operations that will each take time to execute.  The beauty of an Enumerable is that you can define it at the beginning of a function, but until an item from an Enumerable is requested for the first time to use in something else, those functions won't be executed at all.  Also, if logic later on would prevent the use of the data in the Enumerable, then it will actually <strong>never</strong> execute those functions, saving us time and resources we simply don't need to use up.  In an ideal world, we'll leave data defined behind an Enumerable for as long as possible, so that we only access it as and when it's needed and not before.</p>
 
-			<p>The problem we face if we want to amend the item at index 2, like we did at the start of this article, is that the Enumerable doesn't necessarily know where the item as index position 2 <strong>is</strong> or even if there <strong>is</strong> an item 2, until it starts making function calls to iterate through the data.  How then do we amend our value without losing all the benefits of the Lazy Evaluation that an Enumerable gives us?</p>
+			<p>The problem we face if we want to amend the item at index 2, like we did at the start of this article, is that the Enumerable doesn't necessarily know where the item as index position 2 is or even if there <strong>is</strong> an item 2, until it starts making function calls to iterate through the data.  How then do we amend our value without losing all the benefits of the Lazy Evaluation that an Enumerable gives us?</p>
 			
 			<p>The sort've method I usually see that people deploy in production is something like this:</P>
 			
@@ -66,7 +66,7 @@ layout: default
 		
 			<p>I don't like this approach for several reasons.  </p>
 			
-			<p>Firstly, because we've had to crack open the IEnumerable early - potentially before we've finished all the other operations we need to apply to it - and we're returning a new Enumerable based on a modified version of the data from the original.  That's work the application would be better of delaying as late as possible, in case other changes negate the need for this operation, or in other cases there might be an expensive operation required to gather the data which we'd rather save until later.  It's not just me that wants to be lazy when coding, even the application itself ought to be able to work however it wants to!</p>
+			<p>Firstly, because we've had to crack open the Enumerable early - potentially before we've finished all the other operations we need to apply to it - and we're returning a new Enumerable based on a modified version of the data from the original.  That's work the application would be better of delaying as late as possible, in case other changes negate the need for this operation, or in other cases there might be an expensive operation required to gather the data which we'd rather save until later.  It's not just me that wants to be lazy when coding, even the application itself ought to be able to work however it wants to!</p>
 			
 			<p>It's also repetetive.  If you've got 20 alterations to make, then we're going to enumerate the array 20 times, once for each alteration - even though we only change a single item of data each time.</p>
 			
