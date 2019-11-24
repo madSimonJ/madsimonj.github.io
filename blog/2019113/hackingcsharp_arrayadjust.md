@@ -18,10 +18,12 @@ layout: default
 			
 			<pre>
 				<code class="cs hljs">
+	
 	var arrayOfStuff = new[] { "a", "b", "c", "d" };
 	arrayOfStuff[2] = "z";
 
 	// arrayOfStuff = { "a", "b", "z", "d" }			
+	
 				</code>
 			</pre>		
 
@@ -107,7 +109,6 @@ layout: default
 
 	// arrayOfStuff = { "a", "b", "z", "d" }
 
-				
 				</code>
 			</pre>	
 			
@@ -133,6 +134,7 @@ layout: default
 			
 			<p>Each call to the Adjust function effectively creates another filter layer between the Enumerator and the actual array.  When the "current" value is requested by the enumerator, then a value will be requested from the array, and passed through each Adjust function in turn - to see whether it should be returned as-is, or replaced with something else.  If you'd like to see what that final function would look like, complete with the actual order of operations - it'd be something like this:</p>
 			
+			<pre>
 				<code class="cs hljs">
 			
 	public IEnumerable&lt;T&gt; AdjustArray(IEnumerable&lt;T&gt; input)
@@ -154,7 +156,8 @@ layout: default
 		return outputArray;
 	}
 	
-				</code>
+			</code>			
+		</pre>
 			
 			<p>I hope you'll agree that my method is significantly easier to read, and entirely dynamic!</p>
 			
