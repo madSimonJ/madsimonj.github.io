@@ -10,6 +10,8 @@ layout: default
 		<div style="text-align: left">		
 			<p>Welcome to my very first blog entry.  Do please wipe your feet on the way in and try not to leave any mess.  Beers are in the fridge, help yourselves!</p>
 			
+			<p>This blog was posted as part of the <a href="https://crosscuttingconcerns.com/The-Third-Annual-csharp-Advent">Third Annual C# Advent</a>.  Make sure to check out everyone else's work when you're done here</p>
+			
 			<p>This is the first in a series of articles I'm planning to write on some of the techniques I've used over the years to accomplish a whole load more in C# with as little effort as I can get away with.  I'm very much of the opinion that life is too short to spend writing the same old boilerplate code, and that every problem only ever needs to be solved once.  Hopefully this article series will open your eyes a little to what can be done with a bit of imagination.</p>
 			
 			<p>A common enough scenario you might encounter is that - given an array - you need to adjust one of its records.  If you're following best practice, then you'll be referencing arrays between functions in their most abstract form - the IEnumerable&lt;T&gt; - and if not, why not? </p>
