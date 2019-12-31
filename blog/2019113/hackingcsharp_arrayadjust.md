@@ -99,10 +99,11 @@ layout: default
 			
 			<pre>
 				<code class="cs hljs">
-	var arrayOfStuff = new[] { "a", "b", "c", "d" };
-	var array2 = stringArray.Adjust((x, i) => i == 2, "z");
-
-	// arrayOfStuff = { "a", "b", "z", "d" }
+	public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func&lt;T, int, bool&gt; shouldReplace, T replacement) =&gt;
+		@this.Select((obj, pos) =&gt;
+			shouldReplace(obj, pos)
+			   ? replacement
+			   : obj);
 				</code>
 			</pre>	
 			
