@@ -92,6 +92,15 @@ public void AdjustArrayByProperties()
 }
 				</code>
 			</pre>	
+			
+		<p>These are extremely simple examples.  An adjust for a complex object with more detailed adjust requirements might look something like this:</p>
+		
+			<pre>
+				<code class="cs hljs">
+	complexArray.Adjust(x=&gt; x.ByProp(y =&gt; y.ProductType.Contains("fish"), DefaultProducts.FishProduct)
+				.Adjust(x=&gt; x.ByProp(y =&gt; y.Description.Length &gt; 50), DefaultProducts.ProductWithInvalidDescription)
+				</code>
+			</pre>	
 		
 		<p>What I'm trying to do is to help the user step-by-step to get to the behaviour they want, but without having to worry in the slightest about how it's being done.  Someone could pick up a function like Adjust, which requires a slightly unusual Func parameter, but be guided through the available options (prop or pos) and be requested to only provide simple parameters in each step.  No need to peep into my code to understand what it's doing before you start using it.  It's also using more plain english in the codebase, which should provide a greater deal of self-documentation in what's written using it.</p>
 		
