@@ -105,4 +105,3 @@ public void AdjustArrayByProperties()
 		
 		<p>Hopefully you'll agree that none of this is especially hard to do, and the only slightly ugly looking code is locked away in a static class somewhere that no-one is likely to ever have to see it.</p>
 		
-		</div>
