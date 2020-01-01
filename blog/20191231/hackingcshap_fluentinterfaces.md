@@ -99,9 +99,6 @@ public void AdjustArrayByProperties()
 		
 			<div class="svg-container">
 				<img src="interface_b.svg" width="80%" style="text-align: center">
-			</div>
-			
-			<div class="svg-container">
 				<img src="interface_c.svg" width="80%" style="text-align: center">
 			</div>
 		
