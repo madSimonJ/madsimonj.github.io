@@ -49,8 +49,8 @@ public class AdjustSelector&lt;T&gt;
 			
 			<pre>
 				<code class="cs hljs">
-public static IEnumerable<T> Adjust<T>(this IEnumerable<T> @this, Func<AdjustSelector<T>, Func<T, int, bool>> selector, T replacement) =>
-	@this.Adjust(selector(new AdjustSelector<T>()), replacement);
+public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func&lt;AdjustSelector&lt;T&gt;, Func&lt;T, int, bool&gt;&gt; selector, T replacement) =&gt;
+	@this.Adjust(selector(new AdjustSelector&lt;T&gt;()), replacement);
 				</code>
 			</pre>	
 			
