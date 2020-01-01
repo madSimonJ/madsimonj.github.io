@@ -98,7 +98,7 @@ public void AdjustArrayByProperties()
 			<pre>
 				<code class="cs hljs">
 complexArray.Adjust(x=&gt; x.ByProp(y =&gt; y.ProductType.Contains("fish"), DefaultProducts.FishProduct)
-		.Adjust(x=&gt; x.ByProp(y =&gt; y.Description.Length &gt; 50), DefaultProducts.ProductWithInvalidDescription)
+	.Adjust(x=&gt; x.ByProp(y =&gt; y.Description.Length &gt; 50), DefaultProducts.ProductWithInvalidDescription)
 				</code>
 			</pre>	
 		
