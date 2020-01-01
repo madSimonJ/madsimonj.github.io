@@ -166,5 +166,5 @@ layout: default
 			</code>			
 		</pre>
 			
-			<p>We can take this a step further though, to make this even easier to read and work with.  In  <a href="">Part Two</a> of this series, I'll look at creating fluent interfaces to slightly complicated functions like this.</p>
+			<p>We can take this a step further though, to make this even easier to read and work with.  In  <a href="http://www.thecodepainter.co.uk/blog/20191231/hackingcshap_fluentinterfaces">Part Two</a> of this series, I'll look at creating fluent interfaces to slightly complicated functions like this.</p>
 			
