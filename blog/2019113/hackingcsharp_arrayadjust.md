@@ -90,8 +90,11 @@ layout: default
 			
 			<pre>
 				<code class="cs hljs">
-	public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func&lt;AdjustSelector&lt;T&gt;, Func&lt;T, int, bool&gt;&gt; selector, T replacement) =>
-		@this.Adjust(selector(new AdjustSelector&lt;T&gt;()), replacement);
+	public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func&lt;T, int, bool&gt; shouldReplace, T replacement) =&gt;
+		@this.Select((obj, pos) =&gt;
+			shouldReplace(obj, pos)
+			   ? replacement
+			   : obj);
 				</code>
 			</pre>	
 		
@@ -99,11 +102,11 @@ layout: default
 			
 			<pre>
 				<code class="cs hljs">
-	public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func&lt;T, int, bool&gt; shouldReplace, T replacement) =&gt;
-		@this.Select((obj, pos) =&gt;
-			shouldReplace(obj, pos)
-			   ? replacement
-			   : obj);
+
+	var arrayOfStuff = new[] { "a", "b", "c", "d" };
+	var array2 = stringArray.Adjust((x, i) => i == 2, "z");
+
+	// arrayOfStuff = { "a", "b", "z", "d" }
 				</code>
 			</pre>	
 			
@@ -163,5 +166,5 @@ layout: default
 			</code>			
 		</pre>
 			
-			<p>Watch this space for more articles in this series in which I'll be demonstrating other novel ways to malform C# to accomplish what you want in an easier (i.e. lazier) way.  Part two will look at a method to make functions like the Adjust even more compact.</p>
+			<p>We can take this a step further though, to make this even easier to read and work with.  In  <a href="">Part Two</a> of this series, I'll look at creating fluent interfaces to slightly complicated functions like this.</p>
 			
