@@ -90,7 +90,7 @@ layout: default
 			
 			<pre>
 				<code class="cs hljs">
-	public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func<AdjustSelector&lt;T&gt;, Func&lt;T, int, bool&gt;&gt; selector, T replacement) =>
+	public static IEnumerable&lt;T&gt; Adjust&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func&lt;AdjustSelector&lt;T&gt;, Func&lt;T, int, bool&gt;&gt; selector, T replacement) =>
 		@this.Adjust(selector(new AdjustSelector&lt;T&gt;()), replacement);
 				</code>
 			</pre>	
