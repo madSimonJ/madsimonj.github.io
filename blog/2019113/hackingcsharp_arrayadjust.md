@@ -119,10 +119,7 @@ layout: default
 				<img src="array-f.svg" width="80%" style="text-align: center">
 			</div>
 			
-			<p>We've taken two things as inputs - a replacement string (i.e. a "z" string) and a predicate (fancy term for a function that will tell you whether a condition has been met - in our case "i ==2" - i.e. we're on the third element (index=2) of the array), and they we merge them together into a new function that runs the predicate, and either returns the replacement string ("z") if it's true, or the unchanged original input if false.
-			
-			<p>:</p>
-			
+			<p>We've taken two things as inputs - a replacement string (i.e. a "z" string) and a predicate (fancy term for a function that will tell you whether a condition has been met - in our case "i ==2" - i.e. we're on the third element (index=2) of the array), and they we merge them together into a new function that runs the predicate, and either returns the replacement string ("z") if it's true, or the unchanged original input if false.			
 			
 			<p>Using this method, you can now string as many alternations to the original array (or whatever other data source it might be) onto the original Enumerable without every having to waste processor time enumerating it more than once.  This way we're not only saving computer time, but also writing code that's more consise, easier to read and easier to maintain.  If you were to run "Adjust" - say - three times, instead of creating multiple arrays with slightly different values, you'd actually end up with something like this:</p>
 			
