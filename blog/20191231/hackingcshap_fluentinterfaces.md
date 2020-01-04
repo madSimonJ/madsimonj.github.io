@@ -9,7 +9,7 @@ layout: default
 		<hr/>
 		<div style="text-align: left">		
 
-			<p><a href="https://www.thecodepainter.co.uk/blog/2019113/hackingcsharp_arrayadjust">In the first</a> part of this article series, I demonstrated a method for adjusting an Enumerable without having to first Enumerate it.  Here, I'll expand on that idea by providing the user with a friendlier, more verbose interface for making use of my Adjust method (or anything else you fancy using this method on).</p>
+			<p><a href="https://www.thecodepainter.co.uk/blog/2019113/hackingcsharp_arrayadjust">In the first part</a> of this article series, I demonstrated a method for adjusting an Enumerable without having to first enumerate it.  Here, I'll expand on that idea by providing the user with a friendlier, more verbose interface for making use of my Adjust method (or anything else you fancy using this method on).</p>
 			
 			<p>As before, my thinking is that it's more important in a codebase to be clear <strong>what</strong> is being achieved, rather than precisely <strong>how</strong> it is being done - unless there's a bug of course.  I prefer to write my business logic code so that it reads as closely in natural English to what is being done as possible.  The majority of the people who will maintain your code aren't interested in knowing every detail of the algorithm you use, but they may wish to add to or alter the rules you've already written.  </p>
 			
@@ -45,7 +45,7 @@ public class AdjustSelector&lt;T&gt;
 			
 			<p>Notice also that there are two sets of arrows in each of these arrow functions.  These are functions that generate functions - a very quick and easy form of Metaprogramming.  The Adjust requires a Func that converts a pair of parameters (i - the current array index and obj - the current item we've iterated to) into a Boolean (i.e. should we adjust or not) and each of the functions in AdjustSelector generates one of these Funcs. </p>
 			
-			<p>Here's how'd you'd integrate this into the Adjust function:</p>
+			<p>Here's how you'd integrate this into the Adjust function:</p>
 			
 			<pre>
 				<code class="cs hljs">
@@ -102,7 +102,7 @@ complexArray.Adjust(x=&gt; x.ByProp(y =&gt; y.ProductType.Contains("fish"), Defa
 				</code>
 			</pre>	
 		
-		<p>What I'm trying to do is to help the user step-by-step to get to the behaviour they want, but without having to worry in the slightest about how it's being done.  Someone could pick up a function like Adjust, which requires a slightly unusual Func parameter, but be guided through the available options (prop or pos) and be requested to only provide simple parameters in each step.  No need to peep into my code to understand what it's doing before you start using it.  It's also using more plain english in the codebase, which should provide a greater deal of self-documentation in what's written using it.</p>
+		<p>What I'm trying to do is to help the user step-by-step to get to the behaviour they want, but without having to worry in the slightest about how it's being done.  Someone could pick up a function like Adjust, which requires a slightly unusual Func parameter, but be guided through the available options (prop or pos) and be requested to only provide simple parameters in each step.  No need to peep into my code to understand what it's doing before you start using it.  It's also using more plain English in the codebase, which should provide a greater deal of self-documentation in what's written using it.</p>
 		
 		<p>If we return now to our stick-figure fast-foot customer, there's hopefully a happier experience being had by everyone:</p>
 		
