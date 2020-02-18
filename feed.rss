@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>The Code Painter Blog</title>
+    <link>https://www.thecodepainter.co.uk/blog/</link>
+    <description>Simon Painter's technical blog</description>
+    <item>
+       <title>Hacking C# Part One: Adjustable Arrays</title>
+       <link>https://www.thecodepainter.co.uk/blog/2019113/hackingcsharp_arrayadjust</link>
+       <description>Create arrays that can be adjusted, but without needing you to first enumerate</description>
+    </item>
+    <item>
+       <title>Hacking C# Part Two: Fluent Function Interfaces</title>
+       <link>http://www.thecodepainter.co.uk/blog/20191231/hackingcshap_fluentinterfaces</link>
+	   <description>Cut down on complicated function paramter sets by creating quick and easy fluent interfaces</description>
+    </item>
+  </channel>
+</rss>
