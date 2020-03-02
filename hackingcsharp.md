@@ -29,6 +29,6 @@ layout: default
 <p><strong><a href="https://www.dddeastmidlands.com/">DDD East Midlands</a></strong> - Nottingham, UK - <small>26th October 2019</small></p>
 <p><strong><a href="https://shropshiredevs.co.uk/">Shropshire Devs</a></strong> - Telford, UK - <small>16th January 2020</small></p>
 <p><strong><a href="https://www.meetup.com/Birmingham-DotNet-And-Xamarin-User-Group/events/265178106/">Birmingham .NET and Xamarin User Group</a></strong> - Birmingham, UK - <small>28th January 2020</small></p>
-		
+<p><strong><a href="https://www.dddnorth.co.uk/">DDD North</a></strong> - Hull, UK - <small>29 February 2020</small></p>
   </div>
 </div>
