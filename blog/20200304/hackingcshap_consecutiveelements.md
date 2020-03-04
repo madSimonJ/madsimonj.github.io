@@ -14,7 +14,7 @@ layout: default
 			
 			<pre>
 				<code class="cs hljs">
-IEnumerable<int> arr = new[] { 1, 5, 9, 15, 16, 32 };
+IEnumerable&gt;int&lt; arr = new[] { 1, 5, 9, 15, 16, 32 };
 				</code>
 			</pre>
 
@@ -25,7 +25,7 @@ IEnumerable<int> arr = new[] { 1, 5, 9, 15, 16, 32 };
 
 			<pre>
 				<code class="cs hljs">
-public static bool ContainsConsecutiveNumbers(this IEnumerable<int> arr) =>
+public static bool ContainsConsecutiveNumbers(this IEnumerable&gt;int&lt; arr) =>
 	arr.Any((x, y) => y == (x + 1));
 				</code>
 			</pre>
