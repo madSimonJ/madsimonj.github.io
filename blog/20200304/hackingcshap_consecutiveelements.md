@@ -77,25 +77,25 @@ public static bool Any&lt;T&gt;(this IEnumerator&lt;T&gt; @this, Func&lt;T, T, b
 			<p>Start with the Enumerator in its starting state - i.e. Position -1:</p>
 			
 			<div class="svg-container">
-				<img src="arraya.svg" width="60%" style="text-align: center">
+				<img src="arraya.svg" width="30%" style="text-align: center">
 			</div>
 			
 			<p>Call MoveNext() to move to the first item (i.e. Position 0):</p>
 			
 			<div class="svg-container">
-				<img src="arrayb.svg" width="60%" style="text-align: center">
+				<img src="arrayb.svg" width="30%" style="text-align: center">
 			</div>
 			
 			<p>After getting the first item, we hold it in reserve, and move to the second item, so we can see them both at the same time:</p>
 			
 			<div class="svg-container">
-				<img src="arrayc.svg" width="60%" style="text-align: center">
+				<img src="arrayc.svg" width="30%" style="text-align: center">
 			</div>
 			
 			<p>The user-supplied function compares (x+1) with y - so 1+1 and 5.  2 and 5 aren't equal, so we iterate again.  This time 5 is passed as the new Previous item, and the Iterator moves on to 9 as the new Current</p>
 			
 			<div class="svg-container">
-				<img src="arrayd.svg" width="60%" style="text-align: center">
+				<img src="arrayd.svg" width="30%" style="text-align: center">
 			</div>
 			
 			<p>It eventually stops when we reach the 5th item in the array - 16, which does equal the previous value (15) incremented by 1.  This causes the entire function to return out with a True, and cascade that True all the way back to the top level.</p>
