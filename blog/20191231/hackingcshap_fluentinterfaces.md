@@ -114,3 +114,5 @@ complexArray.Adjust(x=&gt; x.ByProp(y =&gt; y.ProductType.Contains("fish"), Defa
 		
 		<p>Hopefully you'll agree that none of this is especially hard to do, and the only slightly ugly looking code is locked away in a static class somewhere that no-one is likely to ever have to see.</p>
 		
+		<p>In  <a href="https://www.thecodepainter.co.uk/blog/20200304/hackingcshap_consecutiveelements">Part Three</a> of this series, I'll return to ways to operate on Enumerables without Enumerating first with a look at comparing consecutive values from an array without using array indexes.</p>
+		

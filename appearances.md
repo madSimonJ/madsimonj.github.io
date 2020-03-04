@@ -15,9 +15,3 @@ layout: default
 	</div>
 </div>
 
-
-
-07790247143
-
-derek
-
