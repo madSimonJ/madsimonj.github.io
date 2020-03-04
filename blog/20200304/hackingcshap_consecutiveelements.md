@@ -16,7 +16,7 @@ layout: default
 				<code class="cs hljs">
 IEnumerable<int> arr = new[] { 1, 5, 9, 15, 16, 32 };
 				</code>
-			<pre>
+			</pre>
 
 			<p>What I'd like to do is work out whether there are any consecutive values in this array (there are - 15 and 16), but without enumerating it.  This is a pretty arbitray, simple example - but what I'm trying to do is not to get too bogged down in the specifics of what I'm trying to achieve - just the technique.  Imagine instead that this integer array was an Enumerable pointing at a series of expensive DB operations that produce complex objects that you want to compare.  Maybe they're audit entries, or sales transactions from a particular customer - whatever you'd like.  I'm keeping it simple for now, though.</p>
 			
@@ -28,7 +28,7 @@ IEnumerable<int> arr = new[] { 1, 5, 9, 15, 16, 32 };
 public static bool ContainsConsecutiveNumbers(this IEnumerable<int> arr) =>
 	arr.Any((x, y) => y == (x + 1));
 				</code>
-			<pre>
+			</pre>
 
 			<p>In this code sample "x" and "y" represent consecutive values from the Enumerable - i.e. the first time it runs, it'll fetch 1 and 5 from the example array above.  I'm comparing y (the second value) against x+1, because that would mean that x is exactly 1 lower than y - i.e. they're consecutive.</p>
 		
