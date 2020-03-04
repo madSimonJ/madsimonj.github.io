@@ -25,8 +25,8 @@ IEnumerable&gt;int&lt; arr = new[] { 1, 5, 9, 15, 16, 32 };
 
 			<pre>
 				<code class="cs hljs">
-public static bool ContainsConsecutiveNumbers(this IEnumerable&gt;int&lt; arr) =>
-	arr.Any((x, y) => y == (x + 1));
+public static bool ContainsConsecutiveNumbers(this IEnumerable&gt;int&lt; arr) =&gt;
+	arr.Any((x, y) =&gt; y == (x + 1));
 				</code>
 			</pre>
 
@@ -40,7 +40,7 @@ public static bool ContainsConsecutiveNumbers(this IEnumerable&gt;int&lt; arr) =
 			
 			<pre>
 				<code class="cs hljs">
-public static bool Any<T>(this IEnumerable<T> @this, Func<T, T, bool> f) =>
+public static bool Any<T>(this IEnumerable<T> @this, Func<T, T, bool> f) =&gt;
 	@this.GetEnumerator().Any(f);
 				</code>
 			</pre>
@@ -61,7 +61,7 @@ public static bool Any<T>(this IEnumerator<T> @this, Func<T, T, bool> f)
 		
 			<pre>
 				<code class="cs hljs">
-public static bool Any<T>(this IEnumerator<T> @this, Func<T, T, bool> f, T prev) =>
+public static bool Any<T>(this IEnumerator<T> @this, Func<T, T, bool> f, T prev) =&gt;
 	@this.MoveNext()
 		? f(prev, @this.Current)
 			? true
