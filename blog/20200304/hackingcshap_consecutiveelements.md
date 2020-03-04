@@ -100,6 +100,8 @@ public static bool Any&lt;T&gt;(this IEnumerator&lt;T&gt; @this, Func&lt;T, T, b
 			
 			<p>It eventually stops when we reach the 5th item in the array - 16, which does equal the previous value (15) incremented by 1.  This causes the entire function to return out with a True, and cascade that True all the way back to the top level.</p>
 			
+			<p>There we are - all done!  We can aggregate an Enumerable down to a boolean value based on whether a condition is ever met in which we can compare consecutive items in pairs.  All this without disturbing the Lazy evaulation feature of the Enumerable by forcing an Enumeration into an array.</p>
+			
 			
 			
 			
