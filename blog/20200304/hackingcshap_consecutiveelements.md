@@ -40,7 +40,7 @@ public static bool ContainsConsecutiveNumbers(this IEnumerable&gt;int&lt; arr) =
 			
 			<pre>
 				<code class="cs hljs">
-public static bool Any<T>(this IEnumerable<T> @this, Func<T, T, bool> f) =&gt;
+public static bool Any&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func<T, T, bool> f) =&gt;
 	@this.GetEnumerator().Any(f);
 				</code>
 			</pre>
@@ -49,7 +49,7 @@ public static bool Any<T>(this IEnumerable<T> @this, Func<T, T, bool> f) =&gt;
 			
 			<pre>
 				<code class="cs hljs">
-public static bool Any<T>(this IEnumerator<T> @this, Func<T, T, bool> f)
+public static bool Any&lt;T&gt;(this IEnumerator&lt;T&gt; @this, Func<T, T, bool> f)
 {
 	@this.MoveNext();
 	return Any(@this, f, @this.Current);
@@ -61,7 +61,7 @@ public static bool Any<T>(this IEnumerator<T> @this, Func<T, T, bool> f)
 		
 			<pre>
 				<code class="cs hljs">
-public static bool Any<T>(this IEnumerator<T> @this, Func<T, T, bool> f, T prev) =&gt;
+public static bool Any&lt;T&gt;(this IEnumerator&lt;T&gt; @this, Func<T, T, bool> f, T prev) =&gt;
 	@this.MoveNext()
 		? f(prev, @this.Current)
 			? true
