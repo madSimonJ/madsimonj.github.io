@@ -14,5 +14,10 @@
        <link>http://www.thecodepainter.co.uk/blog/20191231/hackingcshap_fluentinterfaces</link>
 	   <description>Cut down on complicated function paramter sets by creating quick and easy fluent interfaces</description>
     </item>
+    <item>
+       <title>Hacking C# Part Three: Compare Adjacent Array Elements</title>
+       <link>https://www.thecodepainter.co.uk/blog/20200304/hackingcshap_consecutiveelements</link>
+	   <description>Run comparisons on adjacent elements in an Enumerable without enumerating to array first</description>
+    </item>
   </channel>
 </rss>
