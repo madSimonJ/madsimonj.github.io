@@ -18,7 +18,7 @@ IEnumerable&lt;int&gt; arr = new[] { 1, 5, 9, 15, 16, 32 };
 				</code>
 			</pre>
 
-			<p>What I'd like to do is work out whether there are any consecutive values in this array (there are - 15 and 16), but without enumerating it.  This is a pretty arbitray, simple example - but what I'm trying to do is not to get too bogged down in the specifics of what I'm trying to achieve - just the technique.  Imagine instead that this integer array was an Enumerable pointing at a series of expensive DB operations that produce complex objects that you want to compare.  Maybe they're audit entries, or sales transactions from a particular customer - whatever you'd like.  I'm keeping it simple for now, though.</p>
+			<p>What I'd like to do is work out whether there are any consecutive values in this array (there are - 15 and 16), but without enumerating it.  This is a pretty arbitrary, simple example - but what I'm trying to do is not to get too bogged down in the specifics of what I'm trying to achieve - just the technique.  Imagine instead that this integer array was an Enumerable pointing at a series of expensive DB operations that produce complex objects that you want to compare.  Maybe they're audit entries, or sales transactions from a particular customer - whatever you'd like.  I'm keeping it simple for now, though.</p>
 			
 			<p>What I'd like is something like this:</p>
 			
@@ -106,7 +106,7 @@ public static bool Any&lt;T&gt;(this IEnumerator&lt;T&gt; @this, Func&lt;T, T, b
 				<img src="arraye.svg" width="50%" style="text-align: center">
 			</div>
 			
-			<p>There we are - all done!  We can aggregate an Enumerable down to a boolean value based on whether a condition is ever met in which we can compare adjacent items in pairs.  All this without losing the Lazy evaulation feature of the Enumerable by forcing an Enumeration into an array.</p>
+			<p>There we are - all done!  We can aggregate an Enumerable down to a boolean value based on whether a condition is ever met in which we can compare adjacent items in pairs.  All this without losing the Lazy evaluation  feature of the Enumerable by forcing an Enumeration into an array.</p>
 			
 			
 			
