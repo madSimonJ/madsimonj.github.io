@@ -5,10 +5,10 @@ layout: default
 <div class="pagepanel down_arrow white">
   <div class="center">
 		<h2>HACKING C#: PROGRAMMING FOR THE TRULY LAZY</h2>
-		<h3>Parte the Thirde: Compare Consecutive Array Elements</h3>
+		<h3>Parte the Thirde: Compare Adjacent Array Elements</h3>
 		<hr/>
 		<div style="text-align: left">		
-			<p>As shown in <a href="https://www.thecodepainter.co.uk/blog/2019113/hackingcsharp_arrayadjust">Part One</a> it's best to leave an Enumerable Un-enumerated for as long as possible.  Part One showed how to adjust an array without enumerating first.  This time we're going to look at a method to compare two adjacent array elements without forcing it into an array to use Indexes.</p>
+			<p>As shown in <a href="https://www.thecodepainter.co.uk/blog/2019113/hackingcsharp_arrayadjust">Part One</a> it's best to leave an Enumerable Un-enumerated for as long as possible - leaving potentially expensive operations delayed until absolutely needed.  Part One showed how to adjust an array without enumerating first.  This time we're going to look at a method to compare two adjacent array elements without forcing it into an array to use Indexes (i.e. arr[i] compared to arr[i+1]).</p>
 			
 			<p>Let's quickly whip up a problem to solve first.  Let's say I had an enumerable defined with these integer values:</p>
 			
@@ -30,7 +30,7 @@ public static bool ContainsConsecutiveNumbers(this IEnumerable&lt;int&gt; arr) =
 				</code>
 			</pre>
 
-			<p>In this code sample "x" and "y" represent consecutive values from the Enumerable - i.e. the first time it runs, it'll fetch 1 and 5 from the example array above.  I'm comparing y (the second value) against x+1, because that would mean that x is exactly 1 lower than y - i.e. they're consecutive.</p>
+			<p>In this code sample "x" and "y" represent adjacent values from the Enumerable - i.e. the first time it runs, it'll fetch 1 and 5 from the example array above.  I'm comparing y (the second value) against x+1, because that would mean that x is exactly 1 lower than y - i.e. they're consecutive.</p>
 		
 			<p>How do I do it though?  </p>
 			
@@ -70,7 +70,7 @@ public static bool Any&lt;T&gt;(this IEnumerator&lt;T&gt; @this, Func&lt;T, T, b
 				</code>
 			</pre>
 
-			<p>There's a little bit to unpack here.  MoveNext is being used to move to the next item in the Enumerable, and the return value tells us whether we've reached the end or not.   For each item (aside from the first) we're passing it, and the cached previous item into the user-supplied function.  This is an "Any" function, so we return True at any point if the user-supplied function returns True, otherwise if we reach the end of the array, then we return False.  If this current iteration doesn't return True, then we use recursion to call the same function again, this time passing the "current" item back to be the new "previous" item.</p>
+			<p>There's a little bit to unpack here.  MoveNext is being used to move to the next item in the Enumerable, and the return value tells us whether we've reached the end or not (True if another array element is found, False if not).   For each item (aside from the first) we're passing it, and the cached previous item into the user-supplied function.  This is an "Any" function, so we return True at any point if the user-supplied function returns True, otherwise if we reach the end of the array, then we return False.  If this current iteration doesn't return True, then we call the function again (i.e. use recursion), this time passing the "current" item back to be the new "previous" item.</p>
 			
 			<p>Here's the process in (badly-drawn) pictures:</p>
 			
@@ -100,7 +100,13 @@ public static bool Any&lt;T&gt;(this IEnumerator&lt;T&gt; @this, Func&lt;T, T, b
 			
 			<p>It eventually stops when we reach the 5th item in the array - 16, which does equal the previous value (15) incremented by 1.  This causes the entire function to return out with a True, and cascade that True all the way back to the top level.</p>
 			
-			<p>There we are - all done!  We can aggregate an Enumerable down to a boolean value based on whether a condition is ever met in which we can compare consecutive items in pairs.  All this without disturbing the Lazy evaulation feature of the Enumerable by forcing an Enumeration into an array.</p>
+			<p>If you want a view of the whole thing at once, then the 5 calls made to the user-supplied function (f) look like this:<p>
+			
+			<div class="svg-container">
+				<img src="arraye.svg" width="50%" style="text-align: center">
+			</div>
+			
+			<p>There we are - all done!  We can aggregate an Enumerable down to a boolean value based on whether a condition is ever met in which we can compare adjacent items in pairs.  All this without losing the Lazy evaulation feature of the Enumerable by forcing an Enumeration into an array.</p>
 			
 			
 			
