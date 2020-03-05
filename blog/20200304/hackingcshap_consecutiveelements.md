@@ -100,7 +100,7 @@ public static bool Any&lt;T&gt;(this IEnumerator&lt;T&gt; @this, Func&lt;T, T, b
 			
 			<p>It eventually stops when we reach the 5th item in the array - 16, which does equal the previous value (15) incremented by 1.  This causes the entire function to return out with a True, and cascade that True all the way back to the top level.</p>
 			
-			<p>If you want a view of the whole thing at once, then the 5 calls made to the user-supplied function (f) look like this:<p>
+			<p>If you want a view of the whole thing at once, then the 4 calls made to the user-supplied function (f) look like this:<p>
 			
 			<div class="svg-container">
 				<img src="arraye.svg" width="50%" style="text-align: center">
