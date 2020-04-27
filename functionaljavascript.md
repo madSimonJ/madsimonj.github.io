@@ -32,5 +32,6 @@ layout: default
 </p>
 <p><strong>GTS-X</strong> - Minneapolis, Minnesota, USA - <small>July, 2015</small></p>
 <p><strong><a href="https://www.meetup.com/meetup-group-MzfqIqCy/events/xzxnwqyzhbcc/">BrumJS</a></strong> - Birmingham, West Midlands, UK - <small>May, 2019</small></p>
+<p><strong><a href="https://foss-north.se/2020/speakers-and-talks.html#spainter">Foss-North 20</a></strong> - Gothemberg, Sweden - <small>March, 2020</small></p>
   </div>
 </div>
