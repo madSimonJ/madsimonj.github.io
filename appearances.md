@@ -12,7 +12,7 @@ layout: default
 		<p>Functional Programming in JavaScript: <strong><a href="https://www.meetup.com/Worcester-Source-Meetup/">Worcester Source</a></strong> - Worcester, UK - <small>27th May 2020</small></p>
 		<p>Functional Programming in C#: <strong><a href="https://ndcoslo.com/talk/functional-programming-with-c/">NDC Oslo 2020</a></strong> - Oslo, Norway - <small>111th June 2020</small></p>
 		<p>Hacking C#: Development for the Truly Lazy<strong><a href="">DotNet Oxford</a></strong> - Oxford, UK - <small>June 2020</small></p>
-		<p>Hacking C#: Development for the Truly Lazy: <strong><a href="https://www.developer-week.de/">Developer Week 20</a></strong> - Nürnberg, Germany - <small>1st July 2020</small></p>		
+		<p>Hacking C#: Development for the Truly Lazy: <strong><a href="https://www.developer-week.de/">Developer Week 20</a></strong> - Nürnberg, Germany - <small>22nd November 2020</small></p>		
 	</div>
 </div>
 
