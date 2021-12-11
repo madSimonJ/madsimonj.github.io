@@ -15,4 +15,7 @@ layout: default
 </p>
 
 
+<p><strong><a href="https://www.youtube.com/watch?v=XjL27AEUzI8">NE-RPC</a></strong> - Virtual - <small>19th June 2020</small></p>
 <p><strong><a href="https://www.dotnetoxford.com/posts/2020-05-lightning-talks">DotNet Oxford</a></strong> - Oxford, UK (Virtual)- <small>18th July, 2020</small></p>
+<p><strong><a href="https://www.youtube.com/watch?v=MG1NdygImG8&t=294s">DotNet Sheff</a></strong> - Sheffield, UK (Virtual)- <small>6th September, 2020</small></p>
+<p><strong><a href="https://www.youtube.com/watch?v=AbEoS0HzEw0">DDD</a></strong> - Reading, UK (Virtual)- <small>12 December, 2020</small></p>

@@ -45,3 +45,4 @@ layout: default
 <p><strong><a href="https://www.meetup.com/dotnetsheff/events/259322674/">DotNet Sheffield</a></strong> - Sheffield, UK - <small>5th November 2019</small></p>
 <p><strong><a href="https://www.meetup.com/Chester-Devs/events/267928336/">Chester Devs</a></strong> - Chester, UK - <small>4th February 2020</small></p>
 <p><strong><a href="https://ndcoslo.com/talk/functional-programming-with-c/">NDC Oslo</a></strong> - Oslo, Norway (Virtual) - <small>11th June 2020</small></p>
+<p><strong><a href="https://www.youtube.com/watch?v=k02Ft5FSl-I">Func Prog Sweden</a></strong> - Sweden (Virtual) - <small>27th May 2021</small></p>
