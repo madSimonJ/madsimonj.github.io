@@ -12,11 +12,13 @@ layout: default
 
 <p>In this talk, we're going to look at each of the 5 SOLID principles, these being:</p>
 
-* Single Dependency Principle
-* Open/Close Principle
-* Liskov Substitution Principle
-* Interface Segregation Principle
-* Dependency Inversion Principle
+<ul>
+<li>Single Dependency Principle</li>
+<li>Open/Close Principle</li>
+<li>Liskov Substitution Principle</li>
+<li>Interface Segregation Principle</li>
+<li>Dependency Inversion Principle</li>
+</ul>
 
 <p>See what he did there with the names?</p>
 
