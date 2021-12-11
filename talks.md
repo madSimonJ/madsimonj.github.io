@@ -16,7 +16,7 @@ layout: default
 	Some of the most basic principles behind Object-Orientated development, what they are, and what can go wrong if they aren't followed.
 	</p><p/>
 
-	<a href="/PrideAndPrejudiceAndCSharp"><img src="">
+	<a href="/PrideAndPrejudiceAndCSharp"><img src="/Content/img/janeaustensmall.png">
 	<h3>Pride & Prejudice and C#</h3></a>
 	<p>
 	How we can use a simple machine learning technique and a bit of C# to generate whole new books "by" Jane Austen.  
