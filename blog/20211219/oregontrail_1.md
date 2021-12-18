@@ -14,7 +14,7 @@ layout: blog
 		
 		<p/>
 		</div>
-		
+
 		<h4>Introduction</h4>
 		
 		<p>Hi, everyone.  I tried starting this blog up a year or so back, but it didn't quite take.  I'm having another go, and to keep me honest, I'm going to focus for now on one of my particular passions in development - functional programming.  Specifically functional programming implemented in C#.  Also drawing, that's been my Covid lockdown project.  I drew the pic at the top on my iPad.  Like it?</p>
@@ -46,9 +46,9 @@ layout: blog
 		
 		<ul>
 			<li>Once you set a variable, you can't ever change its state (Immutability)</li>
-			<li>Functions pass around like variables (as in Func<T>)</li>
+			<li>Functions pass around like variables (as in Funcs)</li>
 			<li>No statements like If, When, For, ForEach, any of that stuff.  There're better ways of doing it.</li>
-			<li>No state.  Functions only depend on their parameters, and nothing else (at least as much as it's possible to do that)</li>
+			<li>No state.  Functions only depend on their parameters, and nothing else (at least as much as it's possible to do that) </li>
 		</ul>
 		
 		<p>Now that I've set the ground rules, it's time for us to start building a whole game this way...</p>
