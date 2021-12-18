@@ -11,9 +11,6 @@ layout: blog
 			<div class="svg-container">
 				<img src="Oregontrailsmall.png" width="50%" style="text-align: center" alt="Man sitting with a laptop and phone by a covered wagon">
 			</div>
-		
-		<p/>
-		</div>
 
 		<h4>Introduction</h4>
 		
