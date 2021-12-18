@@ -90,7 +90,7 @@ public void StartGame()
 			<p>You may notice however, the "IterateUntil" function in this code extract.  That's not part of C#.  That's here because there's an entirely indeterminate amount of stuff that has to happen between starting the game, and the turn on which it ends.  If I were writing normal code, I'd probably use a while(true) with a "break" statement somewhere to kill the process once we're ready, but I'm being functional.  I cobbled together a quick, generic extension method to provide that same functionality for me here:</p>
 			
 			<pre>
-				<code class="cs hljs"&gt;
+				<code class="cs hljs">
 public static T IterateUntil<T&gt;(
 	this T @this,
 	Func<T, T&gt; createNext,
