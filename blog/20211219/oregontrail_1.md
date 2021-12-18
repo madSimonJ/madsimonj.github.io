@@ -63,4 +63,120 @@ layout: blog
 		
 		<p>I created an enum to represent the player's progress through the game, so that we know fundamentally where we are.  As well as that, we need a few values that need to be tracked - amount of oxen, amount of ammunition, etc. and the text that the user should see on screen when they receive the new state - which will prompt them with the next intruction.<p>
 		
+		<p>Here's my actual basic game-loop code:</p>
 		
+			<pre>
+				<code class="cs hljs">
+public void StartGame()
+{
+	var firstState = new GameState();
+	var firstTurn = this._turnMaker.MakeNextTurn(firstState, string.Empty);
+	this._textDisplay.DisplayToUser(firstTurn.Text);
+
+	firstTurn.IterateUntil(
+			x =>
+			{
+				var input = this._userInputCapture.GetInput();
+				var nextTurn = this._turnMaker.MakeNextTurn(x, input);
+				this._textDisplay.DisplayToUser(nextTurn.Text);
+				
+				return nextTurn;
+			},
+			x => x.IsGameFinished
+		);
+}
+				</code>
+			</pre>
+			
+			<p>Most of what this code is doing is pretty self-explanatory.  It's initiating an initial game state, feeding that into something that make a turn (i.e. advances the game world 1 move) and displays the results of that to the user.  We then iterate until the game is finished with that same basic process.  Capture input, update state, display to user.</p>
+			
+			<p>You may notice however, the "IterateUntil" function in this code extract.  That's not part of C#.  That's here because there's an entirely indeterminate amount of stuff that has to happen between starting the game, and the turn on which it ends.  If I were writing normal code, I'd probably use a while(true) with a "break" statement somewhere to kill the process once we're ready, but I'm being functional.  I cobbled together a quick, generic extension method to provide that same functionality for me here:</p>
+			
+			<pre>
+				<code class="cs hljs">
+public static T IterateUntil<T>(
+	this T @this,
+	Func<T, T> createNext,
+	Func<T, bool> finishCondition)
+{
+	var isFinished = finishCondition(@this);
+	if (isFinished)
+	{
+		return @this;
+	}
+	else
+	{
+		return IterateUntil(
+				createNext(@this),
+				createNext,
+				finishCondition);
+			
+	}
+}
+				</code>
+			</pre>
+			
+	<p>This isn't perfect, as we're recursing, possibly for a very long time.  That can have a memory impact, since we're effectively holding all of those iterations in memory until the process completes.  Pure functional languages support Tail Recursion, which avoids that problem, but that's not a luxury we can necessarily have available to us in C#.  I'll be returning to this topic in a future article, so watch this space.  There are a couple of ways of getting what we want, but it's worth writing an entire article about.</p>
+	
+	<p>This is our game state at this point.  Mostly storing how many turns there have been, the current text to display, and a few values that need tracking - like how much ammo we have so far.</P>
+	
+			<pre>
+				<code class="cs hljs">
+public enum Request
+{
+	StartGame = 0,
+	DoYouRequireInstruction = 1,
+	HowMuchSpendOnOxen,
+	HowMuchSpendOnFood,
+	HowMuchSpendOnAmmunition,
+	HowMuchSpendOnClothing,
+	HowMuchSpendOnMisc,
+	BeginGame
+}
+public record GameState
+{
+	public int TurnNumber { get; set; } = 1;
+	public bool IsGameFinished { get; set; }
+	public IEnumerable<string> Text { get; set; } = Enumerable.Empty<string>();
+	public Request Request { get; set; }
+	public int Food { get; set; }
+	public int Oxen { get; set; }
+	public int Ammunition { get; set; }
+	public int MiscelaneousSupplies { get; set; }
+	public int Clothing { get; set; }
+	public int Money { get; set; }
+}
+				</code>
+			</pre>
+			
+	<p>This bulk of the code I've written, however, is the engine for generating new states whenever we turn over.  That makes use of one of my favourite features in C# in recent years - switch operations.  This is basically a C# inplementation of a functional concept called Pattern Recognition.  I use the switch operation to determine the current in-game operation being performed, as well as whatever validation operations need to be applied - like has the user over-spent, or entered a number that's below 0 for something.  Part of the system for setting state is setting the next in-game operation to be performed, so I can set the player back to a previous part of the game if a validation process fails.</p>
+	
+	<p>Here are a few examples:</p>
+	
+	
+			<pre>
+				<code class="cs hljs">
+Request.HowMuchSpendOnClothing when userInputAsInt < 0 => state with
+{
+	Request = Request.HowMuchSpendOnClothing,
+	Text = new[]
+	{
+		"IMPOSSIBLE",
+		string.Empty,
+		string.Empty,
+		"HOW MUCH DO YOU WANT TO SPEND ON CLOTHING"
+	}
+},
+Request.HowMuchSpendOnClothing => state with
+{
+	Clothing = userInputAsInt,
+	Request = Request.HowMuchSpendOnMisc,
+	Text = new[]
+	{
+		"HOW MUCH DO YOU WANT TO SPEND ON MISCELANEOUS SUPPLIES"
+	}
+},
+				</code>
+			</pre>
+	
+	<p>Here I'm checking on how much the user spent on clothes.  If the value was negative - i.e. less than 0, then it's invalid and the player needs to move back a step.  Otherwise, we store up the value and move on to the next operation.<.p>
