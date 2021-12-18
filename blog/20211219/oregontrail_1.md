@@ -55,4 +55,12 @@ layout: blog
 		
 		<h4>Creating the Input/Output Cycle</h4>
 		
-		<p>Some text</p>
+		<p>The first bit of code to lay down is the very basic structure of the application itself</p>
+		
+		<p>When you think about it, a text-based game follows a fairly ridgid pattern: Display text -> Receive user Input -> update state -> Output to user.  And so on, until the game is completed.  We can't change the value of state objects, that's one of our rules, but we can use the super-funky new Record Types in the latest version of C# to easily create a new state object on each iteration, based on the previous one.</p>
+		
+		<p>If anyone reading this has ever done much with Redux and React, then the functional system of maintaining state might seem familiar.  What you need to do is have a function (or set thereof) which takes the previous state, and a set of instructions as parameters.  It takes these, and determines the new state.  With no state to track, and everything simply being based on the previous operation, it's very easy to come up with unit tests to make sure everything is behavng correctly.</p>
+		
+		<p>I created an enum to represent the player's progress through the game, so that we know fundamentally where we are.  As well as that, we need a few values that need to be tracked - amount of oxen, amount of ammunition, etc. and the text that the user should see on screen when they receive the new state - which will prompt them with the next intruction.<p>
+		
+		
