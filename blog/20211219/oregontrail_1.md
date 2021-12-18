@@ -11,8 +11,9 @@ layout: blog
 			<div class="svg-container">
 				<img src="Oregontrailsmall.png" width="50%" style="text-align: center" alt="Man sitting with a laptop and phone by a covered wagon">
 			</div>
-
+		
 		<p/>
+		</div>
 		
 		<h4>Introduction</h4>
 		
@@ -52,6 +53,6 @@ layout: blog
 		
 		<p>Now that I've set the ground rules, it's time for us to start building a whole game this way...</p>
 		
-		<h4>Creating the Input/Output Cycle</p>
+		<h4>Creating the Input/Output Cycle</h4>
 		
 		<p>Some text</p>
