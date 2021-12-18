@@ -74,7 +74,7 @@ public void StartGame()
 	this._textDisplay.DisplayToUser(firstTurn.Text);
 
 	firstTurn.IterateUntil(
-			x =>
+			x =&gt;
 			{
 				var input = this._userInputCapture.GetInput();
 				var nextTurn = this._turnMaker.MakeNextTurn(x, input);
@@ -82,7 +82,7 @@ public void StartGame()
 				
 				return nextTurn;
 			},
-			x => x.IsGameFinished
+			x =&gt; x.IsGameFinished
 		);
 }
 				</code>
@@ -93,11 +93,11 @@ public void StartGame()
 			<p>You may notice however, the "IterateUntil" function in this code extract.  That's not part of C#.  That's here because there's an entirely indeterminate amount of stuff that has to happen between starting the game, and the turn on which it ends.  If I were writing normal code, I'd probably use a while(true) with a "break" statement somewhere to kill the process once we're ready, but I'm being functional.  I cobbled together a quick, generic extension method to provide that same functionality for me here:</p>
 			
 			<pre>
-				<code class="cs hljs">
-public static T IterateUntil<T>(
+				<code class="cs hljs"&gt;
+public static T IterateUntil<T&gt;(
 	this T @this,
-	Func<T, T> createNext,
-	Func<T, bool> finishCondition)
+	Func<T, T&gt; createNext,
+	Func<T, bool&gt; finishCondition)
 {
 	var isFinished = finishCondition(@this);
 	if (isFinished)
@@ -137,7 +137,7 @@ public record GameState
 {
 	public int TurnNumber { get; set; } = 1;
 	public bool IsGameFinished { get; set; }
-	public IEnumerable<string> Text { get; set; } = Enumerable.Empty<string>();
+	public IEnumerable<string&gt; Text { get; set; } = Enumerable.Empty<string&gt;();
 	public Request Request { get; set; }
 	public int Food { get; set; }
 	public int Oxen { get; set; }
@@ -156,7 +156,7 @@ public record GameState
 	
 			<pre>
 				<code class="cs hljs">
-Request.HowMuchSpendOnClothing when userInputAsInt < 0 => state with
+Request.HowMuchSpendOnClothing when userInputAsInt < 0 =&gt; state with
 {
 	Request = Request.HowMuchSpendOnClothing,
 	Text = new[]
@@ -167,7 +167,7 @@ Request.HowMuchSpendOnClothing when userInputAsInt < 0 => state with
 		"HOW MUCH DO YOU WANT TO SPEND ON CLOTHING"
 	}
 },
-Request.HowMuchSpendOnClothing => state with
+Request.HowMuchSpendOnClothing =&gt; state with
 {
 	Clothing = userInputAsInt,
 	Request = Request.HowMuchSpendOnMisc,

@@ -7,7 +7,7 @@ layout: blog
 		<h2>HACKING C#: PROGRAMMING FOR THE TRULY LAZY</h2>
 		<h3>Parte the Seconde: Fluent Function Interfaces</h3>
 		<hr/>
-		<div style="text-align: left">		
+		<div style="text-align: left">			
 
 			<p><a href="https://www.thecodepainter.co.uk/blog/2019113/hackingcsharp_arrayadjust">In the first part</a> of this article series, I demonstrated a method for adjusting an Enumerable without having to first enumerate it.  Here, I'll expand on that idea by providing the user with a friendlier, more verbose interface for making use of my Adjust method (or anything else you fancy using this method on).</p>
 			
