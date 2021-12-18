@@ -91,10 +91,10 @@ public void StartGame()
 			
 			<pre>
 				<code class="cs hljs">
-public static T IterateUntil<T&gt;(
+public static T IterateUntil&lt;T&gt;(
 	this T @this,
-	Func<T, T&gt; createNext,
-	Func<T, bool&gt; finishCondition)
+	Func&lt;T, T&gt; createNext,
+	Func&lt;T, bool&gt; finishCondition)
 {
 	var isFinished = finishCondition(@this);
 	if (isFinished)
