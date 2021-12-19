@@ -7,13 +7,13 @@ layout: blog
 		<h2>Functional Programming in C#</h2>
 		<h3>Oregon Trail Part One: The Feedback Loop</h3>
 		<hr/>
-<p>This blog is part of the 2021 C# Advent Calendar.  See <a href="https://www.csadvent.christmas/">here</a> for more information</p>
-
 		<div style="text-align: left">	
 			<div class="svg-container">
 				<img src="Oregontrailsmall.png" width="50%" style="text-align: center" alt="Man sitting with a laptop and phone by a covered wagon">
 			</div>
 
+<p>This blog is part of the 2021 C# Advent Calendar.  See <a href="https://www.csadvent.christmas/">here</a> for more information</p>
+<p>All source code for this project can be found on GitHub <a href="https://github.com/madSimonJ/OregonTrail">here</a>.
 
 
 		<h4>Introduction</h4>
