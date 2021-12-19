@@ -19,5 +19,10 @@
        <link>https://www.thecodepainter.co.uk/blog/20200304/hackingcshap_consecutiveelements</link>
 	   <description>Run comparisons on adjacent elements in an Enumerable without enumerating to array first</description>
     </item>
+    <item>
+       <title>Functional Programming in C#: Oregon Trail Part One - The Feedback Loop</title>
+       <link>https://www.thecodepainter.co.uk/blog/20211219/oregontrail_1</link>
+	   <description>Follow my new project to redevelop a 1971 BASIC computer game classic into C#, using Functional Programming techniques</description>
+    </item>
   </channel>
 </rss>
