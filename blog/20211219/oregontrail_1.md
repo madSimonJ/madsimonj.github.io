@@ -12,6 +12,8 @@ layout: blog
 				<img src="Oregontrailsmall.png" width="50%" style="text-align: center" alt="Man sitting with a laptop and phone by a covered wagon">
 			</div>
 
+<p>This blog is part of the 2021 C# Advent.  See <a href="https://www.csadvent.christmas/">here for more information</p>
+
 		<h4>Introduction</h4>
 		
 		<p>Hi, everyone.  I tried starting this blog up a year or so back, but it didn't quite take.  I'm having another go, and to keep me honest, I'm going to focus for now on one of my particular passions in development - functional programming.  Specifically functional programming implemented in C#.  Also drawing, that's been my Covid lockdown project.  I drew the pic at the top on my iPad.  Like it?</p>
