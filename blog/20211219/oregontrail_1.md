@@ -178,7 +178,7 @@ Request.HowMuchSpendOnClothing =&gt; state with
 				</code>
 			</pre>
 	
-	<p>Here I'm checking on how much the user spent on clothes.  If the value was negative - i.e. less than 0, then it's invalid and the player needs to move back a step.  Otherwise, we store up the value and move on to the next operation.<.p>
+	<p>Here I'm checking on how much the user spent on clothes.  If the value was negative - i.e. less than 0, then it's invalid and the player needs to move back a step.  Otherwise, we store up the value and move on to the next operation.</p>
 	
 	<p>A consequence of moving to the state-transition approach, rather than the line-jumping BASIC approach of this original is that I end up needing to replicate some state messages, as they are there to prompt the user to enter the required data, and that happens now in 2 places: the original prompt, and the re-try prompt if they fail validation.  I can live with that, but I'm not going to pretend that I won't be trying to think of some way to make it a little more concise.</p>
 	
@@ -283,3 +283,7 @@ public void given_the_user_enters_an_oxen_price_too_high_then_the_user_is_prompt
 <h4>To follow...</h4>
 
 <p>The next step is to write out the basic turn sequence (each turn consisting of a set number of days in world time, during which there will be random events and activities for the user to perform.  Unless there are any surprises, I'll probably leave out mini-games for the time being, and focus on those in a subsequent installment.  The real-time hunting game sounds especially challenging to do this way.</p>
+
+<p>My current plan is to have a blog entry a month written during 2022, and for the most part I'm intending to stick to the same format - fun retro computing projects in Functional C#.  Tentatively the next game I'd like to look at is Dope Wars, which has a similar age and pedigree to Oregon Trail.  I hope you'll stay with me for all of that as well.</p>
+
+<p>Thanks for reading!  Stay safe out there!</p>
