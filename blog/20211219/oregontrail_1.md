@@ -286,4 +286,5 @@ public void given_the_user_enters_an_oxen_price_too_high_then_the_user_is_prompt
 
 <p>My current plan is to have a blog entry a month written during 2022, and for the most part I'm intending to stick to the same format - fun retro computing projects in Functional C#.  Tentatively the next game I'd like to look at is Dope Wars, which has a similar age and pedigree to Oregon Trail.  I hope you'll stay with me for all of that as well.</p>
 
-<p>Thanks for reading!  Stay safe out there!</p>
+<p>Thanks for reading!  Stay safe out there!</p> 
+
