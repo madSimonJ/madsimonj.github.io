@@ -146,9 +146,11 @@ public record GameState
 				</code>
 			</pre>
 			
-	<p>This bulk of the code I've written, however, is the engine for generating new states whenever we turn over.  That makes use of one of my favourite features in C# in recent years - switch operations.  This is basically a C# inplementation of a functional concept called Pattern Recognition.  I use the switch operation to determine the current in-game operation being performed, as well as whatever validation operations need to be applied - like has the user over-spent, or entered a number that's below 0 for something.  Part of the system for setting state is setting the next in-game operation to be performed, so I can set the player back to a previous part of the game if a validation process fails.</p>
+	<p>This bulk of the code I've written, however, is the engine for generating new states whenever we turn over.  That makes use of one of my favourite features in C# in recent years - switch operations.  This is basically a C# inplementation of a functional concept called Pattern Recognition.  I use the switch operation to determine the current in-game operation being performed, as well as whatever validation operations need to be applied - like has the user over-spent, or entered a number that's below 0 for something.  Part of the system for setting state is setting the next in-game operation to be performed, so I can set the player back to a previous part of the game if a validation process fails.  The original code used those infamous BASIC "goto" commands to literally skip forward or backward to repeat or skip validation messages, but there's no chance I'd do that, even if I could.  In any case, there's something about the stateless simplicity of maintaining a Switch operation that appeals to be an awful lot.</p>
 	
-	<p>Here are a few examples:</p>
+	<p>Chances are, as this project continues, and the switch operation grows significantly in size, then I'm going to have to split it out into sub-functions, or sub-classes to hold all of the additional possible state transitions.  One of my pet haates in development though, is coding for a requirement we aren't considering yet, so let's stay on track.</p>
+	
+	<p>Here are a few examples of my state transitions:</p>
 	
 	
 			<pre>
@@ -177,3 +179,107 @@ Request.HowMuchSpendOnClothing =&gt; state with
 			</pre>
 	
 	<p>Here I'm checking on how much the user spent on clothes.  If the value was negative - i.e. less than 0, then it's invalid and the player needs to move back a step.  Otherwise, we store up the value and move on to the next operation.<.p>
+	
+	<p>A consequence of moving to the state-transition approach, rather than the line-jumping BASIC approach of this original is that I end up needing to replicate some state messages, as they are there to prompt the user to enter the required data, and that happens now in 2 places: the original prompt, and the re-try prompt if they fail validation.  I can live with that, but I'm not going to pretend that I won't be trying to think of some way to make it a little more concise.</p>
+	
+	<p>In case you're curious, the state variables being stored so far are all about the amount of money (in Dollars) spent on each of the following:</p>
+	
+	<ul>
+		<li>Food</li>
+		<li>Oxen</li>
+		<li>Ammunition</li>
+		<li>Miscellaneous Supplies</li>
+		<li>Clothing</li>
+	</ul>
+	
+	<p>Naturally, we are also tracking the remaining money.  There are trading posts along the trail, which the player will have the option to buy new items at.  The final state transition for this setup phase of the game consists of a check that the player hasn't over-spent.  If they have, they're returned to the beginning of setup to try again:</p>			
+	
+	<pre>
+				<code class="cs hljs">
+				
+				
+Request.HowMuchSpendOnMisc =&gt; state with
+{
+	Request = Request.BeginGame,
+	MiscellaneousSupplies = userInputAsInt,
+	Money = 700 - (state.Ammunition + state.Food + userInputAsInt + state.Oxen + state.Clothing),
+	Text = new[]
+	{
+		$"AFTER ALL YOUR PURCHASES, YOU NOW HAVE {700 - (state.Ammunition + state.Food + userInputAsInt + state.Oxen + state.Clothing)} DOLLARS LEFT",
+		string.Empty,
+		"MONDAY MARCH 29 1847"
+	}
+}
+	
+	</code>
+</pre>
+
+		<h4>Improvements</h4>
+		
+		<p>It would be nice to think I could fix some bugs and make some improvements on the original as I carry out this project.  Nothing drastic, I'm still effectively creating a port of the original code, as close to the feel of it as I can.  Still I can't help finding the odd issue to fix.</p>
+		
+		<p>So far that mostly consists of ensuring case sensitivity isn't a thing - since that's easily done in C#, and expanding the range of accepted commands.  The first prompt to the player in the original code was to ask whether instructions were required.  Any answer other than "yes" would result in no instructions being displayed.  I added in an "isYes" function to expand the range of responses:</p>
+		
+	<pre>
+				<code class="cs hljs">
+				
+        private static bool IsYes(string s) =&gt;
+            new[]
+            {
+                "y",
+                "yes"
+            }.Contains(s.ToLower());
+				</code>
+	</pre>
+		
+		<p>Nothing flashy, but it might the game experience a tiny bit better</p>
+		
+		<p>The one area I'm debating seriously whether to change is to provide an awful lot more information to the player during the questions regarding how much to spend.  In the original, you simply got a series of questions, and were only required to provide positive numeric values to pass validation in most cases.  It was only after the fifth question you'd finally find out whether you'd gone over budget or not.  It also wasn't possible to move back a step, to change your mind on a previous answer. </p>
+		
+		<p>This feels like a step far too far for this first iteration of the project.  I still fundamentally want it to have the same look and feel as the 1974 original, but it wouldn't be all that hard to do, considering how much easier it would make those first few steps.</p>
+		
+		<p>I think I'll most likely loop back around at the end to create a version 1.5, exclusive to the C# port, which fixes a lot of the UX issues the original had.</p>
+
+		<h4>Testing</h4>
+	
+	<p>I'll wrap up with a quick look at testing for this project.  The stateless approach I'm using makes unit testing extremely easy.  I simply create a state which is exactly at the point I want, and the user input I'm testing, then confirm that the expected new state is returned.  Simple as that.  Here's an example, in which I'm using XUnit and FluentAssertions (one of my favourite Nuget packages ever):
+	
+	<pre>
+				<code class="cs hljs">
+	
+[Fact]
+public void given_the_user_enters_an_oxen_price_too_high_then_the_user_is_prompted_to_try_again()
+{
+	var turnMaker = new TurnMaker();
+
+	var newTurn = turnMaker.MakeNextTurn(new GameState
+	{
+		Request = Request.HowMuchSpendOnOxen,
+		TurnNumber = 2
+	}, "500");
+
+	newTurn.Should().BeEquivalentTo(
+		new GameState
+		{
+			IsGameFinished = false,
+			Request = Request.HowMuchSpendOnOxen,
+			Text = new[]
+			{
+				"TOO MUCH",
+				string.Empty,
+				string.Empty,
+				"HOW MUCH DO YOU WANT TO SPEND ON YOUR OXEN TEAM"
+			},
+			TurnNumber = 3
+		}
+	);
+}
+	
+	</code>
+</pre>
+
+<p>This particular test is checking that if the user is prompted for a spend on Oxen, and they said an amount that's drastically too high, then they're told it's too much and returned to the system state that will prompt them for a spend on oxen.  All of the tests in my suite so far follow this style.  I'm hoping the rest of the system will be as easy.</p>
+	
+<h4>To follow...</h4>
+
+<p>The next step is to write out the basic turn sequence (each turn consisting of a set number of days in world time, during which there will be random events and activities for the user to perform.  Unless there are any surprises, I'll probably leave out mini-games for the time being, and focus on those in a subsequent installment.  The real-time hunting game sounds especially challenging to do this way.</p>
