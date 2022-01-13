@@ -16,7 +16,7 @@ layout: blog
 
 <p>The first film I've picked is - so far as I can tell - the very first proper depiction of an IT technician in Hollywood.  At least, the first time they've been anything other than a small role or bit of stock footage in a rocket launch sequence.  If anyone knows of anything earlier, do let me know & I'll make sure to give it a watch.</p>
 
-<h4>The Plot</p>
+<h4>The Plot</h4>
 
 <p>This is an old Hollywood romantic comedy featuring Spencer Tracy and Katherine Hepburn as the leads.  Two Hollywood legends, regularly cast together as they had a chemistry - to the extent that they became a real-life couple.  Tracy here is the computer scientist - Richard Sumner - the inventor of a revolutional new all-purpose computer called <s>ENIAC</s> EMERAC - The <strong>E</strong>lectromagnetic <strong>ME</strong>mory and <strong>R</strong>esearch</strong> <strong>A</strong>rithmetical <strong>C</strong>alculator.  "Emmy" for short.</p>
 
