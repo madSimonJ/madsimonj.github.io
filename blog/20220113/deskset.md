@@ -9,7 +9,7 @@ layout: blog
 		<hr/>
 		<div style="text-align: left">	
 			<div class="svg-container">
-				<img src="Desk_Set_cinema_poster.jpg" width="50%" style="text-align: center" alt="Desk set cinema poster">
+				<img src="Desk_Set_cinema_poster.jpg" width="25%" style="text-align: center" alt="Desk set cinema poster">
 			</div>
 
 <p>This is the first post in a series I'm hoping to keep running over 2022 - Computing films.  I want to have a look at films made between now and somewhere around the mid-50s or so that feature computers or programmers promiently.  I'm going to look at not only are they good films in their own right, but also look at their representation of our profession is anywhere close to real</p>
