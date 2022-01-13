@@ -1,5 +1,7 @@
 ---
 layout: blog
+title: Computing Films - The Desk Set
+description: A review of the old Katherine Hepburn film by a software engineer
 ---
 
 <div class="pagepanel down_arrow white">
