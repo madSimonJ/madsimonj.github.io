@@ -15,6 +15,16 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/2dac21f655.css" media="all">
 	<link rel="alternate" type="application/rss+xml" href="/feed.rss" title="The Code Painter - Technical blog for Simon Painter">
 {% seo %}
+	  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XJFBCPTCXG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XJFBCPTCXG');
+</script>
   </head>
 
 <body class="home page page-id-75 page-template-default">
@@ -72,11 +82,11 @@
                              
       </section>
 	  
-		<script src="Content/js/vendor/modernizr-3.7.1.min.js"></script>
-		<script src="Content/js/vendor/foundation.min.js"></script>
-		<script src="Content/js/vendor/jquery.js"></script>
-		<script src="Content/js/vendor/what-input.js"></script>
-		<script src="Content/js/plugins.js"></script>
+		<script src="{{ '/Content/js/vendor/modernizr-3.7.1.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+	    	<script src="{{ '/Content/js/vendor/foundation.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+	    	<script src="{{ '/Content/js/vendor/jquery.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+	    	<script src="{{ '/Content/js/vendor/what-input.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+	    	<script src="{{ '/Content/js/plugins.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     </div>
 
 
