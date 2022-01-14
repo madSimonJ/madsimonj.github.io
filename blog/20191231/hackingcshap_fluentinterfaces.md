@@ -1,5 +1,7 @@
 ---
 layout: blog
+title: Hacking C# - Programming for the Truly Lazy 2 - Fluent Function Interfaces
+description: How to write blocks of code as a fluent interface
 ---
 
 <div class="pagepanel down_arrow white">

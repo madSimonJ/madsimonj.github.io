@@ -1,5 +1,7 @@
 ---
 layout: blog
+title: Hacking C# - Programming for the Truly Lazy 3 - Compare Adjacent Array Elements
+description: How to compare adjacent array elements without calling ToArray
 ---
 
 <div class="pagepanel down_arrow white">

@@ -1,5 +1,7 @@
 ---
 layout: blog
+title: Oregon Trail Part One - The Feedback Loop
+description: Part one of a series on convering an old 1974 BASIC program into Functional C#
 ---
 
 <div class="pagepanel down_arrow white">

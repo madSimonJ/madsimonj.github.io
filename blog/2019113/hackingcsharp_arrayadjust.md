@@ -1,5 +1,7 @@
 ---
-layout: blog
+layut: blog
+title: Hacking C# - Programming for the Truly Lazy 1 - Adjustable Arrays
+description: Adjust arrays without calling ToArray
 ---
 
 <div class="pagepanel down_arrow white">
