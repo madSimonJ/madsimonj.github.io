@@ -24,7 +24,7 @@ description: Part two of a series on convering an old 1974 BASIC program into Fu
 		<li>The hunting mini-game</li>
 		<li>Prompt the player  to eat</li>
 		<li>The "horse riders ahead" mini-game (I'll cover this next time)</li>
-		<li>update all relevant statuses, determine whether or not the player is dead, loop back around for another turn</p>
+		<li>update all relevant statuses, determine whether or not the player is dead, loop back around for another turn</li>
 	</ol>
 	
 	<p>As with before, the main turn engine is a switch operation that takes the old state, update information and generates a new state, so I've made a unit test for each and every possibility for what the player might do.</p>
@@ -197,11 +197,9 @@ private static GameState ResolveHunting(GameState oldState, string userInput, Da
 	
 	<p>The bits of logic that are encapsulated above are things like : 
 	<ul>
-		<li>A "bang" entry time of 1 second is a "flawless victory", and hits automaticlly with extra bonus food.  I can't honestly imagine how that could ever be possible.  Either it literally always was impossible, or the seconds that are being counted in the original BASIC code are longer than actual, real-world seconds.  I might have to experiment with a copy of the game in an emulator to see.</li>
-		
-		<li>A timespan longer than 7 seconds is corrected to 7.  The game doesn't want it to ever be impossible for you to hit<li>
-		
-		<li>The "was it a hit" calculation is the time taken (rounded down to 7) multiplied by 13 (a maximum value of 91), this gives us a score that a random number (chosen between 1 and 100) should be lower than.  This means that longer taken to type, the less likely it is that the player hits their target.  Even if you take forever to type "BANG", the player still has a 9 in 100 change of a hit.<li>
+		<li>A "bang" entry time of 1 second is a "flawless victory", and hits automaticlly with extra bonus food.  I can't honestly imagine how that could ever be possible.  Either it literally always was impossible, or the seconds that are being counted in the original BASIC code are longer than actual, real-world seconds.  I might have to experiment with a copy of the game in an emulator to see.</li>		
+		<li>A timespan longer than 7 seconds is corrected to 7.  The game doesn't want it to ever be impossible for you to hit</li>		
+		<li>The "was it a hit" calculation is the time taken (rounded down to 7) multiplied by 13 (a maximum value of 91), this gives us a score that a random number (chosen between 1 and 100) should be lower than.  This means that longer taken to type, the less likely it is that the player hits their target.  Even if you take forever to type "BANG", the player still has a 9 in 100 change of a hit.</li>
 		<li>How many bullets used, and how much food gained is also generated randomly, with the time-taken factor being used to give better results to quick shooters.</li>
 		
 	</ul>
