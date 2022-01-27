@@ -10,7 +10,7 @@ layout: default
 		<p>02/01/2020: <strong><a href="http://www.thecodepainter.co.uk/blog/20191231/hackingcshap_fluentinterfaces">Hacking C# Part Two: Fluent Interfaces</a></strong></p>
 		<p>05/03/2020: <strong><a href="https://www.thecodepainter.co.uk/blog/20200304/hackingcshap_consecutiveelements">Hacking C# Part Three: Compare Adjacent Array Items</a></strong></p>
 		<p>19/12/2021: <strong><a href="https://www.thecodepainter.co.uk/blog/20211219/oregontrail_1">Functional C#: Oregon Trail Part One - The Feedback Loop</a></strong></p>
-		<p>19/12/2021: <strong><a href="https://www.thecodepainter.co.uk/blog/20220113/deskset">Computer Films: Desk Set</a></strong></p>
-		<p>19/12/2021: <strong><a href="https://www.thecodepainter.co.uk/blog/20220128/oregontrail_2">Functional C#: Oregon Trail Part Two - It's Huntin' Season</a></strong></p>
+		<p>13/01/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220113/deskset">Computer Films: Desk Set</a></strong></p>
+		<p>22/01/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220128/oregontrail_2">Functional C#: Oregon Trail Part Two - It's Huntin' Season</a></strong></p>
 	</div>
 </div>
