@@ -294,3 +294,5 @@ public void given_the_user_enters_an_oxen_price_too_high_then_the_user_is_prompt
 
 <p>Thanks for reading!  Stay safe out there!</p> 
 
+<p>This series is continued in <a href="~/blog/20220128/oregontrail_2">Part Two</a></p>
+

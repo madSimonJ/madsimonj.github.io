@@ -29,5 +29,10 @@
        <link>https://www.thecodepainter.co.uk/blog/20220113/deskset</link>
 	   <description>A review of the first film to depict a computer reviewed by a professional software engineer</description>
     </item>
+    <item>
+       <title>Functional Programming in C#: Oregon Trail Part Two - It's Huntin' Season</title>
+       <link>https://www.thecodepainter.co.uk/blog/20220128/oregontrail_2</link>
+	   <description>Continuing my project to redevelop a 1971 BASIC computer game classic into C#, using Functional Programming techniques</description>
+    </item>
   </channel>
 </rss>
