@@ -11,7 +11,7 @@ description: Part two of a series on convering an old 1974 BASIC program into Fu
 		<hr/>
 		<div style="text-align: left">	
 			<div class="svg-container">
-				<img src="blog/20220128/Blog2.png" width="50%" style="text-align: center" alt="Man holding a nintendo gun">
+				<img src="/blog/20220128/Blog2.png" width="50%" style="text-align: center" alt="Man holding a nintendo gun">
 			</div>
 	
 	<p>In <a href="~/blog/20211219/oregontrail_1">Part One</a> of this article series, I talked about the background to Oregon Trail, where and whom it came from, and I coded the basic feedback loop necessary to get the game working.  In this Installment, I'm going to put some flesh on the bones and start working on the basic turn sequence.  I won't get it all done - there's an awful lot to it!  But I'll at least get most of it done.  At a guess, there are no more than one or two articles left in this series before I have it all wrapped up.</p>
