@@ -11,7 +11,7 @@ description: Part two of a series on convering an old 1974 BASIC program into Fu
 		<hr/>
 		<div style="text-align: left">	
 			<div class="svg-container">
-				<img src="Oregontrailsmall.png" width="50%" style="text-align: center" alt="Man sitting with a laptop and phone by a covered wagon">
+				<img src="blog2.png" width="50%" style="text-align: center" alt="Man holding a nintendo gun">
 			</div>
 	
 	<p>In <a href="~/blog/20211219/oregontrail_1">Part One</a> of this article series, I talked about the background to Oregon Trail, where and whom it came from, and I coded the basic feedback loop necessary to get the game working.  In this Installment, I'm going to put some flesh on the bones and start working on the basic turn sequence.  I won't get it all done - there's an awful lot to it!  But I'll at least get most of it done.  At a guess, there are no more than one or two articles left in this series before I have it all wrapped up.</p>
@@ -215,6 +215,6 @@ private static GameState ResolveHunting(GameState oldState, string userInput, Da
 			
 	<p>The Bell characters here are written as "'7".  Each of those would be rendered by making a beep noise, rather than actually writing anything down.  It's an oversight on my part that I didn't write my console output function with single-character-at-a-time or Bells into consideration.  This is a candidate to be re-written on another occasion.  For now I've simply omitted the Bells, and I'll come back and restore them at another time.<p>
 	
-	<p>That's enough for now.  Come back in a month's time, and I'll aim to have the "horse riders ahead" mini-game and Fort trading done.  That'll be most of the game finished.  I'm planning then to finish off with = Part 4, in which I'll finish off the last details, correct any mistakes and omissions, and maybe make a few improvements to the original design.  </p>
+	<p>That's enough for now.  Come back in a month's time, and I'll aim to have the "horse riders ahead" mini-game and Fort trading done.  That'll be most of the game finished.  I'm planning then to finish off with Part 4, in which I'll finish off the last details, correct any mistakes and omissions, and maybe make a few improvements to the original design.  </p>
 	
 	<p>Ta-ta for now.  Stay safe until next time.</p>
