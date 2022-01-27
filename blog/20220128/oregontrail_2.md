@@ -215,6 +215,50 @@ private static GameState ResolveHunting(GameState oldState, string userInput, Da
 			
 	<p>The Bell characters here are written as "'7".  Each of those would be rendered by making a beep noise, rather than actually writing anything down.  It's an oversight on my part that I didn't write my console output function with single-character-at-a-time or Bells into consideration.  This is a candidate to be re-written on another occasion.  For now I've simply omitted the Bells, and I'll come back and restore them at another time.<p>
 	
+	<p>There's also eating.  That's a very simple set of choices.  Does the player want to eat: poorly, moderately or well.  The only actual difference for the time being is how much food in consumed.  The better the player eats, the more food we lose.  What's the point of that?  For the time being, literally none.  It comes into play later when the game attempts to determine whether or not the player's caravan takes ill.   Eating better reduces the chance of illness.  The original BASIC code stored the player's choice in a variable called E, and that was referred to again a little further down the codebase.  For the time being I'm just recording the player's choice and reducing the food level appropriately.</p>
+	
+	<p>I implemented one of the death scenarios this time too - starving to death.  There's an elaborate "death" sequence of choices, wherein the player is asked about fancy funerals and whether next-of-kin should be informed.  As my C# shows, the choices actually make just about no difference to anything whatsoever.  I suppose that was just the original developer's sense of humour or something!</p>
+	
+			<pre>
+				<code class="cs hljs">
+Request.DeadWouldLikeMinister =&gt; state with
+{
+	Text = new []
+	{
+		"WOULD YOU LIKE A FANCY FUNERAL?"
+	},
+	Request = Request.DeadWantFancyFuneral
+},
+Request.DeadWantFancyFuneral =&gt; state with
+{
+	Text = new[]
+	{
+		"WOULD YOU LIKE US TO INFORM YOUR NEXT OF KIN?"
+	},
+	Request = Request.DeadInformNextOfkin
+},
+Request.DeadInformNextOfkin =&gt; state with
+{
+	Text = (IsYes(userInput) ? new [] { "YOUR AUNT NELLIE IN ST. LOUIS IS ANXIOUS TO HEAR", string.Empty} : Enumerable.Empty&lt;string&gt;())
+	.Concat(
+			new []
+			{
+				"WE THANK YOU FOR THIS INFORMATION AND WE ARE SORRY YOU",
+				"DIDN'T MAKE IT TO THE GREAT TERRITORY OF OREGON",
+				"BETTER LUCK NEXT TIME",
+				string.Empty,
+				string.Empty,
+				"       SINCERELY",
+				"   THE OREGON CITY CHAMBER OF COMMERCE"
+			}
+		),
+	IsGameFinished = true,
+	Request = Request.DeadEndGame
+}
+};
+				</code>
+			</pre>
+	
 	<p>That's enough for now.  Come back in a month's time, and I'll aim to have the "horse riders ahead" mini-game and Fort trading done.  That'll be most of the game finished.  I'm planning then to finish off with Part 4, in which I'll finish off the last details, correct any mistakes and omissions, and maybe make a few improvements to the original design.  </p>
 	
 	<p>Ta-ta for now.  Stay safe until next time.</p>
