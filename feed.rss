@@ -34,5 +34,10 @@
        <link>https://www.thecodepainter.co.uk/blog/20220128/oregontrail_2</link>
 	   <description>Continuing my project to redevelop a 1971 BASIC computer game classic into C#, using Functional Programming techniques</description>
     </item>
+    <item>
+       <title>Computer Films - Tron (1982)</title>
+       <link>https://www.thecodepainter.co.uk/blog/20220208/tron</link>
+	   <description>A review of the legendary 80s Science Fantasy film Tron</description>
+    </item>  
   </channel>
 </rss>
