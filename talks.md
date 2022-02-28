@@ -10,6 +10,11 @@ layout: default
 	I love talking tech, travelling, meeting new people and making a bit of a fool of myself in public.  Speaking at conferences and user groups gives me the perfect opportunity to endulge all of those interests.  I come up with new talks all the time, and at any given moment there are usually at least two or three new ones in development, but these are the ones I've finished and have been known to subject members of the public to:
 	</p>
 
+	<a href="/steganography"><img src="/Content/img/steganographysmall.png">
+	<h3>Steganography - The data that's hidden right under your 6e6f7365</h3></a>
+	<p>A fun talk on ways to hide secret messages in plain sight.
+	</p><p/>
+
 	<a href="/SolidPrinciplesIn5Nightmares"><img src="">
 	<h3>SOLID Principles in 5 Nightmares</h3></a>
 	<p>
