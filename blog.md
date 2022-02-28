@@ -12,5 +12,6 @@ layout: default
 		<p>19/12/2021: <strong><a href="https://www.thecodepainter.co.uk/blog/20211219/oregontrail_1">Functional C#: Oregon Trail Part One - The Feedback Loop</a></strong></p>
 		<p>13/01/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220113/deskset">Computer Films: Desk Set</a></strong></p>
 		<p>26/01/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220128/oregontrail_2">Functional C#: Oregon Trail Part Two - It's Huntin' Season</a></strong></p>
+	  	<p>09/02/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220208/tron">Computer Films: Tron (1982)</a></strong></p>
 	</div>
 </div>
