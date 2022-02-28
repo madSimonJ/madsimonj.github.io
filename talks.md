@@ -14,19 +14,19 @@ layout: default
 	<h3>Steganography - The data that's hidden right under your 6e6f7365</h3></a>
 	<p>A fun talk on ways to hide secret messages in plain sight.
 	</p><p/>
-
+	<hr>
 	<a href="/SolidPrinciplesIn5Nightmares"><img src="">
 	<h3>SOLID Principles in 5 Nightmares</h3></a>
 	<p>
 	Some of the most basic principles behind Object-Orientated development, what they are, and what can go wrong if they aren't followed.
 	</p><p/>
-
+	<hr>
 	<a href="/PrideAndPrejudiceAndCSharp"><img src="/Content/img/janeaustensmall.png">
 	<h3>Pride & Prejudice and C#</h3></a>
 	<p>
 	How we can use a simple machine learning technique and a bit of C# to generate whole new books "by" Jane Austen.  
 	</p><p/>
-	
+	<hr>
 	<a href="/functionalcsharp"><img src="/Content/img/functional-csharp.png">
 	<h3>Functional Programming in C#</h3></a>
 	<p>
