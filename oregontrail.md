@@ -6,7 +6,7 @@ layout: default
   <div class="center">
     <h2>DOWN THE OREGON TRAIL WITH FUNCTIONAL C#</h2>
     <hr/>
-<img src="/Content/img/oregontrail.png">
+<img src="/Content/img/Oregontrail.png">
 
 <p>In 1971, three students from Minnesota thought they could liven up a history lecture by creating a computer game for the students to play, and after several days of work in HP Time Share BASIC, they came up with what turned out to be a significant milestone in the history of computer games - Oregon Trail.</p>
 
