@@ -37,24 +37,42 @@ description: Part One of a series on how I came to be writing for O'reilly, and 
 
 <h4>How is it written?</h4>
 
-<p>O'Reilly have a Git-based source control system with a build system attached that converts ASCII DOC format files into PDFs or EPUB docs.  ASCII DOC is a text-based format, a little like Mark-down, with all sorts of extra styling mark-up for rendering source code, etc.  It's pretty easy to use, and there's something kind've awesome about being able to build a PDF from it, and have my words with all of the O'Reilly styling I'm used to.</P>
+<p>O'Reilly have a Git-based source control system with a build system attached that converts ASCII DOC format files into PDFs or EPUB docs.  ASCII DOC is a text-based format, a little like Mark-down, with all sorts of extra styling mark-up for rendering source code, etc.  It's pretty easy to use, and there's something kind of awesome about being able to build a PDF from it, and have my words with all of the O'Reilly styling I'm used to.</P>
 
 <p>I tend to do the work very late at night.  I've got 2 kids, and looking after them takes up an awful lot of my evening, plus I really need a bit of quiet, distraction-free time to work properly.  It does mean that falling asleep at my keyboard is an occupational hazard now, mind!.  By and large though, I'm finding a chapter a month fairly do-able, aside from a weirdly busy April, where I seemed to spend most of it travelling.</p>
 
 <p>It helps that I've been giving talks on Functional Programming in C# for long enough that I've got a pretty decent grip on the subject matter already, so the amount of research required is fairly minimal.  The harder part I find is coming up with the right wording for an explanation, or trying to decide on an amusing example function to show code for.  </p>
 
 <p>Me being me, I've also put plenty of terrible jokes in.  To my surprise, with one exception, none of them have been removed by the editors.</p>
-
+ 
 <h4>What are O'Reilly like to work with?</h4>
 
 <p>Really nice, actually - and I'm not just saying that.  Jill, my editor, meets me once a fortnight to check in on how I'm doing, and provide editorial feedback.  She's lovely, and our meetings are pretty informal.  There's no real sense of an intense deadline, although that would probably change if I stopped providing regular updates.</p>
 
 <p>I've heard tell some publishers can be a bit over-bearing with regards deadlines and expected progress, but so far at least, O'Reilly don't appear to be one of them.<p>
 
+<p>The process for the monthly release has gone something like this:</p>
+
+<ul>
+	<li>I work on Chapter N+2</li>
+	<li>The editors at O'Reilly look at chapter N+1</li>
+	<li>Chapter N is released to the Learning site</li>
+</ul>
+	  
+<p>The biggest issue I have in editing is that the official language of the book is American English, and I'm British, so I'm having to constantly correct my spellings.  Changing 's' for 'z', removing silent 'u's, that sort of thing.  They did let me get away with a reference to the 90s British Fantasy gameshow/RPG 'Knightmare' though.  I'm chuffed to have managed that.</p>
+	  
+	  <h4>What Animal Will I Get?</h4>
+	  <p>I have no idea, and neither does anyone else.  The editing team have no say in which animal goes with which book.  Aparently there's a team somewhere in O'Reilly whose job is to make the Animal selection. It'll be determined close to release date - some time next year.</p>
+	  
+	  <p>I don't get any say, but if I could choose I'd go with either a Eurasian Wren or a Eurasian Robin.  I'm a keen birdwatcher, and those two are among my paricular favourites.  If nothing else, the Robin would be nice, since it's the national bird of my home country - the UK.</p>
+	  
+	  
 <h4>Will you make any money off this?</h4>
 
-<p>I have no idea, in all honesty.  Probably not.  I get 10% of the royalties on paper copies.  I couldn't tell you what that'll equate to, but really and truely I'm not in this for the money.  If I get a 50p piece sellotaped to a bit of cardboard in the post from O'reilly once a month I probably still won't feel too hard done by.   A few months of that and I can even treat myself to a beer!</p>
+<p>I have no idea, in all honesty.  Probably not.  I get 10% of the royalties on paper copies and something like 25% on e-copies.  I couldn't tell you what that'll equate to, but really and truely I'm not in this for the money.  If I get a 50p piece sellotaped to a bit of cardboard in the post from O'reilly once a month I probably still won't feel too hard done by.   A few months of that and I can even treat myself to a beer!</p>
 
+<p>It has been suggested I could self-publish and keep 90% of the profit for myself.  That might well be true, but the O'Reilly brand has a lot of pull in the market, and they have international contacts that I couldn't hope to make use of, so I can't help but think that 10% skimmed off the surface of O'Reilly's profits are probably still more than 90% of whatever I could hope to achieve as an almost completely unknown author.  Maybe for the next book, who knows... I've not honestly planned that far ahead.</p>
+	  
 <h4>What's next?</h4>
 
 <p>Keep my head down and write as much as I can the rest of this year.  I've reached chapter 4 in draft, and I've got another 8 chapters still to do.  that's really quite a lot of work.  The pre-release version is available on the O'Reilly learning platform now, and they're hoping to update it with another chapter every month, going forward.</p>
@@ -62,3 +80,5 @@ description: Part One of a series on how I came to be writing for O'reilly, and 
 <p>Tech review is ongoing right now, so I'm hoping for my first professional feedback in the next week or two, most likely followed by a late night of frantic alterations.  I'm not sure they ever have enough reviewers, so do get in touch if you're interested in reading the early version of this book & helping me with feedback.  You don't have to already be an expert, I'd love to hear what anyone from any level of skill has to say about what I'm writing.</p>
 
 <p>I'll probably write a follow-up article once there have been further developments.  Maybe towards the end of the year.  I'll see how it goes...</p>
+
+<p>I'm half tempted to spend a year learning painting when this is all over.  I'm aware I've got a slightly ironic surname, but it is actually something I fancy learning to do.  Would make a nice contrast with a solid year of tech stuff.</p>
