@@ -37,7 +37,7 @@ description: Part One of a series on how I came to be writing for O'reilly, and 
 
 <h4>How is it written?</h4>
 
-<p>O'Reilly have a Git-based source control system with a build system attached that converts ASCII DOC format files into PDFs or EPUB docs.  ASCII DOC is a text-based format, a little like Mark-down, with all sorts of extra styling mark-up for rendering source code, etc.  It's pretty easy to use, and there's something kind of awesome about being able to build a PDF from it, and have my words with all of the O'Reilly styling I'm used to.</P>
+<p>O'Reilly have a Git-based source control system with a build system attached that converts AsciiDoc format files into PDFs or EPUB docs.  AsciiDoc is a text-based format, a little like Mark-down, with all sorts of extra styling mark-up for rendering source code, etc.  It's pretty easy to use, and there's something kind of awesome about being able to build a PDF from it, and have my words with all of the O'Reilly styling I'm used to.</P>
 
 <p>I tend to do the work very late at night.  I've got 2 kids, and looking after them takes up an awful lot of my evening, plus I really need a bit of quiet, distraction-free time to work properly.  It does mean that falling asleep at my keyboard is an occupational hazard now, mind!.  By and large though, I'm finding a chapter a month fairly do-able, aside from a weirdly busy April, where I seemed to spend most of it travelling.</p>
 
