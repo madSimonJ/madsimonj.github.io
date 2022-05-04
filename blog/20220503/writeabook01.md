@@ -51,7 +51,7 @@ description: Part One of a series on how I came to be writing for O'reilly, and 
 
 <p>I've heard tell some publishers can be a bit over-bearing with regards deadlines and expected progress, but so far at least, O'Reilly don't appear to be one of them.<p>
 
-<h4>Will you make any money off this?</p>
+<h4>Will you make any money off this?</h4>
 
 <p>I have no idea, in all honesty.  Probably not.  I get 10% of the royalties on paper copies.  I couldn't tell you what that'll equate to, but really and truely I'm not in this for the money.  If I get a 50p piece sellotaped to a bit of cardboard in the post from O'reilly once a month I probably still won't feel too hard done by.   A few months of that and I can even treat myself to a beer!</p>
 
