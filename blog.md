@@ -13,5 +13,6 @@ layout: default
 		<p>13/01/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220113/deskset">Computer Films: Desk Set</a></strong></p>
 		<p>26/01/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220128/oregontrail_2">Functional C#: Oregon Trail Part Two - It's Huntin' Season</a></strong></p>
 	  	<p>09/02/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220208/tron">Computer Films: Tron (1982)</a></strong></p>
+	  	<p>04/04/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220503/writeabook01">Writing a Book for O'Reilly - Part One</a></strong></p>
 	</div>
 </div>
