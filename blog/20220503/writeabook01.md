@@ -47,7 +47,7 @@ description: Part One of a series on how I came to be writing for O'reilly, and 
 
 <h4>What are O'Reilly like to work with?</h4>
 
-<p>Really nice, actually - and I'm not just saying that.  Jill, my editor, meets me once a fortnite to check in on how I'm doing, and provide editorial feedback.  She's lovely, and our meetings are pretty informal.  There's no real sense of an intense deadline, although that would probably change if I stopped providing regular updates.</p>
+<p>Really nice, actually - and I'm not just saying that.  Jill, my editor, meets me once a fortnight to check in on how I'm doing, and provide editorial feedback.  She's lovely, and our meetings are pretty informal.  There's no real sense of an intense deadline, although that would probably change if I stopped providing regular updates.</p>
 
 <p>I've heard tell some publishers can be a bit over-bearing with regards deadlines and expected progress, but so far at least, O'Reilly don't appear to be one of them.<p>
 
