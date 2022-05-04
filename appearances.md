@@ -12,13 +12,10 @@ layout: default
 		
 		<ul>
 		
-			<li><b>Steganography</b> - Shortlist Recruitment Virtual Roundtable - 3rd March, 2022</li>
-			<li><b>Hacking C#</b> - Rome .NET Conference 2022 - 18th March, 2022</li>
-			<li><b>Functional Programming in C#</b> - NDC Porto - 28th April, 2022</li>
 			<li><b>Hacking C#</b> - NDC Copenhagen - 1st June, 2022</li>
-			<li><b>Down the Oregon Trail</b> - NDC Melbourne - 22nd June, 2022</li>
+			<li><b>Down the Oregon Trail with Functional C#</b> - NDC Melbourne - 22nd June, 2022</li>
 			<li><b>SOLID Principles in 5 Nightmares</b> - .NET Sheffield - 6th September, 2022</li>
-		
+
 		</ul>
 		
 		
