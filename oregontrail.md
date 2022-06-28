@@ -28,3 +28,5 @@ layout: default
 	<strong>Presented at:</strong>
 </p>
 
+<p><strong><a href="">DotNet Oxford</a></strong> - Virtual - <small>14th June 2022</small></p>
+<p><strong><a href="https://ndcmelbourne.com/agenda/down-the-oregon-trail-with-functional-c-072c/0iqbzgkdipk">NDC Melbourne</a></strong> - Melbourne, Australia - <small>22nd June 2022</small></p>

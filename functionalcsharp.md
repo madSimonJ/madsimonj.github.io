@@ -48,3 +48,4 @@ layout: default
 <p><strong><a href="https://www.youtube.com/watch?v=k02Ft5FSl-I">Func Prog Sweden</a></strong> - Sweden (Virtual) - <small>27th May 2021</small></p>
 <p><strong><a href="https://www.youtube.com/watch?v=Ny_-p-tEmu0">.Net Zürich</a></strong> - Zürich, Switzerland (Virtual) - <small>28th February 2022</small></p>
 <p><strong><a href="https://ndcporto.com/agenda/functional-programming-with-c-0ye0/0jf13emda2r">NDC Porto</a></strong> - Porto, Portugual - <small>28th April 2022</small></p>
+<p><strong><a href="http://netponto.org/">Net Ponto</a></strong> - Virtual - <small>14th June 2022</small></p>

@@ -31,6 +31,8 @@ layout: default
 <p><strong><a href="https://www.meetup.com/Birmingham-DotNet-And-Xamarin-User-Group/events/265178106/">Birmingham .NET and Xamarin User Group</a></strong> - Birmingham, UK - <small>28th January 2020</small></p>
 <p><strong><a href="https://www.dddnorth.co.uk/">DDD North</a></strong> - Hull, UK - <small>29 February 2020</small></p>
 <p><strong><a href="https://www.meetup.com/dotnetnotts/events/269642073/">DotNet Notts</a></strong> - <small>30th March 2020</small></p>
+<p><strong><a href="https://www.meetup.com/dotnetnotts/events/269642073/">DotNet Notts</a></strong> - <small>30th March 2020</small></p>
+<p><strong><a href="https://ndccopenhagen.com/agenda/hacking-c-development-for-the-truly-lazy-0nvb/0eev20me1xy">NDC Copenhagen</a></strong> - Copenhagen, Denmark - <small>1st June 2022</small></p>
   
   </div>
 </div>
