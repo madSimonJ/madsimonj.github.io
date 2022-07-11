@@ -11,7 +11,7 @@ layout: default
 		<br>
 		
 		<ul>
-		
+			<li><b>Down the Oregon Trail with Functional C#</b> - Func Prog Sweden - 9 August, 2022</li>	
 			<li><b>SOLID Principles in 5 Nightmares</b> - .NET Sheffield - 6th September, 2022</li>
 			<li><b>Down the Oregon Trail with Functional C#</b> - NDC Oslo - 28th September, 2022</li>
 			<li><b>Functional Programming in C#</b> - Hainton - 22nd November, 2022</li>
