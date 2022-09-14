@@ -12,8 +12,9 @@ layout: default
 		
 		<ul>
 		
-			<li><b>SOLID Principles in 5 Nightmares</b> - .NET Sheffield - 6th September, 2022</li>
 			<li><b>Down the Oregon Trail with Functional C#</b> - NDC Oslo - 28th September, 2022</li>
+			<li><b>Functional Programming in C#</b> - Hainton - 22nd November, 2022</li>
+			<li><b>Hacking C#: Development for the Truly Lazy</b> - Milton Keynes .NET - 10th January, 2023</li>
 
 		</ul>
 		

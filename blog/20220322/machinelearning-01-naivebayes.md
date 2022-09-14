@@ -147,6 +147,8 @@ Doctor, Probability<br>
 
 <h4>What's it For?</h4>
 
-<p>This was all good fun, but what's the point?  
+<p>This was all good fun, but what's the point?  For one, we can now take an array of data items with a list of properties, and quickly and easily calculate a set of probabilities arranged around that property.  In our example, we went from a set of data about each Doctor, to a set of data based around all of the Dalek stories in the set, and how they break down by Doctor.  The same way a C# GroupBy function can be used to repivot a dataset around a chosen property.  Creating Pie Charts, or other reports is definitely a useful feature of this algorithm.  <p>
+
+<p>There's a
 
 

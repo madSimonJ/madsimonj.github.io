@@ -34,3 +34,4 @@ layout: default
 <p><strong><a href="https://www.youtube.com/watch?v=mGHB6X5FOBo">DDD East Midlands</a></strong> - Nottingham, UK - <small>2nd October, 2021</small></p>
 <p><strong><a href="https://www.developerdeveloperdeveloper.com/schedule">DDD</a></strong> - Reading, UK (Virtual)- <small>27th November, 2021</small></p>
 <p><strong><a href="">Shortlist Recruitment Virtual Roundtable</a></strong> - Virtual- <small>9th December, 2021</small></p>
+<p><strong><a href="">DotNet Sheffield</a></strong> - Sheffield, UK - <small>14th September, 2022</small></p>
