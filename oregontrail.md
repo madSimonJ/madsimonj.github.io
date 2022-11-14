@@ -33,3 +33,4 @@ layout: default
 <p><strong><a href="">Func Prog Sweden</a></strong> - Virtual - <small>9th August 2022</small></p>
 <p><strong><a href="">DotNet Sheffield</a></strong> - Sheffield, UK - <small>14th September 2022</small></p>
 <p><strong><a href="https://ndcoslo.com/agenda/down-the-oregon-trail-with-functional-c-0ndc/0hl05zvftz3">NDC Oslo</a></strong> - Oslo, Norway - <small>30th September, 2022</small></p>
+<p><strong><a href="">DotNet Conf</a></strong> - Virtual - <small>8th November, 2022</small></p>
