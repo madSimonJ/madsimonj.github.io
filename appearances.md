@@ -11,7 +11,6 @@ layout: default
 		<br>
 		
 		<ul>
-			<li><b>Functional Programming in C#</b> - Hainton - 22nd November, 2022</li>
 			<li><b>Functional Programming in C#</b> - .NET Liverpool - 29th November, 2022</li>
 			<li><b>Functional Programming in C#</b> - Derby Devs - 30th November, 2022</li>
 			<li><b>Hacking C#: Development for the Truly Lazy</b> - Milton Keynes .NET - 10th January, 2023</li>
