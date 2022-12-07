@@ -33,9 +33,9 @@ description: A few hints and tips about solving the Advent of Code purely functi
 
 <p>To make sure I'm following these rules, and since I don't need to worry about the additional complexities of things like interactions with a web API or database, or any unclean user input, I can go absolutely all-out with functional style code.  In fact, for the purposes of demonstration, I'm going to write everything entirely as arrow functions.  That makes it just about impossible to alter the value of a variable or include a statement.</P>
 
-<p>What I'm going to do over the course of this article is show some of the techniques I use to write functional C#, but without having to resort to any non-functional code whatsoever.  </P>
+<p>What I'm going to do over the course of this article is show some of the techniques I use to write functional C#, but without having to resort to any non-functional code whatsoever.  </p>
 
-<h3>Structuring the Answer</p>
+<h3>Structuring the Answer</h3>
 
 <p>Unlike Object-Oriented code, functional code tends to be structured less around the detail of how exactly a result object is built up and in which order - rather it tends to be written in a way that's more closely linked to how the process works <i>logically</i> - as in, like the way you'd describe the steps you'd take to solve a problem if you were talking to another human being (assuming you are one.  AIs are getting pretty clever now, I must remind myself!).  Functional programming is less concerned with the details how exactly how and when things were built up, rather it focuses on what is <i>wanted</i>.  The details of the order of operations, etc. are not really of any interest.</p>
 
