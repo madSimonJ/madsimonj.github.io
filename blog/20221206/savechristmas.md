@@ -41,6 +41,54 @@ description: A few hints and tips about solving the Advent of Code purely functi
 
 <p>You may wonder how you'd accomplish something like that in C#.  A large chunk of the answer is the use of LINQ.  LINQ was developed based on the functional paradigm.  Select statements don't alter the original Enumerable, they create a new one, based on the old.  They also take functions as parameters.  Both of these techniques are functional.  This isn't a coincidence.  The .NET team have a stated goal of supporting both paradigms in C#, and every version of C# for years now has consistently included further functional features.</p>
 
+<p>As for structuring the answer itself, my general approach is to keep everything split down as small as logically possible.  In Functional Programming, it's entirely possible to write the whole thing  as a massive chain of functions, but this has its problems.  For a start, it makes it harder to debug.  The latest versions of Visual Studio contain a lot more support for putting break points inside function chains, but older versions aren't great for it.  The second issue is testability - the fewer things that a function does, the easier it is to create robust tests that cover everything.  Finally, one of the points of the Advent of Code is that after completing Part One, you'll then be given a mystery varient Part Two to develop.  If you've kept your functions small, it's usually easy enough to re-use most of the same code from Part One again, just perhaps glued together in a different order, or with different parameters.</p>
 
+<p>From a lower-level perspective, I create my answers in a Unit Test project, and I implement all of the examples given in each puzzle page as unit tests before I move on to the <i>actual</i> real puzzle input.  If I'm lucky, the real input works first time.  That's not really all that common, though!  I find the best approach is to imagine - logically - the steps of a problem, and implement the code in <i>that</i> order.  I find one of the beauties of functional programming is that you don't need to worry about laying down boilerplate code that won't be useful until later, the way you often have to with object-oriented code.</p>
 
+<p>I would also ensure you're using as up-to-date a version of .NET as you can.  Microsoft are always releasing new functional features, so there's always likely to be a nifty new feature in the latest version, when it comes out.  Case in point, the latest version of LINQ contains a Chunk feature, for breaking arrays into even sized pieces.  That's incredibly useful for these puzzles.</p>
 
+<h3>Really Learn LINQ</h3>
+
+<p>This seems a bit basic, but you'd be surprised.  LINQ is far bigger than most people realise, and even I after decades of using it, still find the odd new feature I wasn't aware of before.</p>
+
+<p>Here are a few less-well-known LINQ commands that it might be worth reading up on:</p>
+
+<ul>
+	<li>Zip - Link 2 arrays together into a sort've psueo-tuple.  The callback function will first see the first element from each array, then the second from each, and so on.  If the sizes differ, the parameter for the shorter array will be default</li>
+	<li>Aggregate - Render an array of items down to a single, final result using a running total built up in increments.  Tremendously powerful when used well</li>
+	<li>Chunk - new to .NET.  Splits a larger array up into a requested regular size</li>
+	<li>Take & Skip - used to take a chunk from the middle of an Enumerable without necessarily enumerating it.  Newer versions of C# can also do this as a handy Python-style array select syntax - e.g. myArray[3..] or myArray[^4]</li>
+	<li>Enumerable.Range - Create an array of integers where the first element is a specified and each subsequent element is 1 higher, continuing until there are many elements as you require.  Can be very useful for replacing the "var i" feature of a For-loop</li>
+	<li>Enumerable.Repeat - create an array with X elements, each containing the same value</li>
+	<li>Append - Create a new Enumerable, the same as the last, but with an additional item.  Saves the need to use a List</li>
+	<li>Concat - As with Append, but you can pass another Enumerable, and get back a new one which has all values from the source arrays joined together</li>
+</ul>
+
+<p>Something to bear in mind though...</p>
+
+<p>Enumerables implement lazy loading - meaning that data only comes out of them at the very latest possible moment. Until that, they're just the potential for data, pointing at a data source, with a few bits of logic that tell it how to transform it once received.  This is a very powerful feature, but it has a down side.  Until ToList or ToArray are called, all LINQ operations are just stacked up in memory until they're needed.  If you don't make sure that you call ToArray in the right places, it can cause a massive memory overhead that can bring your code screeching to a halt.<p>
+
+<h3>Replacing Loops</h3>
+
+<p>There are three fundamental types of loop in C# - For, ForEach and While.  Just about all of them can be replaced by other structures in functional-style C#.  I'll show you a few techniques here to accomplish that.<p>
+
+<p>The most obvious way to get rid of the majority of ForEach loops is to use a LINQ Select function.  It can replace the OO approach of instantiating a List outside a ForEach loop and adding to it with each iteration.  If there are many operations to be performed, then Selects can be called, one after the other.  Alternatively, a more complex function can be written and referenced within the Select.  Here's an Example from this year's puzzles:</p>
+
+			<pre>
+				<code class="cs hljs">
+private static int TopThreeCalories(string input) =>
+	input.Split("\r\n\r\n")
+		.Select(x => x.Split("\r\n"))
+		.Select(x => x.Select(int.Parse))
+		.Select(x => x.Sum())
+		.OrderByDescending(x => x)
+		.Take(3)
+		.Sum();
+				</code>
+			</pre>
+
+<p>If you look that function, we're starting with a single item - the input string, then splitting it up into an Enumerable of items, performing list-based operations on those items, before finaly aggregating down to a single return value.  That's a fairly typical functional flow.</p>
+
+<p>We also need to replace For loops, however.  These days easily 90% or more of loops that I create are ForEach, because I don't necessarily care about the index position of the element I'm transforming from an Enumerable, but there are cases we still need the For loop to provide a value of i, so what options are there?</p>
+
+<p>As it happens there are three.  The first is to use the overloaded version of the LINQ Select method, the one that takes 2 parameters.  The first parameter is the usual x we're all used to - the current element from the Enumerable.  The second is the index of the element - i.e. the i from a For loop.  That's the simplest method to have the index value available to you, and serves in the majority of cases.</P>
