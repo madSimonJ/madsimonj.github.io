@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Saving Christmas with Functional C#
+title: Saving Christmas with Functional C# - Part One
 description: A few hints and tips about solving the Advent of Code purely functionally
 ---
 
@@ -91,4 +91,36 @@ private static int TopThreeCalories(string input) =>
 
 <p>We also need to replace For loops, however.  These days easily 90% or more of loops that I create are ForEach, because I don't necessarily care about the index position of the element I'm transforming from an Enumerable, but there are cases we still need the For loop to provide a value of i, so what options are there?</p>
 
-<p>As it happens there are three.  The first is to use the overloaded version of the LINQ Select method, the one that takes 2 parameters.  The first parameter is the usual x we're all used to - the current element from the Enumerable.  The second is the index of the element - i.e. the i from a For loop.  That's the simplest method to have the index value available to you, and serves in the majority of cases.</P>
+<p>As it happens there are two.  The first is to use the overloaded version of the LINQ Select method, the one that takes 2 parameters.  The first parameter is the usual x we're all used to - the current element from the Enumerable.  The second is the index of the element - i.e. the i from a For loop.  That's the simplest method to have the index value available to you, and serves in the majority of cases.</P>
+
+			<pre>
+				<code class="cs hljs">
+public static Stacks ParseStacks(IEnumerable<string> input) =>
+	input.Select(s => s.Chunk(4))
+		.Select(x => x.Select(y => y[1]))
+		.SelectMany(x => x.Select((y, i) => (Crane: i + 1, Crate: y)))
+		.GroupBy(x => x.Crane)
+		.ToDictionary(x => x.Key, x => x.Where(y => y.Crate != ' ').Select(y => y.Crate))
+				</code>
+			</pre>
+
+<p>In this eample you can see the overloaded version of the Select at work to determine an arbitrary id value for a crane, so that I can perform a grouping afterwards.</p>
+
+<p>The second method is to use Enumerable.Range, then perform a select against it.  This is an example where I was using it to build up a string, where a check had to be made to determine whether the current character overlapped with a rapidly changing variable, which was used to select the appropriate character to print to the result string.</p>
+
+			<pre>
+				<code class="cs hljs">
+public static string RenderSpriteString(IEnumerable<int> input) =>
+		input.Zip(Enumerable.Range(0, 40))
+		.Select(x => Math.Abs(x.First - x.Second) < 2 ? '#' : '.')
+		.Bind(x => new string(x.ToArray()));
+				</code>
+			</pre>
+
+<p>A much more complicated problem is replacing While loops.  The previous two kinds of loop are instances of Definite loops - that is loops with a definite beginning and end.  Easy, uncomplicated loops.  What about <i>in</i>definite loops.  Ones where we're looping around indefinitely until an arbitrary condition is met.  How do we do those?</p>
+
+<p>The classical approach in functional programming is to use recursion.  That isn't an approach I'd recommend in C#, however.  In F#, and in other more functional languages, it's perfectly possible to do recursion as a method of looping indefinitely, but in C# it has a <i>massive</i> memory overhead.  To the point that it can cause a stack overflow exception.  Unless you're very sure of what you're doing, I'd avoid the technique alltogether. </p>
+
+<p>Where does that leave us, as functional c# developers?  Well, once again there are a variety of possible solutions, and I'll go into them in Part two of this article in a few weeks.</p>
+
+<p>Until next time...</p>
