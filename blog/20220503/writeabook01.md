@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Writing a Book for O'Reilly - Party One
+title: Writing a Book for O'Reilly - Part One
 description: Part One of a series on how I came to be writing for O'reilly, and what the process is like
 ---
 
