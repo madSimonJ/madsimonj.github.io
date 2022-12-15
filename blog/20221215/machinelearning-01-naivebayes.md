@@ -66,7 +66,7 @@ description: Part One of a series on basic Machine Learning Algorithms in C#.  T
 <p>In case you're curious, the actual formula looks like this: P(c|x) = (P(x|c) * P(c)) / P(x).  That's a maths thing, though.  I'm not interested in precise mathematical definitions, I want the practical, engineers version, and that look more like this:<p>
 
 <ol>
-	<li>Select a Probability of "Daleks Given 1st Doctor" (i.e. </li>
+	<li>Select a Probability of "Daleks Given 1st Doctor" (i.e. 5/29 = 0.172)</li>
 	<li>Multiply by probability of any random story being a 1st doctor story (i.e. 29/299 = 0.097 = 9.7%)</li>
 	<li>Divide by the probabilty of any random story being a Dalek story (i.e. 27/299 = 0.090 = 9.0%)</li>
 </ol>
