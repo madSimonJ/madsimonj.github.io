@@ -15,6 +15,8 @@ description: Part One of a series on basic Machine Learning Algorithms in C#.  T
 				<img src="" width="50%" style="text-align: center" alt="">
 			</div>
 
+<p> This article was published as part of the 2022 <a href="https://csadvent.christmas/">C# Advent Event</a>.  Make sure to check out the other articles that were part of the event too!</p>
+
 <h4>Introduction</h4>
 
 <p>Anyone familiar with my work so far will know that my usual topic is functional programming - specifically how to accomplish it in C#.  There are actually an awful lot of areas of interest in coding that I'm into, and among them is Machine Learning.  I've done a few talks touching on it in the past, like the one I've done on randomly generating a new book by Jane Austen using Markhov chains (have a hunt around on YouTube, there are a few recorded versions of it out there).  This time though,  I wanted to take a much deeper dive into the topic.  When it's over, I might have a think about practical applications, and see whether I can put a project together.</p>

@@ -43,6 +43,11 @@
        <title>Writing a Book for O'Reilly - Part One</title>
        <link>https://www.thecodepainter.co.uk/blog/20220503/writeabook01</link>
 	   <description>A few notes and on what it's like to be writing a book for O'Reilly publishing</description>
+    </item> 
+	<item>
+       <title>Basic Machine Learning Algorithms in C# - Part One - Naive Bayes</title>
+       <link>https://www.thecodepainter.co.uk/blog/20221215/machinelearning-01-naivebayes</link>
+	   <description>Part One of a series on basic Machine Learning Algorithms in C#.  This one is about Naive Bayes</description>
     </item>  
   </channel>
 </rss>
