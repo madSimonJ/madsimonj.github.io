@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Writing a Book for O'Reilly - Part One
-description: Part One of a series on how I came to be writing for O'reilly, and what the process is like
+description: Part One of a series on basic Machine Learning Algorithms in C#.  This one is about Naive Bayes
 ---
 
 
