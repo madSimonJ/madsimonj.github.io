@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Basic Machine Learning Algorithms - Part One: Naive Bayes
+title: Basic Machine Learning Algorithms - Part One - Naive Bayes
 description: Part One of a series on basic Machine Learning Algorithms in C#.  This one is about Naive Bayes
 ---
 
