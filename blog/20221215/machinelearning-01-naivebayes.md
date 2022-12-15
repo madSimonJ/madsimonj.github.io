@@ -16,7 +16,7 @@ description: Part One of a series on basic Machine Learning Algorithms in C#.  T
 
 <h4>Introduction</h4>
 
-<p>I'm taking a brief pause from my work on Oregon Trail for a bit to focus on one of my other frequent obsessions - machine learning.  I've done a few talks touching on it in the past, like the one I've done on randomly generating a new book by Jane Austen using Markhov chains (have a hunt around on YouTube, there are a few recorded versions of it out there).  This year though,  I wanted to take a much deeper dive into the topic.  When it's over, I might have a think about practical applications, and see whether I can put a project together.</p>
+<p>Anyone familiar with my work so far will know that my usual topic is functional programming - specifically how to accomplish it in C#.  There are actually an awful lot of areas of interest in coding that I'm into, and among them is Machine Learning.  I've done a few talks touching on it in the past, like the one I've done on randomly generating a new book by Jane Austen using Markhov chains (have a hunt around on YouTube, there are a few recorded versions of it out there).  This time though,  I wanted to take a much deeper dive into the topic.  When it's over, I might have a think about practical applications, and see whether I can put a project together.</p>
 
 <p>I'm also planning to do all of this in C#.  I'm aware that C# isn't the go-to language for most data scientists (take a bow, Python) but I wanted to do it this way for a couple of reasons. </p>
 
@@ -55,11 +55,11 @@ description: Part One of a series on basic Machine Learning Algorithms in C#.  T
 	<li><strong>10th Doctor (Tennant)</strong> - 3/36 = 0.083 = 8.3%</li>
 	<li><strong>11th Doctor (Smith)</strong> - 3/39 = 0.172 = 17.2%</li>
 	<li><strong>12th Doctor (Capaldi)</strong> - 1/35 = 0.172 = 17.2%</li>
-	<li><strong>13th Doctor (Whittaker)</strong> - 2/22 = 0.091 = 9.1%</li>
+	<li><strong>13th Doctor (Whittaker)</strong> - 5/26 = 0.192 = 19.2%</li>
 
 </ul>
 
-<p>Before there are any arguments, I'm only counting <strong>proper</strong> Dalek stories, where they're the main villains.  I'm not counting every episode that features one wandering around in the background somewhere.  </p>
+<p>Before there are any arguments, I'm only counting <strong>proper</strong> Dalek stories, where they're the main villains.  I'm not counting every episode that features one wandering around in the background somewhere.  Probably.  Like everything else in Doctor Who it's probably up for debate.  Even the number of episodes is a little arbitrary here.</p>
 
 <p>So what we have so far is a list of probabilities that say "given this is a (for example) First Doctor story, the chances it is a Dalek story is X".  Using the Bayes algorithm, we can turn that on its head, and say "Given this is a Dalek story, the chances it is a First Doctor story is Y".</p>
 
@@ -94,7 +94,7 @@ var DoctorDalekData = new[]
 	(10, 36, 3),
 	(11, 39, 3),
 	(12, 35, 1),
-	(13, 22, 2)
+	(13, 26, 5)
 };
 
 var probabilityOfDalekGivenDoctor = DoctorDalekData.Select(x =&gt;
@@ -140,7 +140,7 @@ Doctor, Probability<br>
 10, 0.11<br>
 11, 0.11<br>
 12, 0.04<br>
-13, 0.07<br>
+13, 0.17<br>
 <br>
 
 <p>Looks like if I were a betting man, and we were inexplicably betting on which Doctor we'd get from a random bag of all of the Dalek stories on DVD, I'd put my money on the 1st or 3rd Doctors.</p>
@@ -149,6 +149,7 @@ Doctor, Probability<br>
 
 <p>This was all good fun, but what's the point?  For one, we can now take an array of data items with a list of properties, and quickly and easily calculate a set of probabilities arranged around that property.  In our example, we went from a set of data about each Doctor, to a set of data based around all of the Dalek stories in the set, and how they break down by Doctor.  The same way a C# GroupBy function can be used to repivot a dataset around a chosen property.  Creating Pie Charts, or other reports is definitely a useful feature of this algorithm.  <p>
 
-<p>There's a
+<p>There's another use.  We can also use this to classify things.  In Part 2, I'll show you how to use a Naive Bayes classifier identify an author by their writing style, among other things.</p>
 
+<p>Until next time...</p>
 
