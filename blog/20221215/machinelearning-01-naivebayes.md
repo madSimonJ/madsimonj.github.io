@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Writing a Book for O'Reilly - Part One
+title: Basic Machine Learning Algorithms - Part One
 description: Part One of a series on basic Machine Learning Algorithms in C#.  This one is about Naive Bayes
 ---
 
