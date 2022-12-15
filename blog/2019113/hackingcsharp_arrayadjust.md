@@ -1,5 +1,5 @@
 ---
-layut: blog
+layout: blog
 title: Hacking C# - Programming for the Truly Lazy 1 - Adjustable Arrays
 description: Adjust arrays without calling ToArray
 ---
