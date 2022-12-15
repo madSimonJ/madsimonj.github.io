@@ -7,7 +7,7 @@ description: Part One of a series on basic Machine Learning Algorithms in C#.  T
 
 <div class="pagepanel down_arrow white">
   <div class="center">
-		<h2>From Ancient Greeks to Modern Greeks: Basic Machine Learning Algorithms in C#</h2>
+		<h2>From Ancient Greeks to Modern Geeks: Basic Machine Learning Algorithms in C#</h2>
 		<h3>Part One: Naive Bayes</h3>
 		<hr/>
 		<div style="text-align: left">	
