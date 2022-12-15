@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: From Ancient Greeks to Modern Greeks - Basic Machine Learning Algorithms in C Sharp: Part 1 - Naive Bayes
+title: From Ancient Greeks to Modern Greeks - Basic Machine Learning Algorithms in C Sharp: Part One - Naive Bayes
 description: Part One of a series on basic Machine Learning Algorithms in C#.  This one is about Naive Bayes
 ---
 
