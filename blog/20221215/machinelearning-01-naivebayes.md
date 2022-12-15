@@ -1,8 +1,9 @@
 ---
 layout: blog
-title: From Ancient Greeks to Modern Greeks - Basic Machine Learning Algorithms in C Sharp: Part One - Naive Bayes
-description: Part One of a series on basic Machine Learning Algorithms in C#.  This one is about Naive Bayes
+title: Writing a Book for O'Reilly - Part One
+description: Part One of a series on how I came to be writing for O'reilly, and what the process is like
 ---
+
 
 <div class="pagepanel down_arrow white">
   <div class="center">
