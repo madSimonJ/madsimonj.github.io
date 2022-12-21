@@ -7,6 +7,7 @@ description: A few hints and tips about solving the Advent of Code purely functi
 <div class="pagepanel down_arrow white">
   <div class="center">
 		<h2>Saving Christmas with Functional C#</h2>
+	  <h3>Part One - Definite Loops</h3>
 		<hr/>
 		<div style="text-align: left">	
 			<div class="svg-container">
