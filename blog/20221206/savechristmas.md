@@ -106,7 +106,7 @@ public static Stacks ParseStacks(IEnumerable&lt;string&gt; input) =&gt;
 				</code>
 			</pre>
 
-<p>In this example from <a href="https://adventofcode.com/2022/day/5"?Day Five</a> you can see the overloaded version of the Select at work to determine an arbitrary id value for a crane, so that I can perform a grouping afterwards.</p>
+<p>In this example from <a href="https://adventofcode.com/2022/day/5">Day Five</a> you can see the overloaded version of the Select at work to determine an arbitrary id value for a crane, so that I can perform a grouping afterwards.</p>
 
 <p>The second method is to use Enumerable.Range, then perform a select against it.  This is an example from <a href="https://adventofcode.com/2022/day/10">Day Ten</a> where I was using it to build up a string, where a check had to be made to determine whether the current character overlapped with a rapidly changing variable, which was used to select the appropriate character to print to the result string.</p>
 
