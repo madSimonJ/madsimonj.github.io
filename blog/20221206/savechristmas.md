@@ -72,7 +72,7 @@ description: A few hints and tips about solving the Advent of Code purely functi
 
 <p>There are three fundamental types of loop in C# - For, ForEach and While.  Just about all of them can be replaced by other structures in functional-style C#.  I'll show you a few techniques here to accomplish that.<p>
 
-<p>The most obvious way to get rid of the majority of ForEach loops is to use a LINQ Select function.  It can replace the OO approach of instantiating a List outside a ForEach loop and adding to it with each iteration.  If there are many operations to be performed, then Selects can be called, one after the other.  Alternatively, a more complex function can be written and referenced within the Select.  Here's an Example from this year's puzzles:</p>
+<p>The most obvious way to get rid of the majority of ForEach loops is to use a LINQ Select function.  It can replace the OO approach of instantiating a List outside a ForEach loop and adding to it with each iteration.  If there are many operations to be performed, then Selects can be called, one after the other.  Alternatively, a more complex function can be written and referenced within the Select.  Here's an Example from this year's puzzles, specifically <a href="https://adventofcode.com/2022/day/1">Day One</a>:</p>
 
 			<pre>
 				<code class="cs hljs">
@@ -106,9 +106,9 @@ public static Stacks ParseStacks(IEnumerable&lt;string&gt; input) =&gt;
 				</code>
 			</pre>
 
-<p>In this eample you can see the overloaded version of the Select at work to determine an arbitrary id value for a crane, so that I can perform a grouping afterwards.</p>
+<p>In this example from <a href="https://adventofcode.com/2022/day/5"?Day Five</a> you can see the overloaded version of the Select at work to determine an arbitrary id value for a crane, so that I can perform a grouping afterwards.</p>
 
-<p>The second method is to use Enumerable.Range, then perform a select against it.  This is an example where I was using it to build up a string, where a check had to be made to determine whether the current character overlapped with a rapidly changing variable, which was used to select the appropriate character to print to the result string.</p>
+<p>The second method is to use Enumerable.Range, then perform a select against it.  This is an example from <a href="https://adventofcode.com/2022/day/10">Day Ten</a> where I was using it to build up a string, where a check had to be made to determine whether the current character overlapped with a rapidly changing variable, which was used to select the appropriate character to print to the result string.</p>
 
 			<pre>
 				<code class="cs hljs">
