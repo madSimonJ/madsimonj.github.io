@@ -54,7 +54,7 @@ description: A few hints and tips about solving the Advent of Code purely functi
 <p>Here are a few less-well-known LINQ commands that it might be worth reading up on:</p>
 
 <ul>
-	<li>Zip - Link 2 arrays together into a sort've psueo-tuple.  The callback function will first see the first element from each array, then the second from each, and so on.  If the sizes differ, the parameter for the shorter array will be default</li>
+	<li>Zip - Link 2 arrays together into a sort've psueo-tuple.  The callback function will first see the first element from each array, then the second from each, and so on.  If the sizes differ, you'll only get as many elements returned as their are matches on both sides.  It's Not uinlike a T-SQL inner join</li>
 	<li>Aggregate - Render an array of items down to a single, final result using a running total built up in increments.  Tremendously powerful when used well</li>
 	<li>Chunk - new to .NET.  Splits a larger array up into a requested regular size</li>
 	<li>Take & Skip - used to take a chunk from the middle of an Enumerable without necessarily enumerating it.  Newer versions of C# can also do this as a handy Python-style array select syntax - e.g. myArray[3..] or myArray[^4]</li>
