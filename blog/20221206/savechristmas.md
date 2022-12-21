@@ -113,10 +113,10 @@ public static Stacks ParseStacks(IEnumerable&lt;string&gt; input) =&gt;
 			<pre>
 				<code class="cs hljs">
 				
-public static string RenderSpriteString(IEnumerable<int> input) =>
+public static string RenderSpriteString(IEnumerable&lt;int&gt; input) =&gt;
 		input.Zip(Enumerable.Range(0, 40))
-		.Select(x => Math.Abs(x.First - x.Second) < 2 ? '#' : '.')
-		.Bind(x => new string(x.ToArray()));
+		.Select(x =&gt; Math.Abs(x.First - x.Second) &lt; 2 ? '#' : '.')
+		.Bind(x =&gt; new string(x.ToArray()));
 	
 				</code>
 			</pre>
