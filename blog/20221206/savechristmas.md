@@ -95,12 +95,13 @@ private static int TopThreeCalories(string input) =>
 
 			<pre>
 				<code class="cs hljs">
-public static Stacks ParseStacks(IEnumerable<string> input) =>
-	input.Select(s => s.Chunk(4))
-		.Select(x => x.Select(y => y[1]))
-		.SelectMany(x => x.Select((y, i) => (Crane: i + 1, Crate: y)))
-		.GroupBy(x => x.Crane)
-		.ToDictionary(x => x.Key, x => x.Where(y => y.Crate != ' ').Select(y => y.Crate))
+
+public static Stacks ParseStacks(IEnumerable&lt;string&gt; input) =&gt;
+	input.Select(s =&gt; s.Chunk(4))
+		.Select(x =&gt; x.Select(y =&gt; y[1]))
+		.SelectMany(x =&gt; x.Select((y, i) =&gt; (Crane: i + 1, Crate: y)))
+		.GroupBy(x =&gt; x.Crane)
+		.ToDictionary(x =&gt; x.Key, x =&gt; x.Where(y =&gt; y.Crate != ' ').Select(y =&gt; y.Crate))
 	
 				</code>
 			</pre>
