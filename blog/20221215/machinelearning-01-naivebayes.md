@@ -71,10 +71,10 @@ description: Part One of a series on basic Machine Learning Algorithms in C#.  T
 <ol>
 	<li>Select a Probability of "Daleks Given 1st Doctor" (i.e. 5/29 = 0.172)</li>
 	<li>Multiply by probability of any random story being a 1st doctor story (i.e. 29/299 = 0.097 = 9.7%)</li>
-	<li>Divide by the probabilty of any random story being a Dalek story (i.e. 27/299 = 0.090 = 9.0%)</li>
+	<li>Divide by the probabilty of any random story being a Dalek story (i.e. 30/303 = 0.099 = 9.9%)</li>
 </ol>
 
-<p>Following our example, that would mean that the probability a random Dalek story is a First Doctor story is 0.172 * 0.097 / 0.090 = 0.185 or 18.5%.</p>
+<p>Following our example, that would mean that the probability a random Dalek story is a First Doctor story is 0.172 * 0.097 / 0.099 = 0.169 or 16.9%.</p>
 
 <p>If you want to see some C# code to work out the results for all of the Doctors, it looks like this:</p>
 
@@ -131,22 +131,22 @@ var report = reportHeader + Environment.NewLine + string.Join(Environment.NewLin
 <p>The result of running this code looks like this:</p>
 
 Doctor, Probability<br>
-1, 0.19<br>
+1, 0.17<br>
 2, 0.07<br>
-3, 0.15<br>
+3, 0.13<br>
 4, 0.07<br>
-5, 0.04<br>
-6, 0.04<br>
-7, 0.04<br>
+5, 0.03<br>
+6, 0.03<br>
+7, 0.03<br>
 8, 0<br>
 9, 0.07<br>
-10, 0.11<br>
-11, 0.11<br>
-12, 0.04<br>
+10, 0.1<br>
+11, 0.1<br>
+12, 0.03<br>
 13, 0.17<br>
 <br>
 
-<p>Looks like if I were a betting man, and we were inexplicably betting on which Doctor we'd get from a random bag of all of the Dalek stories on DVD, I'd put my money on the 1st or 3rd Doctors.</p>
+<p>Looks like if I were a betting man, and we were inexplicably betting on which Doctor we'd get from a random bag of all of the Dalek stories on DVD, I'd put my money on the 1st or 13th Doctors.</p>
 
 <h4>What's it For?</h4>
 
