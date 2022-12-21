@@ -101,6 +101,7 @@ public static Stacks ParseStacks(IEnumerable<string> input) =>
 		.SelectMany(x => x.Select((y, i) => (Crane: i + 1, Crate: y)))
 		.GroupBy(x => x.Crane)
 		.ToDictionary(x => x.Key, x => x.Where(y => y.Crate != ' ').Select(y => y.Crate))
+	
 				</code>
 			</pre>
 
@@ -110,10 +111,12 @@ public static Stacks ParseStacks(IEnumerable<string> input) =>
 
 			<pre>
 				<code class="cs hljs">
+				
 public static string RenderSpriteString(IEnumerable<int> input) =>
 		input.Zip(Enumerable.Range(0, 40))
 		.Select(x => Math.Abs(x.First - x.Second) < 2 ? '#' : '.')
 		.Bind(x => new string(x.ToArray()));
+	
 				</code>
 			</pre>
 
