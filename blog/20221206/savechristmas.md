@@ -16,6 +16,8 @@ description: A few hints and tips about solving the Advent of Code purely functi
 
 <h4>Introduction</h4>
 
+<p>This article was publiched as part of the <a href="https://dotnet.christmas/2022">.NET Advent Calendar</a></p>			
+			
 <p>As anyone that follows me on Twitter knows, <a href="https://learning.oreilly.com/library/view/functional-programming-with/9781492097068/">I'm writing a book!</a>  It'll be coming out hopefully in the summer, and it's about writing functional style code in C#.  It's been a lot of work, but hopefully it'll be worth it.  I'd planned to start a regular blog this year, but the book writing has put pay to that.  This is hopefully the first of a regular set of writings from me starting now, and into 2023. I'm also planning to upgrade this site to ReactJS and give it a better layout.  One thing at a time, though! </p>
 
 <p>For this talk, I wanted to talk about one of my favourite things of the entire year - <a href="https://adventofcode.com/">the Advent of Code</a>.  If you aren't already aware, it's a series of code puzzles released in pairs each day of Advent.  Since functional programming is one of my <i>other</i> favourite things, that's the style of coding I use to solve the puzzles.  So first-off what is functional programming?</P>
