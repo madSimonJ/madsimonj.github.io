@@ -49,5 +49,10 @@
        <link>https://www.thecodepainter.co.uk/blog/20221215/machinelearning-01-naivebayes</link>
 	   <description>Part One of a series on basic Machine Learning Algorithms in C#.  This one is about Naive Bayes</description>
     </item>  
+	<item>
+       <title>Saving Christmas with Functional C# - Part One - Definite Loops</title>
+       <link>https://www.thecodepainter.co.uk/blog/20221206/savechristmas</link>
+	   <description>Part One of a series on techniques to write functional code in C#</description>
+    </item>  
   </channel>
 </rss>
