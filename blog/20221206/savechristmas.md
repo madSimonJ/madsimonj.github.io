@@ -7,6 +7,7 @@ description: A few hints and tips about solving the Advent of Code purely functi
 <div class="pagepanel down_arrow white">
   <div class="center">
 		<h2>Saving Christmas with Functional C#</h2>
+	  <h3>Part One - Definite Loops</h3>
 		<hr/>
 		<div style="text-align: left">	
 			<div class="svg-container">
@@ -15,6 +16,8 @@ description: A few hints and tips about solving the Advent of Code purely functi
 
 <h4>Introduction</h4>
 
+<p>This article was publiched as part of the <a href="https://dotnet.christmas/2022">.NET Advent Calendar</a></p>			
+			
 <p>As anyone that follows me on Twitter knows, <a href="https://learning.oreilly.com/library/view/functional-programming-with/9781492097068/">I'm writing a book!</a>  It'll be coming out hopefully in the summer, and it's about writing functional style code in C#.  It's been a lot of work, but hopefully it'll be worth it.  I'd planned to start a regular blog this year, but the book writing has put pay to that.  This is hopefully the first of a regular set of writings from me starting now, and into 2023. I'm also planning to upgrade this site to ReactJS and give it a better layout.  One thing at a time, though! </p>
 
 <p>For this talk, I wanted to talk about one of my favourite things of the entire year - <a href="https://adventofcode.com/">the Advent of Code</a>.  If you aren't already aware, it's a series of code puzzles released in pairs each day of Advent.  Since functional programming is one of my <i>other</i> favourite things, that's the style of coding I use to solve the puzzles.  So first-off what is functional programming?</P>
@@ -54,7 +57,7 @@ description: A few hints and tips about solving the Advent of Code purely functi
 <p>Here are a few less-well-known LINQ commands that it might be worth reading up on:</p>
 
 <ul>
-	<li>Zip - Link 2 arrays together into a sort've psueo-tuple.  The callback function will first see the first element from each array, then the second from each, and so on.  If the sizes differ, the parameter for the shorter array will be default</li>
+	<li>Zip - Link 2 arrays together into a sort've psueo-tuple.  The callback function will first see the first element from each array, then the second from each, and so on.  If the sizes differ, you'll only get as many elements returned as their are matches on both sides.  It's Not uinlike a T-SQL inner join</li>
 	<li>Aggregate - Render an array of items down to a single, final result using a running total built up in increments.  Tremendously powerful when used well</li>
 	<li>Chunk - new to .NET.  Splits a larger array up into a requested regular size</li>
 	<li>Take & Skip - used to take a chunk from the middle of an Enumerable without necessarily enumerating it.  Newer versions of C# can also do this as a handy Python-style array select syntax - e.g. myArray[3..] or myArray[^4]</li>
@@ -72,7 +75,7 @@ description: A few hints and tips about solving the Advent of Code purely functi
 
 <p>There are three fundamental types of loop in C# - For, ForEach and While.  Just about all of them can be replaced by other structures in functional-style C#.  I'll show you a few techniques here to accomplish that.<p>
 
-<p>The most obvious way to get rid of the majority of ForEach loops is to use a LINQ Select function.  It can replace the OO approach of instantiating a List outside a ForEach loop and adding to it with each iteration.  If there are many operations to be performed, then Selects can be called, one after the other.  Alternatively, a more complex function can be written and referenced within the Select.  Here's an Example from this year's puzzles:</p>
+<p>The most obvious way to get rid of the majority of ForEach loops is to use a LINQ Select function.  It can replace the OO approach of instantiating a List outside a ForEach loop and adding to it with each iteration.  If there are many operations to be performed, then Selects can be called, one after the other.  Alternatively, a more complex function can be written and referenced within the Select.  Here's an Example from this year's puzzles, specifically <a href="https://adventofcode.com/2022/day/1">Day One</a>:</p>
 
 			<pre>
 				<code class="cs hljs">
@@ -95,25 +98,29 @@ private static int TopThreeCalories(string input) =>
 
 			<pre>
 				<code class="cs hljs">
-public static Stacks ParseStacks(IEnumerable<string> input) =>
-	input.Select(s => s.Chunk(4))
-		.Select(x => x.Select(y => y[1]))
-		.SelectMany(x => x.Select((y, i) => (Crane: i + 1, Crate: y)))
-		.GroupBy(x => x.Crane)
-		.ToDictionary(x => x.Key, x => x.Where(y => y.Crate != ' ').Select(y => y.Crate))
+
+public static Stacks ParseStacks(IEnumerable&lt;string&gt; input) =&gt;
+	input.Select(s =&gt; s.Chunk(4))
+		.Select(x =&gt; x.Select(y =&gt; y[1]))
+		.SelectMany(x =&gt; x.Select((y, i) =&gt; (Crane: i + 1, Crate: y)))
+		.GroupBy(x =&gt; x.Crane)
+		.ToDictionary(x =&gt; x.Key, x =&gt; x.Where(y =&gt; y.Crate != ' ').Select(y =&gt; y.Crate))
+	
 				</code>
 			</pre>
 
-<p>In this eample you can see the overloaded version of the Select at work to determine an arbitrary id value for a crane, so that I can perform a grouping afterwards.</p>
+<p>In this example from <a href="https://adventofcode.com/2022/day/5">Day Five</a> you can see the overloaded version of the Select at work to determine an arbitrary id value for a crane, so that I can perform a grouping afterwards.</p>
 
-<p>The second method is to use Enumerable.Range, then perform a select against it.  This is an example where I was using it to build up a string, where a check had to be made to determine whether the current character overlapped with a rapidly changing variable, which was used to select the appropriate character to print to the result string.</p>
+<p>The second method is to use Enumerable.Range, then perform a select against it.  This is an example from <a href="https://adventofcode.com/2022/day/10">Day Ten</a> where I was using it to build up a string, where a check had to be made to determine whether the current character overlapped with a rapidly changing variable, which was used to select the appropriate character to print to the result string.</p>
 
 			<pre>
 				<code class="cs hljs">
-public static string RenderSpriteString(IEnumerable<int> input) =>
+				
+public static string RenderSpriteString(IEnumerable&lt;int&gt; input) =&gt;
 		input.Zip(Enumerable.Range(0, 40))
-		.Select(x => Math.Abs(x.First - x.Second) < 2 ? '#' : '.')
-		.Bind(x => new string(x.ToArray()));
+		.Select(x =&gt; Math.Abs(x.First - x.Second) &lt; 2 ? '#' : '.')
+		.Bind(x =&gt; new string(x.ToArray()));
+	
 				</code>
 			</pre>
 
