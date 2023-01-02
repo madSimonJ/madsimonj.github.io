@@ -7,7 +7,7 @@ description: A review of the legendary 80s Science-fantasy epic
 <div class="pagepanel down_arrow white">
   <div class="center">
 		<h2>Computing Films</h2>
-		<h3>Tron (1982)</h3>
+		<h3>The Net (1995)</h3>
 		<hr/>
 		<div style="text-align: left">	
 			<div class="svg-container">
