@@ -1,7 +1,7 @@
 ---
 layout: blog
-title: Basic Machine Learning Algorithms - Part One - Naive Bayes
-description: Part One of a series on basic Machine Learning Algorithms in C#.  This one is about Naive Bayes
+title: Computer Films - Part Three - The Net (1995)
+description: Going into really far too much detail about the use of computers in the mid-90s Sandra Bullock Conspiracy thriller - The Net.
 ---
 
 
