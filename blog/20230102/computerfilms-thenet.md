@@ -38,36 +38,46 @@ description: Part One of a series on basic Machine Learning Algorithms in C#.  T
 <p>The film's also spot-on about people having online-only friendships.  That's definitely a thing. Though the film paints this as a tragic, sad character flaw.  Complete with a quoted section of dialogue from Tod Browning's Freaks ("One of us!").  I'm not surely that's really very fair.  One thing it does get right is that after identifying herself as female on a chat group, the men all start hitting on Angela immediately.  Yep, I'm almost certain that's somewhere close to real life.  For some reason she decided to also have all of her friends' chat messages get read out by text-to-voice apps that sound more than a little disturbing.  Not sure why you'd do that!</p>
 <p>There are several things that do puzzle me about the film, though.  What exactly <i>is</i> the Mozart's Ghost app?  The dialogue - and the app itself - heavily imply it's a website, yet angela is sent it on a floppy disk and appears to execute it directly from that disk, like a desktop executable.  Come to think of it, how on earth would you pack the super-hacker, break into any system-type functionality into mid-90s style JavaScript.  I suspect it'd be more than a little tricky.  I'm fairly sure the film-makers either didn't know, or didn't care, about the difference between a desktop application and a website.</p>
 <p>It's also unclear what the purpose of the Mozart's Ghost app is, and how it's intended to be used.  Was it created by the conspiracy?  Were they going to use copies of this innocuous app, which allows them to listen to gnarly 90s-style rock guitar noodling as they hack around the internet?  Presumably.  If that's the case, how on earth did it end up being debugged at a big software development company in LA.  Couldn't the crooks afford themselves a few contractors to get the job done privately?  The only other app we see Angela work on in the film is Castle Wolfenstein 3D which we're led to believe one of her clients developed.  What on earth does her company do?!?</p>
+<div class="center">
 <figure>
 	<img src="thenet01.png" />
 	<figcaption>See - Sandra Bullock is the true genius behind Castle Wolfenstein!</figcaption>
 </figure>
+</div>
 <p>The only actual fix we do is to identify that the version of Wolfenstein she's been sent it infected (somehow!) with a virus, which she proceeds to remove with some sort of low-level code editor which allows her to mess with what looks like machine code.  If this is a product her client is developing, a simple re-compile from source would have done.  Otherwise, downloading a fresh copy of the executable from the supplier would do just as nicely.  The film needs her to have a destructive virus for later though, which is why this scene exists.  Because her colleague improbably collects viruses.  For some reason.  To make things stranger, this virus is activated by pressing the ESC key.  Who developed this, and was it just for giggles?  I can only assume so.</p>
 <p>She follows up her virus-scan victory by going to a website (with the slightly mangled url "//httporder.pizza.net") to order herself a home delivery of pizza.  That must've seemed like craziness in the mid-90s, but now...once again, we've finally caught up with this film</p>
+<div class="center">
 <figure>
 	<img src="thenet02.png" />
 	<figcaption>What a silly idea.  It'll never catch on</figcaption>
 </figure>
+</div>
 <p>If the virtual Pizza weren't enough, to show just how wierd and disconnected she is, she also has a computer app that turns her monitor into a replica of a nice, rawing fire.  Nearly every streaming platform around offers these in a variety of themes now.</p>
+<div class="center">
 <figure>
 	<img src="thenet03.png" />
 	<figcaption>Nor this.  What were they thinking!</figcaption>
 </figure>
+</div>
 <p>Her pizza of choice appears to be anchovies with a side-order of M&Ms.  I can't decide whether that's awful or genius.  Answers on a postcard with your opinions, please.</p>
 <p>The basic premise of the film - that her digital life being tampered with can destroy her real life - is fundamentally sound.  If a little far-fetched.  This can only be carried out because the hackers have injected a trojan into the most popular piece of security software in America, which is used by all government departments.  Not only that, but they can only really erase Angela's identity because she's a total recluse.  She has no family (that remember her) and even her work colleageus don't know what she looks like.  Without that, the whole plan would fall flat.</p>
 <p>Why go to these lengths to get to her in any case?  Why not just killer her?  That appears to have been plan A.  It's implied that the sinister English guy fancies her - could that be it?  He's keeping her alive in the hopes she'll come over to his side?  We even get the stereotypical "We're not so different, you and I" speech from him.  It's a very under-developed plot thread, if so.  The slightly OTT plot aside, it is still true that our digital lives are in many ways more "real" than actual life, at least in the effects they can have on us.</p>
 <p>My favourite bit of strangeness is where she logs onto the "Swiss Internet", which she does via a website that comes complete with a CLI and a welcome sign in French beside a Swiss flag.  I wish it really were that easy and friendly!</p>
+<div class="center">
 <figure>
 	<img src="thenet04.png" />
 	<figcaption>The British internet probably has a picture of the King at a laptop or something</figcaption>
 </figure>
+</div>
 <p>I also wonder about the UI that the conspiracy guys have designed for themselves.  It's accessibly by entering a single, global password.  There's no user account system.  You know the password, you've got full admin access.  They don't have any method to close user accounrs or even know who's using the system.  When Angela is doing just that half-way through the film, the baddies know <i>someone</i> is in the system, and only guess it's her.  How are they planning to administer this?  It also appears to remember the last document you viewed since your last visit - and since there's only effectively a single user for the sytem, that means you see whatever the last user was up to.  In Angela's case, she immediately sees the incriminating evidence that was used to induce a politiician to commit suicide.  It doesn't even close documents down after you log off!  Very poor UX on this system.  No wonder they needed a software house to have a look at it.</p>
 <p>What puzzles me further about the Mozart's Ghost thing is that after Angela logs into "The Swiss Internet", she finds that one of the websites she accesses (via Telnet, no less) has the same super-secret Pi symbol in the corner, which gives her the same password prompt she saw earlier.  So, is the "pi" back-door installed in every website?  If so, what does she need Mozart's ghost for?  What's on that disk that's not on all sorts of web servers around the US?  Does she have a super-secret version that includes the source code?  Once again, the film doesn't appear to understand how websites work.</p>
 <p>Another misunderstanding about computer terminology comes shortly after this scene.  She uses the "whois" command in a unix shell to identify the real names of the folks she's chatting with online.</p>
+<div class="center">
 <figure>
 	<img src="thenet05.png" />
 	<figcaption>Iceman is actually a 12-year old girl posing as a man.  Did this film also predict gender fluidity?</figcaption>
 </figure>
+</div>
 <p>In real life the "whois" command is used to find out who's registered as the owner of a given URL - which is entirely public information.  One of the features of the internet - for better or worse - is that true anonymity isn't all that hard to achieve.  There's no way she should be able to do this.  Unless she's written her own program that hacks into government databases to fetch this from IP addresses.  In which case, why didn't the conspiracy come to her in the first place, she's obviously already able to do the stuff they're trying to do themselves!  The plot literally doesn't move without this scene though, which is probably why it exists.</p>
 <p>The final bit of strangeness is that she realises the secret information she needs can only be accessed with access to her work Mainframe, which requires her to finally go on-prem.  In the film, she simply walks into her office without any worry about security.  No need for ID badges, or even a login to her workstation.  She simply strolls in and starts hacking.  With security practices that bad, it's no wonder the company is infiltrated by evil hackers.</p>
 

@@ -15,7 +15,7 @@ layout: default
 	  	<p>09/02/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220208/tron">Computer Films: Tron (1982)</a></strong></p>
 	  	<p>04/04/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20220503/writeabook01">Writing a Book for O'Reilly - Part One</a></strong></p>
 	  	<p>15/12/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20221215/machinelearning-01-naivebayes">Basic Machine Learning Algorithms in C# - Part 01 - Naive Bayes</a></strong></p>
-		<p>22/12/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20221206/savechristmas">Saving Christmas with Functional C# - Part One - Definite Loops<a></strong></p>
+	  	<p>22/12/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20221206/savechristmas">Saving Christmas with Functional C# - Part One - Definite Loops</a></strong></p>
 		<p>02/01/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20230102/computerfilms-thenet">Computer Films: The Net (1995)</a></strong></p>
 	</div>
 </div>
