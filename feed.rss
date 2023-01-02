@@ -54,5 +54,10 @@
        <link>https://www.thecodepainter.co.uk/blog/20221206/savechristmas</link>
 	   <description>Part One of a series on techniques to write functional code in C#</description>
     </item>  
+	<item>
+       <title>Computer Films - Part Three - The Net (1995)</title>
+       <link>https://www.thecodepainter.co.uk/blog/20230102/computerfilms-thenet</link>
+	   <description>Going into really far too much detail about the use of computers in the mid-90s Sandra Bullock Conspiracy thriller - The Net.</description>
+    </item>  
   </channel>
 </rss>
