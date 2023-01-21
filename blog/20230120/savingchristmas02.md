@@ -109,8 +109,8 @@ public static T IterateUntil<T>(this T @this, Func<T, bool> cond, Func<T, T> f)
 
 	return updated;
 }
-				</code>
-			</pre>
+	</code>
+</pre>
 
 <p>If at some point you think that this looks awfully like a hidden While loop.  That's because...it's absolutely a hidden while loop.  The sad and terrible truth is that it's just about the only way to do this.</p>
 <p>How acceptable is this?  Well, that's a question you'll have to ask yourself.  While you're at it add this question to the list - how functional do you want to be?</p>
