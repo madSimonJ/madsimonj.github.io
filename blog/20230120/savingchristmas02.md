@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Saving Christmas with Functional C# - Part Two
+title: Saving Christmas with Functional C# - Part Two - Indefinite Loops
 description: A few hints and tips about solving the Advent of Code purely functionally
 ---
 
