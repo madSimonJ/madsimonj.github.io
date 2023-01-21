@@ -59,5 +59,10 @@
        <link>https://www.thecodepainter.co.uk/blog/20230102/computerfilms-thenet</link>
 	   <description>Going into really far too much detail about the use of computers in the mid-90s Sandra Bullock Conspiracy thriller - The Net.</description>
     </item>  
+	<item>
+       <title>Saving Christmas with Functional C# - Part Two - Indefinite Loops</title>
+       <link>https://www.thecodepainter.co.uk/blog/20230120/savingchristmas02</link>
+	   <description>Part Two of a series on techniques to write functional code in C#</description>
+    </item>  
   </channel>
 </rss>
