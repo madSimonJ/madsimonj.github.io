@@ -99,7 +99,7 @@ return finalQueue.AlreadySeen.Where(x => x.height == beginning).Min().weight;
 
 			<pre>
 				<code class="cs hljs">
-public static T IterateUntil<T>(this T @this, Func<T, bool> cond, Func<T, T> f)
+public static T IterateUntil&lt;T&gt;(this T @this, Func&lt;T, bool&gt; cond, Func&lt;T, T&gt; f)
 {
 	var updated = @this;
 	while (!cond(updated))
