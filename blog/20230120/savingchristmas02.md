@@ -125,19 +125,18 @@ public static T IterateUntil&lt;T&gt;(this T @this, Func&lt;T, bool&gt; cond, Fu
 
 			<pre>
 				<code class="cs hljs">
-public class CustomEnumerable<T> : IEnumerable<T>
+public class CustomEnumerable&lt;T&gt; : IEnumerable&lt;T&gt;
 {
-	private readonly CustomEnumerator<T> customrEnumerator;
+	private readonly CustomEnumerator&lt;T&gt; customrEnumerator;
 
-	public CustomEnumerable(T state, Func<T, T> fTransformer, Func<T, bool> endState)
+	public CustomEnumerable(T state, Func&lt;T, T&gt; fTransformer, Func&lt;T, bool&gt; endState)
 	{
-		customrEnumerator = new CustomEnumerator<T>(state, fTransformer, endState);
+		customrEnumerator = new CustomEnumerator&lt;T&gt;(state, fTransformer, endState);
 	}
 
-	public IEnumerator<T> GetEnumerator() => this.customrEnumerator;
+	public IEnumerator&lt;T&gt; GetEnumerator() =&gt; this.customrEnumerator;
 
-	IEnumerator IEnumerable.GetEnumerator() => this.customrEnumerator;
-}
+	IEnumerator IEnumerable.GetEnumerator() =&gt; this.customrEnumerator;
 }
 				</code>
 			</pre>
@@ -148,14 +147,14 @@ public class CustomEnumerable<T> : IEnumerable<T>
 
 			<pre>
 				<code class="cs hljs">
-public class CustomEnumerator<T> : IEnumerator<T>
+public class CustomEnumerator&lt;T&gt; : IEnumerator&lt;T&gt;
 {
 	private readonly T InitialState;
 	private bool _conditionMet = false;
-	private readonly Func<T, T> _fTransformer;
-	private readonly Func<T, bool> _endState;
+	private readonly Func&lt;T, T&gt; _fTransformer;
+	private readonly Func&lt;T, bool&gt; _endState;
 
-	public CustomEnumerator(T state, Func<T, T> fTransformer, Func<T,bool> endState)
+	public CustomEnumerator(T state, Func&lt;T, T&gt; fTransformer, Func&lt;T,bool&gt; endState)
 	{
 		this.Current = state;
 		this.InitialState = state;
@@ -180,7 +179,7 @@ public class CustomEnumerator<T> : IEnumerator<T>
 
 	public T Current { get; private set; }
 
-	object IEnumerator.Current => Current;
+	object IEnumerator.Current =&gt; Current;
 
 	public void Dispose()
 	{
@@ -197,9 +196,9 @@ public class CustomEnumerator<T> : IEnumerator<T>
 
 			<pre>
 				<code class="cs hljs">
-public static T IterateUntil<T>(this T @this, Func<T, bool> cond, Func<T, T> f)
+public static T IterateUntil&lt;T&gt;(this T @this, Func&lt;T, bool&gt; cond, Func&lt;T, T&gt; f)
 {
-	var c = new CustomEnumerable<T>(@this, f, cond);
+	var c = new CustomEnumerable&lt;T&gt;(@this, f, cond);
 	var result = c.Last();
 	return result;
 }
@@ -210,8 +209,8 @@ public static T IterateUntil<T>(this T @this, Func<T, bool> cond, Func<T, T> f)
 
 			<pre>
 				<code class="cs hljs">
-var c = new CustomEnumerable<T>(@this, f, cond);
-var results = c.Select(x => x);
+var c = new CustomEnumerable&lt;T&gt;(@this, f, cond);
+var results = c.Select(x =&gt; x);
 				</code>
 			</pre>
 
@@ -220,7 +219,7 @@ var results = c.Select(x => x);
 
 			<pre>
 				<code class="cs hljs">
-var c = new CustomEnumerable<T>(@this, f, cond);
+var c = new CustomEnumerable&lt;T&gt;(@this, f, cond);
 var results = c.Take(10);
 				</code>
 			</pre>
