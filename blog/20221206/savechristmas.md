@@ -130,4 +130,4 @@ public static string RenderSpriteString(IEnumerable&lt;int&gt; input) =&gt;
 
 <p>Where does that leave us, as functional c# developers?  Well, once again there are a variety of possible solutions, and I'll go into them in Part two of this article in a few weeks.</p>
 
-<p>Until next time...</p>
+<p>This article series continues in <a href="https://www.thecodepainter.co.uk/blog/20230120/savingchristmas02">Part Two - Indefinite Loops</a></p>
