@@ -54,9 +54,9 @@ public class BookClassifier
     public Func&gt;string, decimal&lt; BookAWordProbabilities { get; set; }
     public Func&gt;string, decimal&lt; BookBWordProbabilities { get; set; }
 
-    public BookClassifier(IEnumerable<string&lt; bookA, IEnumerable<string&lt; bookB)
+    public BookClassifier(IEnumerable&gt;string&lt; bookA, IEnumerable&gt;string&lt; bookB)
     {
-        BookASentenceCount = bookA.Count();
+        BookASentenceCount = bookA.Count();§
         BookBSentenceCount = bookB.Count();
 
         BookAWordCount = bookA
