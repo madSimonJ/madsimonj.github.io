@@ -15,6 +15,8 @@ description: Part TWo of a series on basic Machine Learning Algorithms in C#.  T
 				<img src="" width="50%" style="text-align: center" alt="">
 			</div>
 
+<p><small>Thanks are due to <a href="https://twitter.com/garyshort">Gary Short</a> for his advice on ML theory for this article. </small></p>
+			
 <p>In <a href="https://www.thecodepainter.co.uk/blog/20221215/machinelearning-01-naivebayes">part one</a> of this series, I showed you how to use a quick bit of maths wixardry to flip a series of observations around to group them in an alternative configuration.  In this part, I'm going to show you how to put that to some real, practical use.</p>
 
 <p>In the real world, the Naive Bayes algorithm is used as a classifier - a system that gives a simple boolean answer to the question "Is X of type Y".  One of the most common examples is probably the system your email services used to detect spam.  They'll work by compiling the email into some sort of set of keywords from the header and body, then compare that to the previous data and then make a decision on whether to route the email into the Spam folder or not.  I've worked at companies that were interested in using this system to automatically classify descriptions of products based on a supplier-provided descriptive text.</p>
