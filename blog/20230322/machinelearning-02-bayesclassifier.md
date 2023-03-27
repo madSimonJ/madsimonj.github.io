@@ -15,7 +15,7 @@ description: Part TWo of a series on basic Machine Learning Algorithms in C#.  T
 				<img src="" width="50%" style="text-align: center" alt="">
 			</div>
 
-<p>In <a href="https://www.thecodepainter.co.uk/blog/20221215/machinelearning-01-naivebayes">part one</a&lt; of this series, I showed you how to use a quick bit of maths wixardry to flip a series of observations around to group them in an alternative configuration.  In this part, I'm going to show you how to put that to some real, practical use.</p>
+<p>In <a href="https://www.thecodepainter.co.uk/blog/20221215/machinelearning-01-naivebayes">part one</a> of this series, I showed you how to use a quick bit of maths wixardry to flip a series of observations around to group them in an alternative configuration.  In this part, I'm going to show you how to put that to some real, practical use.</p>
 
 <p>In the real world, the Naive Bayes algorithm is used as a classifier - a system that gives a simple boolean answer to the question "Is X of type Y".  One of the most common examples is probably the system your email services used to detect spam.  They'll work by compiling the email into some sort of set of keywords from the header and body, then compare that to the previous data and then make a decision on whether to route the email into the Spam folder or not.  I've worked at companies that were interested in using this system to automatically classify descriptions of products based on a supplier-provided descriptive text.</p>
 
@@ -39,8 +39,8 @@ The probability of it being a given book is trickier.  Strictly speaking, there 
 				<code class="cs hljs">
 public static class ExtensionMethods
 {
-    public static Func&gt;TK, TV&lt; ToLookup<TK, TV>(this IDictionary<TK, TV&lt; @this, TV defaultValue) =>
-        x =&lt; @this.TryGetValue(x, out var value) ? value : defaultValue;
+    public static Func&lt;TK, TV&gt; ToLookup<TK, TV>(this IDictionary&lt;TK, TV&gt; @this, TV defaultValue) =>
+        x =&gt; @this.TryGetValue(x, out var value) ? value : defaultValue;
 }
 
 public class BookClassifier
@@ -60,21 +60,21 @@ public class BookClassifier
         BookBSentenceCount = bookB.Count();
 
         BookAWordCount = bookA
-            .SelectMany(x =&lt; Regex.Replace(x.ToLower(), "[^a-zA-Z0-9' ]", string.Empty).Split(" ", StringSplitOptions.RemoveEmptyEntries).Distinct())
-            .Where(x =&lt; !stopWords.Contains(x))
-            .GroupBy(x =&lt; x)
-            .Select(x =&lt; (Word: x.Key, Count: x.Count()))
-            .ToDictionary(x =&lt; x.Word, x =&lt; (decimal)x.Count).ToLookup(0.25M);
+            .SelectMany(x =&gt; Regex.Replace(x.ToLower(), "[^a-zA-Z0-9' ]", string.Empty).Split(" ", StringSplitOptions.RemoveEmptyEntries).Distinct())
+            .Where(x =&gt; !stopWords.Contains(x))
+            .GroupBy(x =&gt; x)
+            .Select(x =&gt; (Word: x.Key, Count: x.Count()))
+            .ToDictionary(x =&gt; x.Word, x =&gt; (decimal)x.Count).ToLookup(0.25M);
 
         BookBWordCount = bookB
-            .SelectMany(x =&lt; Regex.Replace(x.ToLower(), "[^a-zA-Z0-9' ]", string.Empty).Split(" ", StringSplitOptions.RemoveEmptyEntries).Distinct())
-            .Where(x =&lt; !stopWords.Contains(x))
-            .GroupBy(x =&lt; x)
-            .Select(x =&lt; (Word: x.Key, Count: x.Count()))
-            .ToDictionary(x =&lt; x.Word, x =&lt; (decimal)x.Count).ToLookup(0.25M); ;
+            .SelectMany(x =&gt; Regex.Replace(x.ToLower(), "[^a-zA-Z0-9' ]", string.Empty).Split(" ", StringSplitOptions.RemoveEmptyEntries).Distinct())
+            .Where(x =&gt; !stopWords.Contains(x))
+            .GroupBy(x =&gt; x)
+            .Select(x =&gt; (Word: x.Key, Count: x.Count()))
+            .ToDictionary(x =&gt; x.Word, x =&gt; (decimal)x.Count).ToLookup(0.25M); ;
 
-        BookAWordProbabilities = x =&lt; (decimal)BookAWordCount(x) / BookASentenceCount;
-        BookBWordProbabilities = x =&lt; (decimal)BookBWordCount(x) / BookBSentenceCount;
+        BookAWordProbabilities = x =&gt; (decimal)BookAWordCount(x) / BookASentenceCount;
+        BookBWordProbabilities = x =&gt; (decimal)BookBWordCount(x) / BookBSentenceCount;
 
     }
 				</code>
@@ -123,4 +123,4 @@ public bool IsBookA(string sentence)
 
 <P>That's it for this time.  Join me again next time for more machine learning fun. </p>
 
-<p>Until next time...</p&lt; 
+<p>Until next time...</p>
