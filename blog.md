@@ -18,5 +18,6 @@ layout: default
 	  	<p>22/12/2022: <strong><a href="https://www.thecodepainter.co.uk/blog/20221206/savechristmas">Saving Christmas with Functional C# - Part One - Definite Loops</a></strong></p>
 		<p>02/01/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20230102/computerfilms-thenet">Computer Films: The Net (1995)</a></strong></p>
 		<p>02/01/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20230120/savingchristmas02">Saving Christmas with Functional C# - Part Two - Indefinite Loops</a></strong></p>
+		<p>27/03/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20230322/machinelearning-02-bayesclassifier">Basic Machine Learning Algorithms in C# - Part 02 - Bayes Classifier</a></strong></p>
 	</div>
 </div>
