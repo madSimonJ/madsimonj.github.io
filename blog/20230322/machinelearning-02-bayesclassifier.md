@@ -48,13 +48,13 @@ public class BookClassifier
     public int BookASentenceCount { get; set; }
     public int BookBSentenceCount { get; set; }
 
-    public Func&gt;string, decimal&lt; BookAWordCount { get; set; }
-    public Func&gt;string, decimal&lt; BookBWordCount { get; set; }
+    public Func&lt;string, decimal&gt; BookAWordCount { get; set; }
+    public Func&lt;string, decimal&gt; BookBWordCount { get; set; }
 
-    public Func&gt;string, decimal&lt; BookAWordProbabilities { get; set; }
-    public Func&gt;string, decimal&lt; BookBWordProbabilities { get; set; }
+    public Func&lt;string, decimal&gt; BookAWordProbabilities { get; set; }
+    public Func&lt;string, decimal&gt; BookBWordProbabilities { get; set; }
 
-    public BookClassifier(IEnumerable&gt;string&lt; bookA, IEnumerable&gt;string&lt; bookB)
+    public BookClassifier(IEnumerable&lt;string&gt; bookA, IEnumerable&lt;string&gt; bookB)
     {
         BookASentenceCount = bookA.Count();§
         BookBSentenceCount = bookB.Count();
@@ -92,7 +92,7 @@ public class BookClassifier
 public bool IsBookA(string sentence)
 {
     var words = Regex.Replace(sentence.ToLower(), "[^a-zA-Z0-9' ]", string.Empty).Split(' ', StringSplitOptions.RemoveEmptyEntries)
-        .Where(x =&lt; !stopWords.Contains(x));
+        .Where(x =&gt; !stopWords.Contains(x));
 
     var pBookA = words.Aggregate(0.5M, (acc, x) =>
     {
@@ -108,7 +108,7 @@ public bool IsBookA(string sentence)
         return (pWordGivenBookB * acc) / pWord;
     });
 
-    return pBookA &lt; pBookB;
+    return pBookA &gt; pBookB;
 }
 				</code>
 			</pre>
