@@ -1,9 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 
-import Layout from './Components/Layout'
-import AboutMe from './Components/AboutMe';
-import ReadMe from './Components/ReadMe';
+import Layout from './Components/Layout';
+
+import Home from './Components/Home';
+import About from './Components/About';
+import Blog from './Components/Blog';
+import Book from './Components/Book';
+import Contact from './Components/Contact';
+import Gallery from './Components/Gallery';
+import Podcasts from './Components/Podcasts';
+import Talks from './Components/Talks';
+import Upcoming from './Components/Upcoming';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
   createBrowserRouter,
@@ -18,12 +28,40 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: 'aboutme',
-        element: <AboutMe />
+        path: '/',
+        element: <Home />
       },
       {
-        path: 'readme',
-        element: <ReadMe />
+        path: 'about',
+        element: <About />
+      },
+      {
+        path: 'blog',
+        element: <Blog />
+      },
+      {
+        path: 'book',
+        element: <Book />
+      },
+      {
+        path: 'contact',
+        element: <Contact />
+      },
+      {
+        path: 'gallery',
+        element: <Gallery />
+      },
+      {
+        path: 'podcasts',
+        element: <Podcasts />
+      },
+      {
+        path: 'talks',
+        element: <Talks />
+      },
+      {
+        path: 'upcoming',
+        element: <Upcoming />
       }
     ]
   }
