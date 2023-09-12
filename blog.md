@@ -19,5 +19,6 @@ layout: default
 		<p>02/01/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20230102/computerfilms-thenet">Computer Films: The Net (1995)</a></strong></p>
 		<p>02/01/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20230120/savingchristmas02">Saving Christmas with Functional C# - Part Two - Indefinite Loops</a></strong></p>
 		<p>27/03/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20230322/machinelearning-02-bayesclassifier">Basic Machine Learning Algorithms in C# - Part 02 - Bayes Classifier</a></strong></p>
+		<p>12/09/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20230912/computerfilms-swordfish">Computer Films: Swordfish (2001)</a></strong></p>
 	</div>
 </div>
