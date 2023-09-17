@@ -1,16 +1,9 @@
 {
   "name": "thecodepainter",
   "version": "0.1.0",
-  "homepage": "https://madsimonj.github.io",
+  "homepage": "https://www.thecodepainter.co.uk/",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.38",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
     "bootstrap": "^5.3.0",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
@@ -54,6 +47,13 @@
     "@types/lodash": "^4.14.198",
     "@types/react-router-bootstrap": "^0.26.1",
     "@types/webfontloader": "^1.6.35",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.38",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "gh-pages": "^6.0.0"
   }
 }
