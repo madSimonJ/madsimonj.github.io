@@ -1,0 +1,47 @@
+{ 
+    "Talks": [
+        {
+            "Id": 1,
+            "Title": "Functional Programming in JavaScript",
+            "Description": "With the use of a few simple JS libraries, we can create a full implementation of the Functional Programming paradigm without much effort",
+            "Image": "./img/functional-javascript.png",
+            "Active": true
+        },
+        {
+            "Id": 2,
+            "Title": "Hacking C#: Development For the Truly Lazy",
+            "Description": "How can we achieve our development goals using as little effort as possible? How to be productive, but lazy, using Functional progamming, Linq and MetaProgramming",
+            "Image": "./img/hacking-csharp.png",
+            "Active": true
+        },
+        {
+            "Id": 3,
+            "Title": "Functional Programming in C#",
+            "Description": "A look at how we might implement the functional programming paradigm using C# language features that date back as far as C# 4.",
+            "Image": "./img/functional-csharp.png",
+            "Active": true
+        },
+        {
+            "Id": 4,
+            "Title": "Win at Games and Write Novels With Machine Learning Algorithms",
+            "Description": "How we can use a simple machine learning technique and a bit of C# to win at various board games and generate whole new books \"by\" Jane Austen.",
+            "Image": "./img/janeaustensmall.png",
+            "Active": true
+        },
+        {
+            "Id": 5,
+            "Title": "Steganography - The data that's hidden right under your 6e6f7365",
+            "Description": "Steganography - The data that's hidden right under your 6e6f7365",
+            "Image": "./img/steganographysmall.png",
+            "Active": true
+        },
+        {
+            "Id": 6,
+            "Title": "Down the Oregon Trail with Functional C#",
+            "Description": "A worked example of a complete Functional C# application, ported from an legendary, old 1975 game called Oregon Trail.",
+            "Image": "./img/Oregontrailsmall.png",
+            "Active": true
+        }
+
+    ]
+}

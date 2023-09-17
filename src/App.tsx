@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./css_nes.min.css"
 
 import Layout from './Components/Layout';
 
@@ -13,7 +15,7 @@ import Podcasts from './Components/Podcasts';
 import Talks from './Components/Talks';
 import Upcoming from './Components/Upcoming';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import WebFont from 'webfontloader';
 
 import {
   createBrowserRouter,
@@ -69,6 +71,17 @@ const router = createBrowserRouter([
 
 
 function App() {
+
+  useEffect(() => {
+
+    WebFont.load({
+      google: {
+        families: ['Press+Start+2P']
+      }
+    })
+
+  });
+
   return (
     <RouterProvider router={router} />
   );

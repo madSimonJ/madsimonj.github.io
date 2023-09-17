@@ -1,0 +1,39 @@
+{
+    "Podcasts": [
+        {
+            "PodcastTitle": ".NET Core Podcast",
+            "Episode": 52,
+            "EpisodeTitle": "Functional C# with Simon Painter",
+            "Date": "2020-05-29",
+            "Link": "https://dotnetcore.show/episode-52-functional-csharp-with-simon-painter/"
+        },
+        {
+            "PodcastTitle": "The Unhandled Exception Podcast",
+            "Episode": 6,
+            "EpisodeTitle": "The DDD Conferences",
+            "Date": "2021-12-05",
+            "Link": "https://unhandledexceptionpodcast.com/posts/0006-ddd/"
+        },
+        {
+            "PodcastTitle": "The Unhandled Exception Podcast",
+            "Episode": 9,
+            "EpisodeTitle": "Functional C# with Simon Painter",
+            "Date": "2021-01-03",
+            "Link": "https://unhandledexceptionpodcast.com/posts/0009-simonpainter/"
+        },
+        {
+            "PodcastTitle": "Adventures in .NET",
+            "Episode": 95,
+            "EpisodeTitle": "Let's Get Functional",
+            "Date": "2021-11-16",
+            "Link": "https://adventuresindotnet.com/letsgetfunctional-net095?t=0"
+        },
+        {
+            "PodcastTitle": ".NET Rocks!",
+            "Episode": 1832,
+            "EpisodeTitle": "Functional C# With Simon Painter",
+            "Date": "2023-02-09",
+            "Link": "https://www.dotnetrocks.com/details/1832"
+        }
+    ]
+}

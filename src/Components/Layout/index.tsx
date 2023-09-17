@@ -31,9 +31,9 @@ const Layout = () => {
                             <LinkContainer to="/Upcoming">
                                 <Nav.Link>Upcoming</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/Gallery">
+                            {/* <LinkContainer to="/Gallery">
                                 <Nav.Link>Gallery</Nav.Link>
-                            </LinkContainer>
+                            </LinkContainer> */}
                             <LinkContainer to="/Contact">
                                 <Nav.Link>Contact</Nav.Link>
                             </LinkContainer>
@@ -47,7 +47,10 @@ const Layout = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <Outlet />
+            <Container>
+                <Outlet />
+            </Container>
+            
         </>
     );
 };
