@@ -50,6 +50,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.198",
     "@types/react-router-bootstrap": "^0.26.1",
-    "@types/webfontloader": "^1.6.35"
+    "@types/webfontloader": "^1.6.35",
+    "gh-pages": "^6.0.0"
   }
 }
