@@ -11,7 +11,7 @@ const Talk = (props: talkProps) => {
             <div>
                 <section className='nes-container with-title is-centered'>
                     <p className='title'>{props.Details.Title}</p>
-                    <img src={props.Details.Image} />
+                    <img src={props.Details.Image} width="100%"/>
                     <p>{props.Details.Description}</p>
                 </section>
             </div>

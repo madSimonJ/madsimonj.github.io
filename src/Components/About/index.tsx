@@ -8,7 +8,7 @@ const About = () => {
         <>
             <div className="nes-container with-title is-centered">
                 <p className='title'>About Me</p>
-                <img src={portrait} alt="Me if I were in a ZX Spectrum Game!" />                
+                <img src={portrait} alt="Me if I were in a ZX Spectrum Game!" width="100%"/>                
                 <br />
                 <br />
                 <p>Hi!  My name is Simon Painter and I code both professionally and - since it's also my hobby - for fun as well.  I live in a small town in the West Midlands, not far from the Welsh Border, along with my lovely wife and two small children.</p>
