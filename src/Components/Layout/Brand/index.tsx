@@ -11,7 +11,7 @@ const Brand = () => {
         <>
             <LinkContainer to="/">
                 <Navbar.Brand>
-                    <img src={logo} alt="logo" width="500" height="100" />            
+                    <img src={logo} alt="logo" width="75%" height="auto" />            
                 </Navbar.Brand>
             </LinkContainer>
         </>
