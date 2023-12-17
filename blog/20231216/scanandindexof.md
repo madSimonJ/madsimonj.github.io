@@ -34,7 +34,7 @@ description: A simple technique to
 
 <p>So What's a Scan?  It's actually going to take me a whhile to explain, but only a few lines of code to implement.  It's similar to the C# Aggregate function (known as a "Fold" in FP parlance).  I'll just briefly explain an Aggregate first, since surprisingly few people seem to know about it.</p>
 
-<p>Aggregate is a way of reducing an array of things down to a single thing.  Let's work through an example of how it works.  A silly example.  Let's imagine that for some strange, barking-mad reason I wanted to duplicate all of the letters of the word "Christmas" to make it "CCrriissttmmaass".  No special reason I should, but it'll do for a demonstration.</p>
+<p>Aggregate is a way of reducing an array of things down to a single thing.  Let's work through an example of how it works.  A silly example.  Let's imagine that for some strange, barking-mad reason I wanted to duplicate all of the letters of the word "Christmas" to make it "CChhrriissttmmaass".  No special reason I should, but it'll do for a demonstration.</p>
 
 <p>To aggregate it, I'd start with a seed value - an empty string.  The aggregate process iterates through each item in the array (a string is also an array of characters in C#, and indeed many programming languages) and each iteration is supplied with the current running total, and the current item, and from them is expected to make a new running total.</p>
 
