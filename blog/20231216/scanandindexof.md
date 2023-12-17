@@ -15,6 +15,8 @@ description: A simple technique to
 				<img src="" width="50%" style="text-align: center" alt="">
 			</div>
 
+<p>This blog article was published as part of the <a href=" www.csadvent.christmas">C# Advent</a> 2023 (run by <a href="https://twitter.com/mgroves">Matthew Groves</a>) for the 18th of December, an honour I shared with fellow Functional Programmer and F# Guru <a href="https://ijrussell.github.io/">Ian Russell</a> who also published an article on Discriminated Unions that you can find <a href="https://ijrussell.github.io/posts/csharp-discriminated-union/">here</a></p>
+
 <p>I've not updated this blog in a while because I've been pretty busy working on my book "Functional Programming in C#" which was published back in September by O'Reilly.  I"d hoped to keep this blog going at the same time, but there simply wasn't enough time for me to do both.  I'm hoping this will a new start, and hopefully I'll manage to keep to a decent schedule this time.</p>
 
 <h4>Introduction</h4>
