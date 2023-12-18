@@ -74,5 +74,10 @@
        <link>https://www.thecodepainter.co.uk/blog/20230912/computerfilms-swordfish</link>
 	   <description>Does this 2001 computer hacking heist thriller bear any resemblance to real computing?</description>
     </item>  
+	<item>
+       <title>Functional Programming with C#: Scan and FindIndex</title>
+       <link>https://www.thecodepainter.co.uk/blog/20231216/scanandindexof</link>
+	   <description>Two new LINQ-style methods you can use to improve your daily coding</description>
+    </item>  
   </channel>
 </rss>
