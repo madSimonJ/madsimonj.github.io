@@ -67,7 +67,7 @@ public void Test01()
 
 <h4>Scan</h4>
 
-<p>So, like Aggregate, Scan takes an Enumerable and iterates through it, while also holding a running total value which updates with each iteration.  The big difference though is what is actually produced at the end.  Instead of the final, accumulated total, the result is an array of every reeturn from every iteration.  You're basically seeing a step by step of how theh final total was built.  This gives me a chance to indulge in another of my favourite things - the works of legendary British singer-songwriter Kate Bush.  Check out this excerpt from one of her better-known music videos:</p>
+<p>So, like Aggregate, Scan takes an Enumerable and iterates through it, while also holding a running total value which updates with each iteration.  The big difference though is what is actually produced at the end.  Instead of the final, accumulated total, the result is an array of every return from every iteration.  You're basically seeing a step by step of how the final total was built.  This gives me a chance to indulge in another of my favourite things - the works of legendary British singer-songwriter Kate Bush.  Check out this excerpt from one of her better-known music videos:</p>
 
 <img src="katebush.webp" style="text-align: center" alt="Kate Bush twirling">
 
