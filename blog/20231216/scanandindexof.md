@@ -172,8 +172,8 @@ public void Test04()
 public void Test05()
 {
 	var input = "Christmas";
-	var output = input.Scan("", (acc, x) => acc + x + x)
-		.findIndex(x => x.Length == 10);
+	var output = input.Scan("", (acc, x) =&gt; acc + x + x)
+		.FindIndex(x =&gt; x.Length == 10);
 
 	output.Should().Be(5);
 }
@@ -189,10 +189,12 @@ public void Test05()
 			<pre>
 				<code class="cs hljs">
 
-public static int findIndex&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func&lt;T, bool&gt; cond)
+public static int FindIndex&lt;T&gt;(this IEnumerable&lt;T&gt; @this, Func&lt;T, bool&gt; cond)
 {
 	var result = @this.Select((x, i) =&gt; (x, i)).FirstOrDefault(x =&gt; cond(x.x));
-	return result.i;
+	return EqualityComparer&lt;T&gt;.Default.Equals(default)
+		? -1
+		: result.i;
 }
 				</code>
 			</pre>
