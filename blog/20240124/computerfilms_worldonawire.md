@@ -12,7 +12,7 @@ description: A Matrix rip-off that was somehow made over 20 years earlier!
 		<hr/>
 		<div style="text-align: left">	
 			<div class="svg-container">
-				<img src="welt_Am_Draht_poster.jpg" style="text-align: center" alt="World on a Wire Poster">
+				<img src="Welt_Am_Draht_poster.jpg" style="text-align: center" alt="World on a Wire Poster">
 			</div>
 
 <p>This is the sixth film I've looked at in this series on films about computers and IT.  Here are the previous articles if you're interested in reading more:</p>
