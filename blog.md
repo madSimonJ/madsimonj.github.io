@@ -21,5 +21,6 @@ layout: default
 		<p>27/03/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20230322/machinelearning-02-bayesclassifier">Basic Machine Learning Algorithms in C# - Part 02 - Bayes Classifier</a></strong></p>
 		<p>12/09/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20230912/computerfilms-swordfish">Computer Films: Swordfish (2001)</a></strong></p>
 		<p>18/12/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20231216/scanandindexof">Functional Programming With C#: Scan and FindIndex</a></strong></p>
+		<p>24/01/2024: <strong><a href="https://www.thecodepainter.co.uk/blog/20231010/computerfilms_colossustheforbinproject">Computer Films: Colossus - The Forbin Projet (1970)</a></strong></p>
 	</div>
 </div>
