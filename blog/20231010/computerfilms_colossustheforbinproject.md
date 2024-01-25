@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Computer Films - Part Five - Colossus: The Forbin Project (1971)
+title: Computer Films - Part Five - Colossus - The Forbin Project (1971)
 description: Could a giant mega-computer actually take over the world?
 ---
 
