@@ -133,5 +133,80 @@ Console.WriteLine(dict[5]);
 
 <p>How about memoisation, how do we do that?  First-off - what <i>is</i> memoisation?  Put simply, it's the idea that if you call the same function twice, with the same parameter values, the function only calculates the answer a single time - the second time it returns a cached version.  Same basic idea as using a Memory Cache in .NET, but applied at a function level.  It depends on the function being written in such a way that you would <i>expect</i> the same answer back, given the same parameter values.</p>
 
-<p>Now, there are ways of implementing memoisation with an extension method (do have a look at <a href="https://learning.oreilly.com/library/view/functional-programming-with/9781492097068/" my book</a> for a whole chapter on how to do that), but you can also modify a Dictionary a little to get a similar effect.  Consider this extension method:</p>
+<p>Now, there are ways of implementing memoisation with an extension method (do have a look at <a href="https://learning.oreilly.com/library/view/functional-programming-with/9781492097068/"> my book</a> for a whole chapter on how to do that), but you can also modify a Dictionary a little to get a similar effect.  Consider this extension method:</p>
 
+			<pre>
+				<code class="cs hljs">
+public static TValue TryGetKey&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; @this, TKey key, Func&lt;TKey, TValue&gt; f)
+{
+    if(@this.ContainsKey(key)) 
+        return @this[key];
+    var newValue = f(key);
+    @this.Add(key, newValue);
+    return newValue;
+}
+				</code>
+			</pre>
+
+<p>So what's happening here?  What I'm saying with the TryGetKey extension is - first give the key value that should be looked up.  If it's already in the dictionary, the cached version is returned.  If it's not in the dictionary, then the second prameter is a Func delegate which is used to calculate the value, which is then stored and returned to the user from storage.  It does mean using non-funcitional code inside the extension method, but I'm actually at peace with that.  It's a small bit of hidden-away imperative code, which then allows a very funcitonal style of coding everywhere else.</p>
+
+<p>Here is an example of how you might use it on a simple function that returns the current DateTime:</p>
+
+			<pre>
+				<code class="cs hljs">
+var functionToRun = (int x) => x.ToString() + " - " +  DateTime.Now.ToString();
+
+var dict = new Dictionary&lt;int, string&gt;();
+
+var tryOne = dict.TryGetKey(1, functionToRun);
+var trytwo = dict.TryGetKey(1, functionToRun);
+var trythree = dict.TryGetKey(1, functionToRun);
+Console.WriteLine(tryOne);
+Console.WriteLine(trytwo);
+Console.WriteLine(trythree);
+				</code>
+			</pre>
+
+<p>What happens when you run this code is that the same DateTime is printed 3 times, with the number "1" prefixed each time.  The first time TryGetKey is called, the Key "1" isn't found in the dictionary, so the provided function (functionToRun) is called, with "1" being the parameter supplied to it.  It calculates a string, which is stored in the dictionary.  When the same function is called for a second time, the cached value from the dictionary is returned, instead of re-calculating with a new date.  You could theoretically also supply a different function with the same signature each time too, but you'd still only get the same string back each time you call it.</p>
+
+<p>What if you had 2 parameters on your function?  Could We also make a version of this process for that?  Funny you should ask, because yes we can! Here it is:</p>
+
+			<pre>
+				<code class="cs hljs">
+public static TValue TryGetKey&lt;TKey1, TKey2, TValue&gt;(this IDictionary&lt;(TKey1,TKey2), TValue&gt; @this, TKey1 key1, TKey2 key2, Func&lt;TKey1,TKey2, TValue&gt; f)
+    where TKey1: notnull
+    where TKey2: notnull
+{
+    if(@this.ContainsKey((key1, key2))) 
+        return @this[(key1,key2)];
+    var newValue = f(key1, key2);
+    @this.Add((key1,key2), newValue);
+    return newValue;
+}
+				</code>
+			</pre>
+
+<p>What we're doing here is using a Tuple of the twi key values together as a key, rather than just a single item by itself.  Other than that, it's the exact same process.  And this can be extended as many times as your project requirements need!  Make a version of this wtih 10 parameters if that's really what floats your boat!  I'm not sure that's entirely advisable, mind.  </p>
+
+<p>This is how you'd use the two parameter version to memoise an add function:</p>
+
+			<pre>
+				<code class="cs hljs">
+var dict = new Dictionary&lt;(int, int), int&gt;();
+
+var tryOne = dict.TryGetKey(1,2, functionToRun);
+var trytwo = dict.TryGetKey(1, 2,functionToRun);
+var trythree = dict.TryGetKey(1, 2,functionToRun);
+Console.WriteLine(tryOne);
+Console.WriteLine(trytwo);
+Console.WriteLine(trythree);
+				</code>
+			</pre>
+
+<p>In every instance the text writen to the console is the number "3", but it's only actually calculated a single time.  The 2nd and 3rd calls to TryGetKey return a value from cache. </p>
+
+<p>Now, these are trivial examples you probably wouldn't bother to memoise in real life, but imagine that behind these simple key-value pairs, there was an incredibly complicated function with database calls, web api calls, etc. all involved to arrive at an answer.  With this memoisation technique you can save every answer, to avoid calculating it afresh every time.  So long as the dictionary remains in scope while you do your calculations.  It can also be used on algorithms that involve processing the same data multiple times - like solutions to the Travelling Salesman problem, which involve calculating the distances between each node and every other node in a data graph.  Memoisation saves the computer needing to constantly calculate the same thing unnecessarily.</p>
+
+<p>Have fun with this, and let me know if you think of any improvements.</p>
+
+<p>And incidentally.  A merry Christmas to all of you at home!</p>
