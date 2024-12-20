@@ -89,5 +89,10 @@
    <link>https://www.thecodepainter.co.uk/blog/20240124/computerfilms_worldonawire</link>
    <description>The Matrix, but made for German TV 2 decades earlier</description>
 </item>  
+<item>
+   <title>Functional C#: Make Dictionaries Functional</title>
+   <link>hhttps://www.thecodepainter.co.uk/blog/20241219/makedictionarysfunctional</link>
+   <description>How can you fix dictionaries in C#, and also make them a powerful efficiency improving tool</description>
+</item>  
   </channel>
 </rss>

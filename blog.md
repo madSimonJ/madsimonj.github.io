@@ -23,5 +23,6 @@ layout: default
 		<p>18/12/2023: <strong><a href="https://www.thecodepainter.co.uk/blog/20231216/scanandindexof">Functional Programming With C#: Scan and FindIndex</a></strong></p>
 		<p>24/01/2024: <strong><a href="https://www.thecodepainter.co.uk/blog/20231010/computerfilms_colossustheforbinproject">Computer Films: Colossus - The Forbin Projet (1970)</a></strong></p>
 	  	<p>15/02/2024: <strong><a href="https://www.thecodepainter.co.uk/blog/20240124/computerfilms_worldonawire">Computer Films: World on a Wire</a></strong></p>
+	  	<p>20/12/2024: <strong><a href="https://www.thecodepainter.co.uk/blog/20241219/makedictionarysfunctional">Functional C#: Make Dictionaries functional</a></strong></p>
 	</div>
 </div>
