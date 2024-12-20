@@ -186,7 +186,7 @@ public static TValue TryGetKey&lt;TKey1, TKey2, TValue&gt;(this IDictionary&lt;(
 				</code>
 			</pre>
 
-<p>What we're doing here is using a Tuple of the twi key values together as a key, rather than just a single item by itself.  Other than that, it's the exact same process.  And this can be extended as many times as your project requirements need!  Make a version of this wtih 10 parameters if that's really what floats your boat!  I'm not sure that's entirely advisable, mind.  </p>
+<p>What we're doing here is using a Tuple of the two key values together as a key, rather than just a single item by itself.  Other than that, it's the exact same process.  And this can be extended as many times as your project requirements need!  Make a version of this wtih 10 parameters if that's really what floats your boat!  I'm not sure that's entirely advisable, mind.  </p>
 
 <p>This is how you'd use the two parameter version to memoise an add function:</p>
 
