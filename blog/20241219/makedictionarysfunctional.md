@@ -9,6 +9,7 @@ description: A simple technique to
   <div class="center">
 		<h2>Functional Programming with C#</h2>
 		<h3>Make Dictionaries Functional</h3>
+        <h4>Done as part of the <a href="https://www.csadvent.christmas/">C# Advent</a></h4>
 		<hr/>
 		<div style="text-align: left">	
 			<div class="svg-container">
