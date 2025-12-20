@@ -145,11 +145,93 @@ public class Name
 }
 	</code>
 </pre>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+<p>I wouldn't ever actually directly instantiate an Error object in the real world.  A more likely scenario for error -&gt; error to occur in reality would be something like this:</p>
+<pre>
+	<code class="cs hljs">
+var greeting4 = 
+	new Name()
+	.ToResult()
+	.Bind(x =&gt; HowLongIsMyName(x))
+	.Bind(x =&gt; "Your name is " + x + " characters long");
+	</code>
+</pre>
+<p>In this scenario we'vve gone from Name -&gt; Success&lt;Name&gt; -&gt; Failure&lt;int&gt; -&gt; Failure&lt;string&gt;.  The Bind function attached to the monad has done all the type switching, and it knew not to execute the last function in the chain, because the last step failed.  This means we can have great, big chains of functions - but with try/catch built in to everyh single step!</p>
+<p>So, what are those monads already in C#?  First we need to understand how a monad is officially defined...</p>
+<h4>The Laws of the Monad</h4>
+<p>There are three "laws" that define a monad.  Don't bother looking up how they look in text books, it's very maths-heavy and makes for grim reading.  I'll explain them to you in C# terms here:</p>
+<p>First, if I pass in a function that's something like x =&gt; x, then the output contains the same value as the input - i.e. unchanged and nothing else has happend.  Like this:</p>
+<pre>
+	<code class="cs hljs">
+var output2 = 
+	"I like rice"
+	.ToResult()
+	.Bind(x =&gt; x);
+	</code>
+</pre>
+<p>outpu2 is still "I like rice" after running the bind.  Like I said, the point is that there isn't anything else in the pipeline there that changes the value without you knowing.</p>
+<p>The second is that the result of running a function via a Bind funtion should be the same as running it directly.  Like this:</p>
+<pre>
+	<code class="cs hljs">
+var output3 = 
+	"I like rice".ToUpper();
+var output4 = 
+	"I like rice"
+	.ToResult()
+	.Bind(x =&gt; x.ToUpper());
+	</code>
+</pre>
+<p>the string value in both output3 and output4 are the same - "I LIKE RICE".  Calling ToUpper() directly is the same as calling it in the safe, explosion-free environment of the Bind.  Basically you are <i>just</i> running the function, and no funny busines!</p>
+<p>The third law is actually something that I've not strictly implemented, but it doesn't take too much efford.  That's that if a Bind would result in something silly like Result&lt;Result&lt;Result&lt;T&gt;&gt;&gt; then it flattens it down to a nice, simple, straightforward Result&lt;T&gt; instead.  I could do that with an overloaded method like this:</p>
+<pre>
+	<code class="cs hljs">
+public static Result&lt;TOut&gt; Bind&lt;TIn, TOut&gt;(this Result&lt;TIn&gt; input, Func&lt;TIn, Result&lt;TOut&gt;&gt; functionToExecute)
+{
+	try
+	{
+		if(input is Failure&lt;TIn&gt; f)
+		{
+			return new Failure&lt;TOut&gt;(f.e);
+		}
+		var previousSuccessValue = ((Success&lt;TIn&gt;)input).Value;
+		return functionToExecute(previousSuccessValue);
+	}
+	catch(Exception e)
+	{
+		return new Failure&lt;TOut&gt;(e);
+	}
+}
+	</code>
+</pre>
+<p>Any calls now to a function that would return Result&lt;T&gt; won't result in a Result inside a Result, so I've created a true monad now by satisfying all three laws!</p>
+<p>What then in C# already does this?</p>
+<h4>Go on, Where Are They Then?</h4>
+<p>Strictly speaking there is only a single monad already in C# - and that's Enumerable!  Let me show you how:</p>
+<pre>
+	<code class="cs hljs">
+var numbers = new [] { 1, 2, 3 };
+var doubleFunction = (int x) =&gt; x * 2;
 
+var lawOne = numbers.Select(x =&gt; x);
+var lawTwo = numbers.Select(x =&gt; doubleFunction(x));
+var lawThree = (new [] {numbers, numbers}).SelectMany(x =&gt; x);
+	</code>
+</pre>
+<p>When you think about it Select and SelectMany execute whatever function you pass it, and return the results without doing anything else, easily satisfying the first two laws.  The third is satisfied with SelectMany with flattens down an Enumerable of an Enumerable into a single level Enumerable.</p>
+<p>Are there any more?</p>
+<p>Sort of.  Task&lt;T&gt; is often considered a Monad.  It's nearly there, but not quite.  The first two laws are satisfied easily enough:</p>
+<pre>
+	<code class="cs hljs">
+var doubleFunction = (int x) =&gt; x * 2;
+var asyncDouble = (int x) =&gt; await Task.FromResult(doubleFunction(x));
+
+var lawOne = await asyncDouble(100);
+var lawTwo = lawOne == doubleFunction(100);
+	</code>
+</pre>
+<p>Again, the value is unchanged if we do nothing, and calling the function async results in the same value as if we didn't.  That's the first two laws easily followed.  The difference is that there is no flattening effect with Task.  Returning the results of another funtion that itself returns Task&lt;T&gt; will result in Task&lt;Task&lt;T&gt;&gt;, not a nice, easy to manage single-level Task&lt;T&gt;.  So Task is nearly, but not quite a true monad.  It's easily fixable with an extension method, which would change things of course.  If you did that, then yeah - Task can be a member of Monad club.  But out of the box, only Enumerable gets to join.</p>
+<p>Still - I bet there's a fair change that you never knew you'd been working with a Monad all this time, though, did you?</p>
+<p>If you're interested in more functional fun like this, my book "Functional Programming with C#" is available in all good book shops, and one or two rubbish ones.</p>
+<img src="functionalprogrammingwithcsharp.jpg" style="text-align: center" alt="book cover">
 
 
 
