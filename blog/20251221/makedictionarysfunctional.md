@@ -40,8 +40,8 @@ public readonly record struct Failure&lt;T&gt;(Exception e): Result&lt;T&gt;;
 	<code class="cs hljs">
 public static class ResultExtensions
 {
-	public static Result&lt;T&gt; ToResult(this T value) =>
-		new Success(value);
+	public static Result&lt;T&gt; ToResult&lt;TIn&gt;(this T value) =>
+		new Success&lt;TIn&gt;(value);
 }
 	</code>
 </pre>
@@ -51,18 +51,16 @@ public static class ResultExtensions
 	<code class="cs hljs">
 public static class ResultExtensions2
 {
-	public static Result&lt;TOut&gt; Bind&lt;TIn, TOut&gt;(this TIn input, Func&lt;TIn, TOut&gt; functionToExecute)
+	public static Result&lt;TOut&gt; Bind&lt;TIn, TOut&gt;(this Result&lt;TIn&gt; input, Func&lt;TIn, TOut&gt; functionToExecute)
 	{
 		try
 		{
-			if(input is Success&lt;TIn&gt; s)
+			if(input is Failure&lt;TIn&gt; f)
 			{
-				return functionToExecute(s.Value).ToResult();
+				return new Failure&lt;TOut&gt;(f.e);
 			}
-			else if(input is Failure&lt;TIn&gt; f)
-			{
-				return new Failure&lt;TOut&gt;(f.Error);
-			}
+			var previousSuccessValue = ((Success&lt;TIn&gt;)input).Value;
+			return functionToExecute(previousSuccessValue).ToResult();
 		}
 		catch(Exception e)
 		{
@@ -79,6 +77,74 @@ public static class ResultExtensions2
 	<li>Input is a failure - it failed on a previous execcution, so let's not bother running the function, as we have no input to give it, so let's just pass the error message on, but with the correct type assigned to TOut</li>
 </ul>
 <p>Here are examples of those in code:</p>
+<pre>
+	<code class="cs hljs">
+public static void Main()
+{
+	// success -&gt; Success
+	var name  = 
+		new Name 
+		{
+			FirstName = "Santa",
+			LastName = "Claus"
+		};
+	// The input is fine, the function executes without error.  "greeting" is a Success containing a string
+	var greeting = 
+		name
+		.ToResult()
+		.Bind(x =&gt; HowLongIsMyName(x));
+	
+	// Success -&gt; failure
+	// The values of FirstName and LastName are null.  Input is a Success&lt;Name&gt; but executing the
+	// function result in a null reference exeption, which is caught by the try/catch and returned
+	// wrapped in a Failure&lt;int&gt;
+	var greeting2 = 
+		new Name()
+		.ToResult()
+		.Bind(x =&gt; HowLongIsMyName(x));
+	
+	// failure -&gt; failure
+	// The input is already a failure, so the error message is passed on without executing the function supplied
+	var greeting3 = 
+		new Failure&lt;Name&gt;(new Exception("gingerbread everywhere!"))
+		.Bind(x =&gt; HowLongIsMyName(x));
+	
+	
+	var results = new []
+	{
+		greeting,
+		greeting2,
+		greeting3
+	};
+	
+	var output = results.Select(x =&gt; 
+		x switch {
+			Success&lt;int&gt; s =&gt; "Name is " + s.Value  + " characters long",
+			Failure&lt;int&gt; f =&gt; "Error: " + f.e.Message
+		}
+	);
+	foreach(var g in output)
+	{
+		Console.WriteLine(g);
+	}
+	
+	// the console output consists of the following:
+	//
+	//	Name is 11 characters long
+	//	Error: Object reference not set to an instance of an object.
+	//	Error: gingerbread everywhere!
+}
+
+public static int HowLongIsMyName(Name name) =&gt;
+	name.FirstName.Length + name.LastName.Length + 1;
+					
+public class Name
+{
+	public string FirstName { get; set; }
+	public string LastName { get; set; }
+}
+	</code>
+</pre>
 <p></p>
 <p></p>
 <p></p>
